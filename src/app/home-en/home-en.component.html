@@ -1,0 +1,31 @@
+<div class="AppContainer" dir="ltr">
+<app-header-en></app-header-en>
+<main class="pageContainer">
+  <div class="services-description">
+    <h1>electronic services</h1>
+    <p>The Electronic Services System provides all the services that citizens in Riyadh city need, which saves time, effort, and traditional paper transactions. All you have to do is choose the service.</p>
+  </div>
+    <div class="homecards">
+      <app-card-en *ngFor="let card of cardsen"[cardDetails]="card"></app-card-en>
+      <mat-card class="lastCard">
+        <mat-card-content>
+          <img src="../../assets/whiteArrow-en.svg"/>
+          <h1>All Services</h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="homeBottom">
+      <div class="homeBottomContent">
+        <img src="../../assets/lapTop-en.svg"/>
+        <div class="details">
+            <h1>Interact with</h1>
+            <p>We always strive to provide the best solutions for citizens and residents of Riyadh city. This is achieved through the participation of the local community in our surveys, which helps improve the quality of services provided.</p>
+            <button>Survey Archives<img src="../../assets/whiteArrow-en.svg"/></button>
+        </div>
+    </div>
+    </div>
+    
+</main>
+<app-footer-en></app-footer-en>
+</div>

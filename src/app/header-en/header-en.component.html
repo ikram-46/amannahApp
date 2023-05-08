@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="topHeader" >
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
+    <mat-button-toggle value="en" routerLink="/homeEn">English</mat-button-toggle>
+    <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="socialIcons">
+    <p>Join Us</p>
+    <i class="fa fa-youtube-play"></i>
+    <i class="fa fa-twitter"></i>
+  </div>
+</div>
+<mat-sidenav-container>
+	<mat-sidenav #sidenav mode="over">
+		<!-- <label>My Application</label> -->
+        <img src="../../assets/شعار الأمانه افقي.svg"/> 
+    <hr/>   
+		<nav>
+			<a routerLink="homeEn"      (click)="clickHandler()" routerLinkActive="active">Home</a>
+			<a routerLink="page1"     (click)="clickHandler()" routerLinkActive="active">E-Service</a>
+			<a routerLink="page2"     (click)="clickHandler()" routerLinkActive="active"> Service</a>
+			<a routerLink="page3"   (click)="clickHandler()" routerLinkActive="active">Help And Support</a>
+		</nav> 
+    <hr />
+    <div aria-label="user selection" [matMenuTriggerFor]="menu" class="userMenuMobile">
+        <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user"/>
+        <span>
+        User Name Here
+        <mat-icon>keyboard_arrow_down</mat-icon>
+        </span>
+      </div>
+      <hr />
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
+        <mat-button-toggle value="en" routerLink="/homeEn">English</mat-button-toggle>
+        <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
+      </mat-button-toggle-group>
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+		<mat-toolbar>
+			<header>
+				<mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+				<!-- label>My Application</label> -->
+                <img src="../../assets/شعار الأمانه افقي.svg"/> 
+
+        <nav>
+          <a routerLink="home"    routerLinkActive="active">Home</a>
+          <a routerLink="page1"   routerLinkActive="active">E-Service</a>
+          <a routerLink="page2"   routerLinkActive="active">Service </a>
+          <a routerLink="page3" routerLinkActive="active">Help And Support</a>
+        </nav>
+        <div aria-label="user selection" [matMenuTriggerFor]="menu" class="userMenu">
+          <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user"/>
+          <span>
+            User Name Here
+          <mat-icon>keyboard_arrow_down</mat-icon>
+          </span>
+        </div>
+
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item>Change Account<mat-icon>shuffle</mat-icon></button>
+        <span style="color:#056946;">Businesses And Government</span>
+        <mat-divider style="width:90%; margin: 10px auto;"></mat-divider>
+        <button mat-menu-item> <mat-icon>person_add</mat-icon> New Account</button>
+        <span>  Recruitement And Training</span>
+        <br/>
+        <span>Employee</span>
+        <mat-divider style="width:90%; margin: 10px auto;"></mat-divider>
+        <button mat-menu-item><img src="./assets/logoutIcon.svg"/>Log out</button>
+        </mat-menu>       
+      </header>
+      <div class="headerContent-en">
+        <h1>
+            Electronic Services Portal</h1>
+        <p>The Electronic Services System provides all the services that citizens in Riyath  city need, which saves time, 
+          <br/>effort,and traditional paper transactions, All you have to do is choose the service."
+           </p>
+      </div>
+      
+      <div class="headerBottom">
+        <div class="search">
+          <mat-icon>search</mat-icon>
+          <input placeholder="Search In services "/>
+        </div>
+        <mat-divider vertical style="height:53px"></mat-divider>
+        <mat-tab-group>
+          <mat-tab label="Individuals"></mat-tab>
+          <mat-tab label="Businesses And Government"></mat-tab>
+          <mat-tab label="Recruitement And Training"></mat-tab>
+          <mat-tab label="Employee"></mat-tab>
+        </mat-tab-group>
+      </div>
+		</mat-toolbar>
+</mat-sidenav-content>
+</mat-sidenav-container>

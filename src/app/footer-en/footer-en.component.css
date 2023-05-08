@@ -1,0 +1,56 @@
+.FooterContainer {
+    background: #033F2A;
+    border-radius: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    height: 600px;
+}
+
+.FooterContainer p {
+    max-width: 600px;
+    font-family: 'Bahij TheSansArabicExtraLight';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.FooterContainer nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.FooterContainer nav a{
+    color: white;
+    font-family: 'Bahij TheSansArabicLight';
+    padding: 5px 10px;
+    margin-left: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.FooterContainer nav a:hover {
+    /* color: yellow */
+    border-bottom: 2px solid #E6F0EC;
+    padding-bottom: 2px;
+    border-radius: unset;
+  }
+  .FooterContainer nav a.active {
+    /* color: yellow; */
+    border-bottom: 2px solid #E6F0EC;
+    padding-bottom: 2px;
+    border-radius: unset;
+  }
+
+  @media screen and (max-width: 980px) {
+    .FooterContainer {
+        max-height: 500px;
+    }
+  }

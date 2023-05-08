@@ -1,0 +1,31 @@
+<div class="AppContainer" dir="rtl">
+<app-header></app-header>
+<main class="pageContainer" dir="rtl">
+    <div class="services-description">
+      <h1>الخدمات الالكترونية</h1>
+      <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ .</p>
+    </div>
+    <div class="homecards">
+      <app-card *ngFor="let card of cards"[cardDetails]="card"></app-card>
+      <mat-card class="lastCard">
+        <mat-card-content>
+          <img src="../../assets/whiteArrow.svg"/>
+          <h1>كل الخدمات</h1>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="homeBottom">
+      <div class="homeBottomContent">
+        <img src="../../assets/lapTop.svg"/>
+        <div class="details">
+            <h1>تفاعل مع الأمانة</h1>
+            <p>نحن نسعى دائما نحو تقديم أفضل الحلول للمواطنين والمقيمين بمدينة الرياض، هذا يتحقق بمشاركة المجتمع المحلي مع المشاركة بالاستبيانات المقدمة من جهتنا والذي من شأنه رفع مستوى جودة الخدمات المقدمة</p>
+            <button>أرشيف الإستبينات <img src="../../assets/whiteArrow.svg"/></button>
+        </div>
+    </div>
+    </div>
+    
+</main>
+<app-sh-footer></app-sh-footer>
+</div>

@@ -1,17 +1,18 @@
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="AppContainer" dir="rtl">
-  <div class="topHeader">
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" >
-    <mat-button-toggle value="en">English</mat-button-toggle>
-    <mat-button-toggle value="ar">العربية</mat-button-toggle>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="topHeader" >
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
+    <mat-button-toggle value="en" routerLink="/homeEn">English</mat-button-toggle>
+    <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
   </mat-button-toggle-group>
   <div class="socialIcons">
+    <p>تفضلوا بالانضمام إلينا</p>
     <i class="fa fa-youtube-play"></i>
+    <i class="fa fa-twitter"></i>
   </div>
 </div>
 <mat-sidenav-container>
 	<mat-sidenav #sidenav mode="over">
-		
+		<!-- <label>My Application</label> -->
         <img src="../../assets/شعار الأمانه افقي.svg"/> 
     <hr/>   
 		<nav>
@@ -28,13 +29,18 @@
         <mat-icon>keyboard_arrow_down</mat-icon>
         </span>
       </div>
+      <hr />
+      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
+        <mat-button-toggle value="en" routerLink="/homeEn">English</mat-button-toggle>
+        <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
+      </mat-button-toggle-group>
 	</mat-sidenav>
 
 	<mat-sidenav-content>
 		<mat-toolbar>
 			<header>
 				<mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-			
+				<!-- label>My Application</label> -->
                 <img src="../../assets/شعار الأمانه افقي.svg"/> 
 
         <nav>
@@ -88,15 +94,6 @@
           <mat-tab label="موظف"></mat-tab>
         </mat-tab-group>
       </div>
-		</mat-toolbar> -->
-<!--<div class="AppContainer" dir="rtl">
-  <app-header></app-header>
-  <section>
-    <router-outlet></router-outlet>
-  </section>
-
-  <app-sh-footer></app-sh-footer>
-</div>-->
-<section>
-    <router-outlet></router-outlet>
-  </section>
+		</mat-toolbar>
+</mat-sidenav-content>
+</mat-sidenav-container>

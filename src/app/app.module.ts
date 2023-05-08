@@ -3,14 +3,36 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './shared/shared.module';
+import { CardComponent } from './card/card.component';
+import { HomeComponent } from './home/home.component';
+import { ShFooterComponent } from './sh-footer/sh-footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CardEnComponent } from './card-en/card-en.component';
+import { HomeEnComponent } from './home-en/home-en.component';
+import { HeaderComponent } from './header/header.component';
+import { HeaderEnComponent } from './header-en/header-en.component';
+import { FooterEnComponent } from './footer-en/footer-en.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardComponent,
+    HomeComponent,
+    ShFooterComponent,
+    CardEnComponent,
+    HomeEnComponent,
+    HeaderComponent,
+    HeaderEnComponent,
+    FooterEnComponent,
   ],
   imports: [
+    SharedModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,12 +2,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  
+  selector: 'app-footer-en',
+  templateUrl: './footer-en.component.html',
+  styleUrls: ['./footer-en.component.css']
 })
-export class AppComponent implements OnInit {
+export class FooterEnComponent {
   @ViewChild('sidenav') sidenav: MatSidenav;
   opened: boolean;
 
@@ -19,4 +18,5 @@ export class AppComponent implements OnInit {
   clickHandler() {
     this.sidenav.close();
   }
+
 }
