@@ -77,25 +77,25 @@
         <div class="logform">
           <p class="p6" *ngIf="user">تسجيل الدخول</p>
 
-          <mat-form-field class="example-full-width">
-            <mat-label>اسم المستخدم</mat-label>
-            <input matInput  name="username"  [(ngModel)]="form.username" placeholder="رقم الإثبات"  value="" >
-          </mat-form-field>
+          
+            <label>اسم المستخدم</label>
+            <input type="text"  name="username"  [(ngModel)]="form.username" placeholder="رقم الإثبات"  value="" >
+         
 
-          <mat-form-field class="example-full-width">
-            <mat-label>كلمة المرور</mat-label>
-            <input matInput name="mdp"  [(ngModel)]="form.mdp" placeholder="كلمة المرور" value="">
-          </mat-form-field>
+          
+            <label>كلمة المرور</label>
+            <input type="text" name="mdp"  [(ngModel)]="form.mdp" placeholder="كلمة المرور" value="">
+          
 
           <p class="p7">نسيت بيانات المرور؟</p>
         <div class=" user2" *ngIf="!user">
           <p class=" p8">أدخل النص المبين في الصورة</p>
           <div class=" cnt row">
              <div class="cnt1 col">
-              <mat-form-field class="example-full-width">
-                <mat-label>أدخل النص المبين في الصورة</mat-label>
-                <input matInput  placeholder="كلمة المرور" name="captcha"  [(ngModel)]="form.captcha">
-              </mat-form-field>
+              
+                <label>أدخل النص المبين في الصورة</label>
+                <input type="text" placeholder="كلمة المرور" name="captcha"  [(ngModel)]="form.captcha">
+              
              </div>
              <div class="  col">
               <img class="cnt2 border" src="../../assets/captcha.svg" >

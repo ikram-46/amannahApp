@@ -81,16 +81,24 @@
         
         <div class="logform">
           <p class="p6" *ngIf="user">Log  In</p>
-
-          <mat-form-field class="example-full-width">
+           
+          <label>User Name</label>
+            <input   name="username"  [(ngModel)]="form.username" placeholder="User Name"  value="" >
+          
+          <label>Password</label>
+            <input type="text" name="mdp"  [(ngModel)]="form.mdp" placeholder="Password" value="">
+         
+          <!--<mat-form-field class="example-full-width">
             <mat-label>User Name</mat-label>
             <input matInput  name="username"  [(ngModel)]="form.username" placeholder="User Name"  value="" >
           </mat-form-field>
 
+        
+            
           <mat-form-field class="example-full-width">
             <mat-label>Password</mat-label>
             <input matInput name="mdp"  [(ngModel)]="form.mdp" placeholder="Password" value="">
-          </mat-form-field>
+          </mat-form-field>-->
 
           <p class="p7">Forget Password ?</p>
         <div class=" user2" *ngIf="!user">
@@ -100,10 +108,9 @@
                 <img class="cnt2 border" src="../../assets/captcha.svg" >
               </div>
              <div class="cnt1 col">
-              <mat-form-field class="example-full-width">
-                <mat-label>Enter the text shown in the image</mat-label>
-                <input matInput  placeholder="كلمة المرور" name="captcha"  [(ngModel)]="form.captcha">
-              </mat-form-field>
+                <label>Enter the text shown in the image</label>
+                <input type="text"  placeholder="كلمة المرور" name="captcha"  [(ngModel)]="form.captcha">
+              
              </div>
              
           </div>
