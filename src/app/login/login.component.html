@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <div class="container cntr"  >
+    <div class="container row">
+      <div class="container col">
+       <a class="p1" routerLink="/home"    *ngIf="user"><p> <i class="fa fa-angle-left"  style="padding-right: 5px"></i >الرئيسية</p></a>
+        <div style="height:30px" *ngIf="!user"></div>
+        <div class=" row">
+
+          <div class="col col1" *ngIf="userv==='إختر هويتك' ">
+
+            <div aria-label="user selection" [matMenuTriggerFor]="menu" class="btn">
+              <i class="fa fa-angle-down" style="padding-right: 10px"></i>
+              <span >إختر هويتك</span>
+            </div>
+    
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="changeUser('أفراد')">أفراد </button>
+            <button mat-menu-item  (click)="changeUser('الأعمال والجهات الحكومية')" name="userv"  [(ngModel)]="userv">الأعمال والجهات الحكومية </button>
+             
+            </mat-menu>  
+              </div>
+
+            <div class="col col1" *ngIf="userv==='أفراد' " >
+
+          <div aria-label="user selection" [matMenuTriggerFor]="menu" class="btn">
+            <i class="fa fa-angle-down" style="padding-right: 10px"></i>
+            <span >
+             أفراد
+            </span>
+          </div>
+  
+          <mat-menu #menu="matMenu">
+          <button mat-menu-item  (click)="changeUser('الأعمال والجهات الحكومية')" name="userv"  [(ngModel)]="userv">الأعمال والجهات الحكومية </button>
+         
+          </mat-menu>  
+            </div>
+
+            <div class="col col1" *ngIf="userv==='الأعمال والجهات الحكومية' ">
+
+              <div aria-label="user selection" [matMenuTriggerFor]="menu" class="btn">
+                <i class="fa fa-angle-down" style="padding-right: 10px"></i>
+                <span >الأعمال والجهات الحكومية</span>
+              </div>
+      
+              <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="changeUser('أفراد')">أفراد </button>
+             
+              </mat-menu>  
+                </div>
+
+            <div class="col">
+            <h2>تسجيل الدخول</h2>
+            </div>
+
+        </div>
+       
+            <h3  *ngIf="user"> بوابة النفاذ الوطني الموحد</h3>
+            <p class="par1"  *ngIf="user"> يمكنك الدخول عن طريق اسم المستخدم و كلمة المرور المستخدمة في منصة النفاذ الوطني الموحد .. لكي تستفيد من الخدمات الإلكترونية المقدمة</p>
+     
+        
+            <div class="border row bordercl"  *ngIf="user">
+                <div class="p5 col ">
+                  <p >عن طريق بوابة النفاذ الوطني الموحد</p>
+                 
+                </div>
+                <div class="col">
+                  <div class="vl"></div>
+                  <div class="borderImg "><img src="../../assets/borderImg.svg" style="width:50% ;"></div>
+                </div>
+                
+            </div>
+                
+          
+        
+        <div class="logform">
+          <p class="p6" *ngIf="user">تسجيل الدخول</p>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>اسم المستخدم</mat-label>
+            <input matInput  name="username"  [(ngModel)]="form.username" placeholder="رقم الإثبات"  value="" >
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>كلمة المرور</mat-label>
+            <input matInput name="mdp"  [(ngModel)]="form.mdp" placeholder="كلمة المرور" value="">
+          </mat-form-field>
+
+          <p class="p7">نسيت بيانات المرور؟</p>
+        <div class=" user2" *ngIf="!user">
+          <p class=" p8">أدخل النص المبين في الصورة</p>
+          <div class=" cnt row">
+             <div class="cnt1 col">
+              <mat-form-field class="example-full-width">
+                <mat-label>أدخل النص المبين في الصورة</mat-label>
+                <input matInput  placeholder="كلمة المرور" name="captcha"  [(ngModel)]="form.captcha">
+              </mat-form-field>
+             </div>
+             <div class="  col">
+              <img class="cnt2 border" src="../../assets/captcha.svg" >
+            </div>
+          </div>
+        </div>
+        <button class="btn2" *ngIf="(!form.username || !form.mdp) &&( user)"><i class="fa fa-angle-left" style="padding-right: 5%;"></i>تسجيل الدخول</button>
+        <button class="btn2" *ngIf="(!form.username || !form.mdp || !form.captcha) &&( !user)"><i class="fa fa-angle-left" style="padding-right: 5%;"></i>تسجيل الدخول</button>
+        <button class="btn3" *ngIf="form.username && form.mdp && user"><i class="fa fa-angle-left" style="padding-right: 5%;"></i>تسجيل الدخول</button>
+        <button class="btn3" *ngIf="form.username && form.mdp && form.captcha && !user"><i class="fa fa-angle-left" style="padding-right: 5%;"></i>تسجيل الدخول</button>
+        
+         
+          
+        </div>
+        
+      </div>
+      <div class="col logImg">
+
+     
+    </div>
+    
+  </div>
+  
