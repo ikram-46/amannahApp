@@ -18,6 +18,11 @@ html, body {
   margin: 0px;
   background: #F5F5F5;
 }
+
+.mat-mdc-tab-header {
+  z-index: 0;
+}
+
 .mat-toolbar {
     font-family: 'Bahij TheSansArabic';
     background: linear-gradient(294.79deg, #033F2A 25.65%, #00975F 149.82%);
@@ -25,6 +30,11 @@ html, body {
 .mat-drawer-container, .mat-drawer-content {
   overflow:unset !important;
 }
+
+.mat-drawer-container {
+  background: #F5F5F5;
+}
+
 .mat-drawer-content {
   margin:  0 8px;
 }
@@ -49,7 +59,7 @@ html, body {
 
 .mat-mdc-menu-panel.mat-mdc-menu-panel{
   width: 220px;
-  background: #FFFFFF;
+  background: #F5F5F5;
   border: 1px solid #E6F0EC;
   border-radius: 36px;
   padding: 0px 16px;
@@ -97,6 +107,8 @@ html, body {
     background: linear-gradient(294.79deg, #033F2A 25.65%, #00975F 149.82%);
     padding: 10px;
     min-width: 150px;
+    height: 100vh;
+    z-index: 99;
   }
   
   .mat-sidenav-container .mat-sidenav label {
@@ -182,6 +194,10 @@ html, body {
     border-bottom: 2px solid #E6F0EC;
     padding-bottom: 2px;
     border-radius: unset;
+  }
+
+  .mat-drawer-backdrop.mat-drawer-shown {
+    height: 100vh;
   }
   
  
@@ -311,7 +327,7 @@ color: #FFFFFF;
 
 @media screen and (max-width: 980px) {
     .headerBottom {
-        padding: 16px;
+        padding: 4px 8px;
         flex-wrap: wrap;
     }
     .headerBottom .mat-divider {
@@ -368,10 +384,10 @@ color: #FFFFFF;
     }
 
     .headerContent {
-        margin-right: 2%;
+        margin-right: 0;
     }
     .headerContent-en {
-      margin-left: 2%;
+      margin-left: 0;
   }
     .headerContent h1 {
         font-family: 'Bahij TheSansArabic';

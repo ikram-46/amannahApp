@@ -1,0 +1,36 @@
+<div class="pageContent" dir="rtl">
+  <app-header></app-header>
+  <div class="tabs">
+    <mat-tab-group>
+      <mat-tab label="الرخص الإنشائية"></mat-tab>
+      <mat-tab label="الأنشطة التجارية "></mat-tab>
+      <mat-tab label="التجهيز"></mat-tab>
+      <mat-tab label="الإستثمار"></mat-tab>
+      <mat-tab label="الشهادة الصحية "></mat-tab>
+      <mat-tab label="بطاقة دلال"></mat-tab>
+      <mat-tab label="مواقع البيع والمباسطة"></mat-tab>
+    </mat-tab-group>
+    <div class="cards">
+      <app-card *ngFor="let card of cards" [cardDetails]="card"></app-card>
+    </div>
+  </div>
+
+  <div class="electronic-services">
+    <h1>الخدمات الإلكترونية</h1>
+    <div class="services">
+      <app-card
+        *ngFor="let service of services"
+        [cardDetails]="service"
+      ></app-card>
+    </div>
+  </div>
+
+  <div class="bottom-content">
+    <div class="find-service">
+      <app-find-service></app-find-service>
+    </div>
+    <div class="footer">
+      <app-sh-footer></app-sh-footer>
+    </div>
+  </div>
+</div>

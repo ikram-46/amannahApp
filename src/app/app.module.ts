@@ -18,7 +18,10 @@ import { EServiceComponent } from './e-service/e-service.component'
 import { LoginComponent } from './login/login.component';
 import { LoginEnComponent } from './login-en/login-en.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NavbarEnComponent } from './navbar-en/navbar-en.component'
+import { NavbarEnComponent } from './navbar-en/navbar-en.component';
+import { ElectronicServicesPortalComponent } from './electronic-services-portal/electronic-services-portal.component';
+import { FindServiceComponent } from './find-service/find-service.component';
+import { FindServiceEnComponent } from './find-service-en/find-service-en.component'
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { NavbarEnComponent } from './navbar-en/navbar-en.component'
     LoginEnComponent,
     NavbarComponent,
     NavbarEnComponent,
+    ElectronicServicesPortalComponent,
+    FindServiceComponent,
+    FindServiceEnComponent,
   ],
   imports: [
     SharedModule,

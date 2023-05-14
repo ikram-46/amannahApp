@@ -1,0 +1,82 @@
+.pageContent {
+  background: #f5f5f5;
+}
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 8% 8% 8% 0;
+}
+
+.tabs .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.electronic-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8% 8% 8%;
+}
+.electronic-services h1 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 86px;
+  color: #011f15;
+}
+
+.electronic-services .services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.bottom-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bottom-content .find-service {
+  position: absolute;
+  width: 95%;
+}
+
+.bottom-content .footer {
+  margin-top: 38%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    margin-top: 25%;
+    padding: 0;
+  }
+
+  .tabs .cards {
+    margin: auto;
+  }
+  .electronic-services .services,
+  .tabs .cards {
+    grid-template-columns: 1fr;
+  }
+  .bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bottom-content .find-service {
+    position: relative;
+    margin: auto;
+  }
+
+  .bottom-content .footer {
+    margin-top: 0;
+  }
+}
