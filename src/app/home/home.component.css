@@ -3,10 +3,9 @@
 }
 
 .homecards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .lastCard {
@@ -108,7 +107,12 @@
 .homeBottomContent .details button img {
     width: 18px;
 }
-
+@media (max-width: 768px) {
+    
+    .homecards  {
+      grid-template-columns: 1fr;
+    }
+  }
 @media screen and (max-width: 1023px) {
     .pageContainer {
         padding: 64px 0;
