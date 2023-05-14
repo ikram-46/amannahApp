@@ -5,6 +5,7 @@ import { CardEnComponent } from './card-en/card-en.component';
 import { HomeEnComponent } from './home-en/home-en.component';
 import { LoginComponent } from './login/login.component';
 import { LoginEnComponent } from './login-en/login-en.component';
+import { ContractEOComponent } from './contract-eo/contract-eo.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: 'cardEn', component: CardEnComponent },
       { path: 'login', component: LoginComponent },
       { path: 'loginEn', component: LoginEnComponent },
+      { path: 'contractEO', component: ContractEOComponent },
 ]
 @NgModule({
   imports: [ RouterModule.forRoot(routes)],

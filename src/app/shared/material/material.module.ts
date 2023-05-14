@@ -17,7 +17,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 
@@ -34,7 +34,9 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatTabsModule,
     MatButtonToggleModule,
-    MatInputModule
+    MatInputModule,
+    MatStepperModule,
+   
     
   ],
   exports: [
@@ -48,7 +50,8 @@ import {MatInputModule} from '@angular/material/input';
     MatCardModule,
     MatTabsModule,
     MatButtonToggleModule,
-    MatInputModule
+    MatInputModule,
+    MatStepperModule
   ],
   declarations: []
 })

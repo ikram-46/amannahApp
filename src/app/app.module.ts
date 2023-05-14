@@ -15,7 +15,9 @@ import { HeaderComponent } from './header/header.component';
 import { HeaderEnComponent } from './header-en/header-en.component';
 import { FooterEnComponent } from './footer-en/footer-en.component';
 import { LoginComponent } from './login/login.component';
-import { LoginEnComponent } from './login-en/login-en.component'
+import { LoginEnComponent } from './login-en/login-en.component';
+import { ContractEOComponent } from './contract-eo/contract-eo.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,16 @@ import { LoginEnComponent } from './login-en/login-en.component'
     FooterEnComponent,
     LoginComponent,
     LoginEnComponent,
+    ContractEOComponent,
+    
   ],
   imports: [
     SharedModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
