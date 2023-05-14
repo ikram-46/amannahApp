@@ -16,6 +16,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -32,7 +33,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatGridListModule,
     MatCardModule,
     MatTabsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatExpansionModule
   ],
   exports: [
     MatToolbarModule,
@@ -44,7 +46,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatGridListModule,
     MatCardModule,
     MatTabsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatExpansionModule
   ],
   declarations: []
 })

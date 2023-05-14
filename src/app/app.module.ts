@@ -13,7 +13,8 @@ import { CardEnComponent } from './card-en/card-en.component';
 import { HomeEnComponent } from './home-en/home-en.component';
 import { HeaderComponent } from './header/header.component';
 import { HeaderEnComponent } from './header-en/header-en.component';
-import { FooterEnComponent } from './footer-en/footer-en.component'
+import { FooterEnComponent } from './footer-en/footer-en.component';
+import { EServiceComponent } from './e-service/e-service.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FooterEnComponent } from './footer-en/footer-en.component'
     HeaderComponent,
     HeaderEnComponent,
     FooterEnComponent,
+    EServiceComponent,
   ],
   imports: [
     SharedModule,

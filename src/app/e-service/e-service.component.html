@@ -1,0 +1,134 @@
+<div class="pageContent" dir="rtl">
+  <div class="header">
+    <h1>خدمة إنشاء معاملة الكترونية</h1>
+    <nav class="d-flex">
+      <h6 class="mb-0" class="breadCrumb">
+        <a href="/e-service" class="text-reset">الخدمات الإلكترونية</a>
+        <span>></span>
+        <a href="" class="text-reset">الرخص والشهادات </a>
+        <span>></span>
+        <a href="" class="text-reset">خدمة إنشاء معاملة الكترونية</a>
+      </h6>
+    </nav>
+    <div class="actions">
+      <Button mat-fab extended routerLink="." class="add-fav">
+        إضافة للمفضلة
+        <mat-icon>bookmark_border</mat-icon>
+      </Button>
+      <Button mat-fab extended routerLink="." class="start-service">
+        بدء الخدمة
+        <i class="fa-solid fa-arrow-up-left"></i>
+      </Button>
+    </div>
+  </div>
+
+  <div class="eservice-details">
+    <div class="service-inforamtion">
+      <h1>معلومات عن الخدمة</h1>
+      <p>
+        يقوم المستفيد (شركة و فرد) بإنشاء معاملة إلكترونية بشكل فوري الى مركز
+        الصادر و الوارد في الأمانة و يتم تحويلها إلى الجهة المعنية
+      </p>
+    </div>
+    <div>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              اجرائات إستخدام الخدمة
+              <mat-icon *ngIf="!panelOpenState">add</mat-icon>
+              <mat-icon *ngIf="panelOpenState">remove</mat-icon>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              الإشتراطات
+              <mat-icon *ngIf="!panelOpenState">add</mat-icon>
+              <mat-icon *ngIf="panelOpenState">remove</mat-icon>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي
+            القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصف
+          </p>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              المرفقات
+              <mat-icon *ngIf="!panelOpenState">add</mat-icon>
+              <mat-icon *ngIf="panelOpenState">remove</mat-icon>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </div>
+
+  <div class="service-guide">
+    <h1>دليل الخدمة</h1>
+    <p>
+      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ
+      عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي
+      يقرأها.
+    </p>
+    <Button>تحميل<img src="../../assets/pdfIcon.svg" /></Button>
+  </div>
+
+  <div class="asked-questions">
+    <div class="title">
+      <h1>أسئلة شائعة عن الخدمة</h1>
+      <p>
+        يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في
+        مدينة الرياض الذي يوفر
+      </p>
+    </div>
+    <div class="questions">
+      <div class="question">
+        <div
+          class="question-text"
+          *ngFor="let question of questions"
+          (click)="toggleElement(question.id)"
+          [class.selected]="question.id === activeQuestion"
+        >
+          {{ question?.title }}
+        </div>
+      </div>
+      <div class="response">
+        <mat-divider [vertical]="true"></mat-divider>
+
+        <div class="steps" *ngFor="let question of questions">
+          <div class="step" *ngFor="let response of question.response">
+            <div *ngIf="activeQuestion === question.id" class="step" >
+              <div class="number">{{ response?.order }}</div>
+              <p>{{ response?.content }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="certificate-services">
+    <div class="title">خدمات الرخص والشهادات </div>
+    <mat-tab-group>
+      <mat-tab label="الرخص الإنشائية"></mat-tab>
+      <mat-tab label="الأنشطة التجارية "></mat-tab>
+      <mat-tab label="التجهيز"></mat-tab>
+      <mat-tab label="الإستثمار"></mat-tab>
+      <mat-tab label="الشهادة الصحية "></mat-tab>
+      <mat-tab label="بطاقة دلال"></mat-tab>
+      <mat-tab label="مواقع البيع والمباسطة"></mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
