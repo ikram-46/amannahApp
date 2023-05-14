@@ -1,0 +1,283 @@
+.cntr{
+    padding-top: 20px;min-height: 100vh;
+   
+  }
+.p1{
+    font-family: 'Bahij TheSansArabicExtraLight';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+text-align: right;
+text-decoration: none;
+width: 100%;
+
+/* Primary Dark/Primary Dark */
+
+color: #011F15;
+}
+.col1{
+    padding-right: 25% ;
+}
+.btn{
+    min-width: 139px;
+    width: max-content;
+    height: 54px;
+    border: 1px solid #056946;
+    border-radius: 100px;
+
+    font-family: 'Bahij TheSansArabic';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+/* Primary/Primary color */
+
+color: #056946;
+
+
+
+}
+
+h2{
+    font-family: 'Bahij TheSansArabic';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 39px;
+text-align: left;
+color: #011F15;
+margin-top: 10px;
+}
+h3{
+font-family: 'Bahij TheSansArabicLight';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+color: #2C302F;
+text-align: left;
+padding-top: 50px;
+
+}
+.par1{
+    font-family: 'Bahij TheSansArabicExtraLight';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 19px;
+text-align: left;
+width: 90%;
+margin-right: 10%;
+color: #66716D;
+margin-bottom: 40px;
+
+}
+.p5{
+font-family: 'Bahij TheSansArabicExtraLight';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+
+color: #2C302F;
+margin-left: -20%;
+margin-right: 10%;
+  
+    /*border-right: 1px solid #B4D2C7;*/
+    height: 50px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.vl {
+    border-right: 2px solid #B4D2C7;;
+    height: 30px;
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 10px;
+    
+    
+  }
+.bordercl{
+    width: 90%;
+    margin-right: 10%;
+  
+    border: 1px solid #B4D2C7;
+    border-radius: 10px;
+    min-height: 50px;
+    height: max-content;
+    
+    text-align: left;
+    display: flex;
+    align-items: center;
+    
+
+    
+}
+.borderImg{
+    height: 50px;
+   text-align: left;
+    
+}
+.p6{
+    font-family: 'Bahij TheSansArabic';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+text-align: right;
+
+/* Gray - Dark/G1 */
+
+color: #2C302F;
+}
+.logform{
+    margin-top: 36px;
+    text-align:right;
+}
+.p6{
+    font-family: 'Bahij TheSansArabicLight';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 25px;
+color: #2C302F;
+margin-top: 30px;
+border-top: 1px solid #D7DAD9;
+padding-top: 40px;
+text-align: left;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .p7{
+ font-family: 'Bahij TheSansArabic';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 24px;
+align-items: center;
+letter-spacing: 0.5px;
+color: #056946;
+text-align: right;
+  }
+  
+  .btn2{
+    background: #DDDDDD;
+    border-radius: 100px;
+    width: 154px;
+    height: 54px;
+    border: 1px solid #DDDDDD;
+    
+    font-family: 'Bahij TheSansArabic';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+align-items: center;
+letter-spacing: 0.1px;
+
+/* Gray - white/W1 */
+
+color: #B6B6B6;
+margin-top: 20px;
+margin-bottom: 20px;
+padding-right: 5%;
+
+ }
+  
+
+.logImg {
+    background: linear-gradient(180deg, #00975F 0%, rgba(0, 151, 95, 0) 100%, rgba(5, 105, 70, 0.13) 100%), url("../../assets/logImg.svg") no-repeat;
+    border-radius: 55px;
+    margin-right: 3%;
+    margin-left: -5%;
+    min-height: 95vh;
+}
+
+.btn3{
+    background: #056946;
+    border-radius: 100px;
+    width: 154px;
+    height: 54px;;
+    border: 1px solid #DDDDDD;
+    
+    font-family: 'Bahij TheSansArabic';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+
+align-items: center;
+letter-spacing: 0.1px;
+color: #E6F0EC;
+margin-top: 20px;
+margin-bottom: 20px;
+padding-right: 5%;
+
+ }
+ .p8{
+
+    font-family: 'Bahij TheSansArabicLight';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #011F15;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: left;
+ }
+ 
+ .user2{
+    text-align: left;
+ }
+ .cnt2{
+   
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    width: 40%;
+    height: 54px;
+     }
+     .cnt1{
+        margin-left: -40%;
+        margin-top: -10px;
+
+     }
+     input{
+        border: 1px solid #E8E8E8;
+    border-radius: 10px;
+    width: 100%;
+    height: 55px;
+    margin-top: -10px;
+    margin-bottom: 35px;
+     }
+     label{
+        width: 100%;
+        text-align: left;
+        margin-left: 40px;
+        position: relative;
+        color: #66716D;
+        letter-spacing: 0.4px;
+
+        font-family: 'Bahij TheSansArabicLight';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+
+     }

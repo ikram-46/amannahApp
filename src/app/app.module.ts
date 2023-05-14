@@ -15,6 +15,8 @@ import { HeaderComponent } from './header/header.component';
 import { HeaderEnComponent } from './header-en/header-en.component';
 import { FooterEnComponent } from './footer-en/footer-en.component';
 import { EServiceComponent } from './e-service/e-service.component'
+import { LoginComponent } from './login/login.component';
+import { LoginEnComponent } from './login-en/login-en.component'
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { EServiceComponent } from './e-service/e-service.component'
     HeaderEnComponent,
     FooterEnComponent,
     EServiceComponent,
+    LoginComponent,
+    LoginEnComponent,
   ],
   imports: [
     SharedModule,
