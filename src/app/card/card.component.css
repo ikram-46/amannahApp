@@ -22,15 +22,28 @@
     color: #0F0F0F;
 }
 
+
+.mdc-card__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mdc-card__actions h6 { 
+    font-family: 'Bahij TheSansArabicExtraLight';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 31px;
+    color: #414141;
+    margin: 0;
+}
 .mdc-card__actions button {
     background: transparent;
     border-radius: 100px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    height: 64px;
     border: none;
-    width: 268px;
     font-family: 'Bahij TheSansArabic';
     font-style: normal;
     font-weight: 500;

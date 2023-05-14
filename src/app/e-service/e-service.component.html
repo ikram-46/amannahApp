@@ -17,7 +17,7 @@
       </Button>
       <Button mat-fab extended routerLink="." class="start-service">
         بدء الخدمة
-        <i class="fa-solid fa-arrow-up-left"></i>
+        <img src="../../assets/arrow-up-left.svg"/>
       </Button>
     </div>
   </div>
@@ -108,7 +108,7 @@
 
         <div class="steps" *ngFor="let question of questions">
           <div class="step" *ngFor="let response of question.response">
-            <div *ngIf="activeQuestion === question.id" class="step" >
+            <div *ngIf="activeQuestion === question.id" class="step">
               <div class="number">{{ response?.order }}</div>
               <p>{{ response?.content }}</p>
             </div>
@@ -120,7 +120,7 @@
   </div>
 
   <div class="certificate-services">
-    <div class="title">خدمات الرخص والشهادات </div>
+    <div class="title">خدمات الرخص والشهادات</div>
     <mat-tab-group>
       <mat-tab label="الرخص الإنشائية"></mat-tab>
       <mat-tab label="الأنشطة التجارية "></mat-tab>
@@ -130,5 +130,52 @@
       <mat-tab label="بطاقة دلال"></mat-tab>
       <mat-tab label="مواقع البيع والمباسطة"></mat-tab>
     </mat-tab-group>
+    <div class="cards">
+      <app-card *ngFor="let card of cards" [cardDetails]="card"></app-card>
+    </div>
+  </div>
+
+  <div class="find-service">
+    <h1>هل وجدت خدمتك</h1>
+    <div class="questions">
+      <div class="question">
+        <div class="title">
+          1-
+          <br />
+          تحديد ألهوية
+        </div>
+        <div class="response">
+          يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في
+          مدينة الرياض الذي يوفر
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="title">
+          2-
+          <br />
+          إختيار نوع الخدمة
+        </div>
+        <div class="response">
+          يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في
+          مدينة الرياض الذي يوفر
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="title">
+          3-
+          <br />
+          إختيار الخدمة
+        </div>
+        <div class="response">
+          يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في
+          مدينة الرياض الذي يوفر
+        </div>
+      </div>
+    </div>
+    <div class="action">
+      <button>الدعم والمساعدة<img src="../../assets/arrow-up-left.svg"/></button>
+    </div>
   </div>
 </div>
