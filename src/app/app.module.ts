@@ -22,6 +22,8 @@ import { NavbarEnComponent } from './navbar-en/navbar-en.component';
 import { ElectronicServicesPortalComponent } from './electronic-services-portal/electronic-services-portal.component';
 import { FindServiceComponent } from './find-service/find-service.component';
 import { FindServiceEnComponent } from './find-service-en/find-service-en.component'
+import { ContractEOComponent } from './contract-eo/contract-eo.component'
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,13 +44,16 @@ import { FindServiceEnComponent } from './find-service-en/find-service-en.compon
     ElectronicServicesPortalComponent,
     FindServiceComponent,
     FindServiceEnComponent,
+    ContractEOComponent,
+    
   ],
   imports: [
     SharedModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

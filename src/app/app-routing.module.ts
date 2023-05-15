@@ -7,6 +7,7 @@ import { EServiceComponent } from './e-service/e-service.component'
 import { LoginComponent } from './login/login.component';
 import { LoginEnComponent } from './login-en/login-en.component';
 import { ElectronicServicesPortalComponent } from './electronic-services-portal/electronic-services-portal.component';
+import { ContractEOComponent } from './contract-eo/contract-eo.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'loginEn', component: LoginEnComponent },
       { path: 'electronic-service-portal', component: ElectronicServicesPortalComponent },
+      { path: 'contractEO', component: ContractEOComponent },
 ]
 @NgModule({
   imports: [ RouterModule.forRoot(routes)],
