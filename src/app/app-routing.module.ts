@@ -14,12 +14,12 @@ const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'e-service', component: EServiceComponent },
-      { path: 'homeEn', component: HomeEnComponent },
+      { path: 'home-en', component: HomeEnComponent },
       { path: 'cardEn', component: CardEnComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'loginEn', component: LoginEnComponent },
+      { path: 'login-en', component: LoginEnComponent },
       { path: 'electronic-service-portal', component: ElectronicServicesPortalComponent },
-      { path: 'contractEO', component: ContractEOComponent },
+      { path: 'contract-eo', component: ContractEOComponent },
 ]
 @NgModule({
   imports: [ RouterModule.forRoot(routes)],

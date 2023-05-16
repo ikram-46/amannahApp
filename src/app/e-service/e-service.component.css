@@ -84,8 +84,9 @@ span {
   }
 
   .header .breadCrumb {
-    gap: 3px;
-    margin-right: 30px;
+    /* gap: 3px;
+    margin-right: 30px; */
+    display: block;
   }
 }
 /***** end style bloc e-service header  *****/
@@ -178,7 +179,6 @@ span {
   color: #66716d;
 }
 
-
 @media (max-width: 768px) {
   .eservice-details {
     margin-top: 20%;
@@ -196,7 +196,7 @@ span {
   .mat-accordion {
     max-width: 300px;
   }
-  .mat-accordion .mat-expansion-panel .mat-expansion-panel-header-title{
+  .mat-accordion .mat-expansion-panel .mat-expansion-panel-header-title {
     font-size: 14px;
   }
 }
@@ -272,6 +272,7 @@ span {
   background: #ffffff;
   border-radius: 43px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -408,6 +409,7 @@ span {
   justify-content: center;
   flex-direction: column;
   gap: 30px;
+  margin-bottom: 8%;
 }
 
 .certificate-services .title {
@@ -427,78 +429,62 @@ span {
 }
 
 @media (max-width: 768px) {
+  .certificate-services {
+    gap: 15px;
+  }
+  .certificate-services .title {
+    font-size: 20px;
+    line-height: 86px;
+  }
   .certificate-services .cards {
     grid-template-columns: 1fr;
+  }
+
+  .asked-questions .title h1 {
+    font-size: 23px;
+    text-align: right;
+    line-height: 38px;
+  }
+  .asked-questions .title p {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+  }
+  .asked-questions .questions {
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .asked-questions .questions .question .question-text {
+    max-width: 276px;
+    height: 64px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .asked-questions .questions .response {
+    flex: 100%;
+    width: auto;
+    min-height: 302px;
+  }
+
+  .asked-questions .questions .response .step {
+    gap: 5px;
+  }
+  .asked-questions .questions .response .steps {
+    right: 22px;
+    gap: 10%;
+  }
+  .asked-questions .questions .response .step .number {
+    font-size: 11px;
+    line-height: 17px;
+    width: 19px;
+    height: 19px;
+  }
+  .asked-questions .questions .response .step p {
+    font-size: 13px;
+    line-height: 20px;
+    max-width: 220px;
   }
 }
 /***** end style bloc certificate-services  *****/
 
-/***** start style bloc find-service  *****/
-.find-service {
-  margin-top: 8%;
-  padding: 4%;
-  background: #ffffff;
-  border-radius: 43px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-.find-service h1 {
-  font-family: "Bahij TheSansArabic";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 65px;
-  text-align: right;
-  color: #011f15;
-}
-.find-service .questions {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.find-service .questions .question {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 253px;
-}
-
-.find-service .questions .question .title {
-  line-height: 38px;
-  font-family: "Bahij TheSansArabicExtraLight";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  color: #022a1c;
-}
-.find-service .questions .response {
-  font-family: "Bahij TheSansArabicExtraLight";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 25px;
-  color: #66716d;
-}
-
-.find-service .action button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 284px;
-  height: 79px;
-  background: #011f15;
-  border-radius: 100px;
-  font-family: "Bahij TheSansArabicExtraLight";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 31px;
-  color: #e6f0ec;
-}
-/***** end style bloc find-service  *****/

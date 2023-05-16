@@ -1,1 +1,124 @@
-<p>navbar works!</p>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div class="topHeader">
+  <mat-button-toggle-group
+    name="fontStyle"
+    aria-label="Font Style"
+    [(ngModel)]="defaultLanguage"
+  >
+    <mat-button-toggle value="en" routerLink="/home-en"
+      >English</mat-button-toggle
+    >
+    <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="socialIcons">
+    <p>تفضلوا بالانضمام إلينا</p>
+    <i class="fa fa-youtube-play"></i>
+    <i class="fa fa-twitter"></i>
+  </div>
+</div>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over">
+    <!-- <label>My Application</label> -->
+    <img src="../../assets/شعار الأمانه افقي.svg" />
+    <hr />
+    <nav>
+      <a routerLink="home" (click)="clickHandler()" routerLinkActive="active"
+        >الرئيسية</a
+      >
+      <a
+        routerLink="/e-service"
+        (click)="clickHandler()"
+        routerLinkActive="active"
+        >الخدمات الالكترونية</a
+      >
+      <a
+        routerLink="/electronic-service-portal"
+        (click)="clickHandler()"
+        routerLinkActive="active"
+      >
+        الخدمات</a
+      >
+      <a routerLink="/contract-eo" (click)="clickHandler()" routerLinkActive="active"
+        >الدعم والمساعدة</a
+      >
+    </nav>
+    <hr />
+    <div
+      aria-label="user selection"
+      [matMenuTriggerFor]="menu"
+      class="userMenuMobile"
+    >
+      <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
+      <span>
+        اسم المستخدم
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </span>
+    </div>
+    <hr />
+    <mat-button-toggle-group
+      name="fontStyle"
+      aria-label="Font Style"
+      [(ngModel)]="defaultLanguage"
+    >
+      <mat-button-toggle value="en" routerLink="/home-en"
+        >English</mat-button-toggle
+      >
+      <mat-button-toggle value="ar" routerLink="/home"
+        >العربية</mat-button-toggle
+      >
+    </mat-button-toggle-group>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <header>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        <!-- label>My Application</label> -->
+        <img src="../../assets/شعار الأمانه افقي.svg" />
+
+        <nav>
+          <a routerLink="home" routerLinkActive="active">الرئيسية</a>
+          <a routerLink="/e-service" routerLinkActive="active"
+            >الخدمات الالكترونية</a
+          >
+          <a routerLink="/electronic-service-portal" routerLinkActive="active">
+            الخدمات
+          </a>
+          <a routerLink="/contract-eo" routerLinkActive="active">الدعم والمساعدة</a>
+        </nav>
+        <div
+          aria-label="user selection"
+          [matMenuTriggerFor]="menu"
+          class="userMenu"
+        >
+          <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
+          <span>
+            اسم المستخدم
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </span>
+        </div>
+
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/login">
+            تبديل الحساب <mat-icon>shuffle</mat-icon>
+          </button>
+          <span style="color: #056946">الأعمال والجهات الحكومية</span>
+          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          <button mat-menu-item routerLink="/login">
+            <mat-icon>person_add</mat-icon> حساب جديد
+          </button>
+          <span> التوظيف وتدريب التعاوني</span>
+          <br />
+          <span>موظف</span>
+          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          <button mat-menu-item>
+            <img src="./assets/logoutIcon.svg" />Log out
+          </button>
+        </mat-menu>
+      </header>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
