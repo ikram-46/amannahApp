@@ -19,6 +19,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatInputModule} from '@angular/material/input';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -38,6 +40,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatExpansionModule,
     MatInputModule,
     MatStepperModule,
+    MatSelectModule,
    
     
   ],
@@ -54,7 +57,8 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatButtonToggleModule,
     MatExpansionModule,
     MatInputModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSelectModule,
   ],
   declarations: []
 })
