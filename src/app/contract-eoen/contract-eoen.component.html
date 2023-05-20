@@ -1,0 +1,209 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<div dir="ltr">
+  <app-navbar-en></app-navbar-en>
+  <div class="grid-container cnt" *ngIf="!step">
+    <div class="container cnt2">
+        <p class="p1">Service Step </p>
+        <p class="p3">
+          To complete this service, you must fill out all the forms. You can proceed to the next step only after you have filled out all the forms in the current step.
+        </p>
+        <div class="stepper">
+          <p class="p4">
+              <i class="fa fa-check-circle"></i>Car sticker licenses
+          </p>
+          <p class="p4"><i class="fa fa-check-circle"></i>Car sticker licenses</p>
+          <h1 class="p5">
+            <p class="center">3</p>
+              Car sticker licenses
+            
+          </h1>
+        </div>
+      </div>
+    <div class="container cnt1">
+      <p class="p2">Contracting with an engineering office</p>
+      <div class="row">
+        <div class="col">
+          <label class="lb">User Name</label>
+          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
+
+          <label class="lb">User Name</label>
+          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
+
+          <label class="lb">User Name</label>
+          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <div class="col">
+          <label class="lb">User Name</label>
+          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
+
+          <label class="lb">User Name</label>
+          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
+
+          <label class="lb">User Name</label>
+          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
+        </div>
+      </div>
+      <div class="row" style="margin-left: 60%;">
+        
+        <button class="btn1" style="margin-right:0px">Previous</button>
+        <button class="btn" (click)="Next()">
+            Next<i class="fa fa-angle-right" style="padding-left: 10px"></i> 
+          </button>
+      </div>
+    </div>
+    
+  </div>
+  <div class="grid-container cnt" *ngIf="step">
+    <div class="container cnt2">
+        <p class="p6">Service Step </p>
+        <p class="p3">
+          To complete this service, you must fill out all the forms. You can proceed to the next step only after you have filled out all the forms in the current step.
+        </p>
+        <div class="stepper">
+          <p class="p4">
+              <i class="fa fa-check-circle"></i>Car sticker licenses
+          </p>
+          <p class="p4"><i class="fa fa-check-circle"></i>Car sticker licenses</p>
+          <p class="p4">
+             <i class="fa fa-check-circle"></i>Car sticker licenses
+          </p>
+        </div>
+      </div>
+    <div class="container cnt1">
+      <div class="top">
+        <h1>Contracting with an engineering office</h1>
+        <p class="p7 border-bottom">Data details</p>
+      </div>
+      <div class="div2">
+        <h2 class="p8 row">
+            <div class="cercle">1</div>
+            Car sticker licenses
+          
+        </h2>
+        <div class="row">
+            <div class="col col1">
+                <p class="p9">Beneficiary name</p>
+                <p class="p10">12524</p>
+    
+                <p class="p9">Commercial Registration No</p>
+                <p class="p10">Car sticker licenses</p>
+              </div>
+          <div class="col">
+            <p class="p9">applicant status</p>
+            <p class="p10">Car sticker licenses</p>
+          </div>
+          
+        </div>
+        <div class="btnrow">
+          <button class="btn2">
+            <i class="fa fa-pencil" style="padding-right: 10px"></i>Edit Form
+          </button>
+        </div>
+        <hr />
+      </div>
+
+      <div class="div2">
+        <h2 class="p8 row">
+            <div class="cercle">2</div>
+            Car sticker licenses
+          
+        </h2>
+        <div class="row">
+          
+          <div class="col col1">
+            <p class="p9">Beneficiary name</p>
+            <p class="p10">12524</p>
+
+            <p class="p9">Commercial Registration No</p>
+            <p class="p10">Car sticker licenses</p>
+          </div>
+          <div class="col">
+            <p class="p9">applicant status</p>
+            <p class="p10">Car sticker licenses</p>
+          </div>
+        </div>
+        <div class="btnrow">
+          <button class="btn2">
+            <i class="fa fa-pencil" style="padding-right: 10px"></i>Edit Form
+          </button>
+        </div>
+        <hr />
+      </div>
+
+
+      <div class="div2">
+        <h2 class="p8 row">
+            <div class="cercle">3</div>
+            Car sticker licenses
+          
+        </h2>
+        <div class="row">
+         
+          <div class="col col1">
+            <p class="p9">Beneficiary name</p>
+            <p class="p10">12524</p>
+
+            <p class="p9">Commercial Registration No</p>
+            <p class="p10">Car sticker licenses</p>
+          </div>
+          <div class="col">
+            <p class="p9">applicant status</p>
+            <p class="p10">Car sticker licenses</p>
+          </div>
+        </div>
+        <div class="btnrow">
+          <button class="btn2">
+            <i class="fa fa-pencil" style="padding-right: 10px"></i>Edit Form
+          </button>
+        </div>
+        <hr />
+      </div>
+
+      <div class="div2">
+        <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-left: 70%;">
+            Send<i class="fa fa-angle-right" style="padding-left: 10px"></i>
+         
+        </button>
+      </div>
+    </div>
+
+  
+  </div>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header border-bottom-0">
+          <button class="clbtn" type="button" data-bs-dismiss="modal">
+            <i class="fa fa-times-circle"></i>
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="img">
+            <img src="../../assets/modalImg.svg" />
+          </div>
+          <h1 class="p11">Your request has been submitted successfully.</h1>
+          <p class="p12">
+            There is a proven fact from a long time ago that the readable content of a page will not distract the reader from focusing on the external appearance of the text or the form of paragraphs placed on the page that he reads.
+          </p>
+          <button class="btn3">
+            <i class="fa fa-mouse-pointer" style="padding-right: 10px"></i
+            >My requests
+          </button>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer border-top-0"></div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer-en></app-footer-en>
+</div>
