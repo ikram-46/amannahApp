@@ -1,0 +1,84 @@
+.find-service {
+    padding: 4%;
+    background: #ffffff;
+    border-radius: 43px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+  
+  .find-service h1 {
+    font-family: "Bahij TheSansArabic";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 65px;
+    text-align: right;
+    color: #011f15;
+  }
+  .find-service .questions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .find-service .questions .question {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 253px;
+  }
+  
+  .find-service .questions .question .title {
+    line-height: 38px;
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #022a1c;
+  }
+  .find-service .questions .response {
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #66716d;
+  }
+  
+  .find-service .action button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 284px;
+    height: 79px;
+    background: #011f15;
+    border-radius: 100px;
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 31px;
+    color: #e6f0ec;
+  }
+  
+  @media (max-width: 768px) {
+    .find-service {
+      gap: 30px;
+    }
+  
+    .find-service h1 {
+      font-size: 26px;
+      line-height: 43px;
+      text-align: right;
+      margin: 0;
+      align-self: start;
+    }
+    .find-service .questions {
+      grid-template-columns: 1fr;
+    }
+  }
+  

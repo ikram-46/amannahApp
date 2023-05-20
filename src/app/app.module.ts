@@ -24,6 +24,7 @@ import { FindServiceComponent } from './find-service/find-service.component';
 import { FindServiceEnComponent } from './find-service-en/find-service-en.component'
 import { ContractEOComponent } from './contract-eo/contract-eo.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { EServiceEnComponent } from './eservice-en/eservice-en.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FindServiceComponent,
     FindServiceEnComponent,
     ContractEOComponent,
+    EServiceEnComponent,
     
   ],
   imports: [

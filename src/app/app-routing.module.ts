@@ -8,12 +8,14 @@ import { LoginComponent } from './login/login.component';
 import { LoginEnComponent } from './login-en/login-en.component';
 import { ElectronicServicesPortalComponent } from './electronic-services-portal/electronic-services-portal.component';
 import { ContractEOComponent } from './contract-eo/contract-eo.component';
+import { EServiceEnComponent } from './eservice-en/eservice-en.component';
 
 
 const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'e-service', component: EServiceComponent },
+      { path: 'e-serviceEn', component: EServiceEnComponent },
       { path: 'home-en', component: HomeEnComponent },
       { path: 'cardEn', component: CardEnComponent },
       { path: 'login', component: LoginComponent },
