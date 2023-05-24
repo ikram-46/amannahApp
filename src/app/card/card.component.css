@@ -52,7 +52,6 @@
   margin: 0;
 }
 .mdc-card__actions button {
-  justify-self: flex-start;
   background: transparent;
   border-radius: 100px;
   display: flex;

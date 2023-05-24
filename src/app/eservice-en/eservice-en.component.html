@@ -1,0 +1,145 @@
+<div class="pageContent" dir="rtl">
+    <app-navbar-en></app-navbar-en>
+    <div class="header">
+      <h1>Electronic Services Portal</h1>
+      <nav class="">
+        <h6 class="mb-0" class="breadCrumb">
+          <a href="" class="text-reset">Electronic transaction creation service</a>
+         
+          <span><</span>
+          <a href="" class="text-reset">Licenses and certificates </a>
+          <span><</span>
+          <a href="/e-serviceEn" class="text-reset">electronic services</a>
+        </h6>
+      </nav>
+      <div class="actions">
+        <Button mat-fab extended routerLink="." class="start-service">
+          <img src="../../assets/arrow-up-left.svg"/>
+          Start Service
+          
+        </Button>
+        <Button mat-fab extended routerLink="." class="add-fav">
+          <mat-icon>bookmark_border</mat-icon>
+          Add To Favorite
+         
+        </Button>
+        
+      </div>
+    </div>
+  
+    <div class="eservice-details">
+      
+      <div>
+        <mat-accordion>
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon *ngIf="!panelOpenState">add</mat-icon>
+                <mat-icon *ngIf="panelOpenState">remove</mat-icon>
+                Procedures for using the service
+                
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>This is the primary content of the panel.</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel
+            (opened)="panelOpenState = true"
+            (closed)="panelOpenState = false"
+            hideToggle
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon *ngIf="!panelOpenState">add</mat-icon>
+                <mat-icon *ngIf="panelOpenState">remove</mat-icon>
+                stipulations
+               
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>
+              There is a proven fact from a long time ago that the readable content of a page will not distract the reader from focusing on the external appearance of the text or the form of paragraphs placed in the row
+            </p>
+          </mat-expansion-panel>
+  
+          <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon *ngIf="!panelOpenState">add</mat-icon>
+                <mat-icon *ngIf="panelOpenState">remove</mat-icon>
+                attachments
+                
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>This is the primary content of the panel.</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+      <div class="service-inforamtion">
+        <h1>Service Informations</h1>
+        <p>
+          The beneficiary (company and individual) creates an electronic transaction immediately to the outgoing and incoming center in the secretariat, and it is transferred to the concerned party
+
+        </p>
+      </div>
+    </div>
+  
+    <div class="service-guide">
+      <h1>Service guide</h1>
+      <p>
+        There is a proven fact from a long time ago that the readable content of a page will not distract the reader from focusing on the external appearance of the text or the form of paragraphs placed on the page that he reads.
+      </p>
+      <Button>Download<img src="../../assets/pdfIcon.svg" /></Button>
+    </div>
+  
+    <div class="asked-questions">
+      <div class="title">
+        <h1>asked questions about the service</h1>
+        <p>
+          The electronic services system provides all the services needed by citizens in the city of Riyadh
+        </p>
+      </div>
+      <div class="questions">
+        
+        <div class="response">
+          <mat-divider [vertical]="true"></mat-divider>
+  
+          <div class="steps" *ngFor="let question of questions">
+            <div class="step" *ngFor="let response of question.response">
+              <div *ngIf="activeQuestion === question.id" class="step">
+                <div class="number">{{ response?.order }}</div>
+                <p>{{ response?.content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="question">
+          <div
+            class="question-text"
+            *ngFor="let question of questions"
+            (click)="toggleElement(question.id)"
+            [class.selected]="question.id === activeQuestion"
+          >
+            {{ question?.title }}
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  
+    <div class="certificate-services" >
+      <div class="title">License and certificate services</div>
+      <mat-tab-group >
+        <mat-tab label="Sales and convenience sites"></mat-tab>
+        <mat-tab label="investment"></mat-tab>
+        <mat-tab label="processing"></mat-tab>
+        <mat-tab label="commercial activities"></mat-tab>
+        <mat-tab label="Construction licenses"></mat-tab>
+       
+      </mat-tab-group>
+      <div class="cards">
+        <app-card *ngFor="let card of cards" [cardDetails]="card"></app-card>
+      </div>
+    </div>
+  
+    <app-find-service-en></app-find-service-en>
+  </div>
+  <app-footer-en></app-footer-en>
