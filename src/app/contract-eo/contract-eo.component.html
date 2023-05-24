@@ -3,162 +3,159 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<div dir="ltr">
+<div dir="rtl" style="background: #f5f5f5;">
   <app-navbar></app-navbar>
-  <div class="grid-container cnt" *ngIf="!step">
-    <div class="container cnt1">
-      <p class="p2">التعاقد مع مكتب هندسي</p>
-      <div class="row">
-        <div class="col">
-          <label class="lb">اللقب</label>
-          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
 
-          <label class="lb">اللقب</label>
-          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
-
-          <label class="lb">اللقب</label>
-          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
-        </div>
-        <div class="col">
-          <label class="lb">اللقب</label>
-          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
-
-          <label class="lb">اللقب</label>
-          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
-
-          <label class="lb">اللقب</label>
-          <input class="ipt" type="text" name="name" [(ngModel)]="name" />
-        </div>
-      </div>
-      <div class="row">
-        <button class="btn" (click)="Next()">
-          <i class="fa fa-angle-left" style="padding-right: 10px"></i>التالي
-        </button>
-        <button class="btn1">السابق</button>
-      </div>
-    </div>
-    <div class="container cnt2">
-      <p class="p1">مراحل الخدمة</p>
-      <p class="p3">
+  <div class="stepper-form">
+    <div class="stepper">
+      <div class="title">خدمة إنشاء معاملة الكترونية</div>
+      <h1>مراحل الخدمة</h1>
+      <p>
         لإتمام هذه الخدمة، يجب ملء جميع النماذج. يمكنك المتابعة للخطوة التالية
         فقط بعد ملء جميع النماذج في الخطوة الحالية
       </p>
-      <div class="stepper">
-        <p class="p4">
-          تراخيص ملصقات السيارات<i class="fa fa-check-circle"></i>
-        </p>
-        <p class="p4">بيانات السيارات<i class="fa fa-check-circle"></i></p>
-        <h1 class="p5">
+      <div class="steps">
+        <div class="step">
+          <i class="fa fa-check-circle"></i>
           تراخيص ملصقات السيارات
-          <p class="center">3</p>
-        </h1>
+        </div>
+        <div class="step">
+          <i class="fa fa-check-circle"></i>بيانات السيارات
+        </div>
+        <div class="last-step">
+          <div class="step-number">3</div>
+          تراخيص ملصقات السيارات
+        </div>
       </div>
     </div>
-  </div>
-  <div class="grid-container cnt" *ngIf="step">
-    <div class="container cnt1">
-      <div class="top">
-        <h1>التعاقد مع مكتب هندسي</h1>
-        <p class="p7 border-bottom">تفاصيل البيانات</p>
+    <div class="form" *ngIf="!step">
+      <h1>التعاقد مع مكتب هندسي</h1>
+      <div class="fields">
+        <div class="field">
+          <label>اللقب</label>
+          <input type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <div class="field">
+          <label>اللقب</label>
+          <input type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <div class="field">
+          <label>اللقب</label>
+          <input type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <div class="field">
+          <label>اللقب</label>
+          <input type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <div class="field">
+          <label>اللقب</label>
+          <input type="text" name="name" [(ngModel)]="name" />
+        </div>
+        <div class="field">
+          <label>اللقب</label>
+          <input type="text" name="name" [(ngModel)]="name" />
+        </div>
       </div>
-      <div class="div2">
-        <h2 class="p8 row">
-          تراخيص ملصقات السيارات
-          <div class="cercle">1</div>
-        </h2>
-        <div class="row">
-          <div class="col">
-            <p class="p9">صفة مقدم الطلب</p>
-            <p class="p10">تراخيص ملصقات السيارات</p>
-          </div>
-          <div class="col col1">
-            <p class="p9">اسم املستفيد</p>
-            <p class="p10">12524</p>
-
-            <p class="p9">رقم السجل التجاري</p>
-            <p class="p10">تراخيص ملصقات السيارات</p>
-          </div>
-        </div>
-        <div class="btnrow">
-          <button class="btn2">
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>تعديل
-            البيانات
-          </button>
-        </div>
-        <hr />
-      </div>
-
-      <div class="div2">
-        <h2 class="p8 row">
-          بيانات السيارات
-          <div class="cercle">2</div>
-        </h2>
-        <div class="row">
-          <div class="col">
-            <p class="p9">صفة مقدم الطلب</p>
-            <p class="p10">تراخيص ملصقات السيارات</p>
-          </div>
-          <div class="col col1">
-            <p class="p9">اسم املستفيد</p>
-            <p class="p10">12524</p>
-
-            <p class="p9">رقم السجل التجاري</p>
-            <p class="p10">تراخيص ملصقات السيارات</p>
-          </div>
-        </div>
-        <div class="btnrow">
-          <button class="btn2">
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>تعديل
-            البيانات
-          </button>
-        </div>
-        <hr />
-      </div>
-
-      <div class="div2">
-        <h2 class="p8 row">
-          تراخيص ملصقات السيارات
-          <div class="cercle">3</div>
-        </h2>
-        <div class="row">
-          <div class="col">
-            <p class="p9">صفة مقدم الطلب</p>
-            <p class="p10">تراخيص ملصقات السيارات</p>
-          </div>
-          <div class="col col1">
-            <p class="p9">اسم املستفيد</p>
-            <p class="p10">12524</p>
-
-            <p class="p9">رقم السجل التجاري</p>
-            <p class="p10">تراخيص ملصقات السيارات</p>
-          </div>
-        </div>
-        <div class="btnrow">
-          <button class="btn2">
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>تعديل
-            البيانات
-          </button>
-        </div>
-        <hr />
-      </div>
-      <div class="div2">
-        <button class="btn" data-bs-toggle="modal" data-bs-target="#myModal">
+      <div class="actions">
+        <button class="back">السابق</button>
+        <button class="next" (click)="Next()">
+          التالي
           <i class="fa fa-angle-left" style="padding-right: 10px"></i>
-          إرسال
         </button>
       </div>
     </div>
-
-    <div class="container cnt2">
-      <p class="p6">مراحل الخدمة</p>
-      <div class="stepper">
-        <p class="p4">
-          تراخيص ملصقات السيارات<i class="fa fa-check-circle"></i>
-        </p>
-        <p class="p4">بيانات السيارات<i class="fa fa-check-circle"></i></p>
-        <p class="p4">
-          تراخيص ملصقات السيارات <i class="fa fa-check-circle"></i>
-        </p>
+    <div class="details" *ngIf="step">
+      <div class="title">
+        <h1>التعاقد مع مكتب هندسي</h1>
+        <p>تفاصيل البيانات</p>
+      </div>
+      <hr />
+      <div class="step">
+        <div class="step-title">
+          <div class="number">1</div>
+          تراخيص ملصقات السيارات
+        </div>
+        <div class="step-details">
+          <div class="field">
+            <label>اسم املستفيد</label>
+            <p>12524</p>
+          </div>
+          <div class="field">
+            <label>صفة مقدم الطلب</label>
+            <p>تراخيص ملصقات السيارات</p>
+          </div>
+          <div class="field">
+            <label>رقم السجل التجاري</label>
+            <p>تراخيص ملصقات السيارات</p>
+          </div>
+        </div>
+        <div class="step-action">
+          <button>
+            تعديل البيانات
+            <i class="fa fa-pencil" style="padding-right: 10px"></i>
+          </button>
+        </div>
+      </div>
+      <hr />
+      <div class="step">
+        <div class="step-title">
+          <div class="number">1</div>
+          تراخيص ملصقات السيارات
+        </div>
+        <div class="step-details">
+          <div class="field">
+            <label>اسم املستفيد</label>
+            <p>12524</p>
+          </div>
+          <div class="field">
+            <label>صفة مقدم الطلب</label>
+            <p>تراخيص ملصقات السيارات</p>
+          </div>
+          <div class="field">
+            <label>رقم السجل التجاري</label>
+            <p>تراخيص ملصقات السيارات</p>
+          </div>
+        </div>
+        <div class="step-action">
+          <button>
+            تعديل البيانات
+            <i class="fa fa-pencil" style="padding-right: 10px"></i>
+          </button>
+        </div>
+      </div>
+      <hr />
+      <div class="step">
+        <div class="step-title">
+          <div class="number">1</div>
+          تراخيص ملصقات السيارات
+        </div>
+        <div class="step-details">
+          <div class="field">
+            <label>اسم املستفيد</label>
+            <p>12524</p>
+          </div>
+          <div class="field">
+            <label>صفة مقدم الطلب</label>
+            <p>تراخيص ملصقات السيارات</p>
+          </div>
+          <div class="field">
+            <label>رقم السجل التجاري</label>
+            <p>تراخيص ملصقات السيارات</p>
+          </div>
+        </div>
+        <div class="step-action">
+          <button>
+            تعديل البيانات
+            <i class="fa fa-pencil" style="padding-right: 10px"></i>
+          </button>
+        </div>
+      </div>
+      <hr />
+      <div class="action">
+        <button data-bs-toggle="modal" data-bs-target="#myModal">
+          إرسال
+          <i class="fa fa-angle-left" style="padding-right: 10px"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -167,10 +164,10 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <!-- Modal Header -->
-        <div class="modal-header border-bottom-0">
-          <button class="clbtn" type="button" data-bs-dismiss="modal">
+        <div class="exit-btn">
+          <div data-bs-dismiss="modal">
             <i class="fa fa-times-circle"></i>
-          </button>
+          </div>
         </div>
 
         <!-- Modal body -->
@@ -178,15 +175,15 @@
           <div class="img">
             <img src="../../assets/modalImg.svg" />
           </div>
-          <h1 class="p11">تم إرسال الطلب بنجاح</h1>
-          <p class="p12">
+          <h1 class="title">تم إرسال الطلب بنجاح</h1>
+          <p class="desc">
             هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي
             القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في
             الصفحة التي يقرأها.
           </p>
-          <button class="btn3">
-            <i class="fa fa-mouse-pointer" style="padding-right: 10px"></i
-            >طلباتي
+          <button class="action">
+            طلباتي
+            <i class="fa fa-mouse-pointer" style="padding-right: 10px"></i>
           </button>
         </div>
 

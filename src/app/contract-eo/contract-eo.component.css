@@ -1,4 +1,518 @@
-.cnt{
+.stepper-form {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+  gap: 30px;
+}
+
+.stepper-form .stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 326px;
+  padding: 32px 16px;
+  background: #ffffff;
+  border-radius: 31px;
+}
+
+.stepper-form .stepper .title {
+  display: none;
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  color: #033f2a;
+}
+
+.stepper-form .stepper h1 {
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #0b0b0b;
+  margin: 0;
+}
+
+.stepper-form .stepper p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+  color: #66716d;
+  margin: 0;
+}
+
+.stepper-form .stepper .steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stepper-form .stepper .steps .step {
+  display: flex;
+  gap: 10px;
+}
+.stepper-form .stepper .steps .step,
+.last-step {
+  display: flex;
+  gap: 10px;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #056946;
+  align-items: center;
+}
+
+.stepper-form .stepper .steps .step .fa-check-circle {
+  text-align: center;
+  font-style: normal;
+  color: #056946;
+  font-weight: 400;
+  font-size: 29px;
+}
+.last-step {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: right;
+  color: #66716d;
+}
+.last-step .step-number {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px dashed #66716d;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.1px;
+  color: #66716d;
+}
+
+/******* Start style stepper form ******/
+.stepper-form .form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #ffffff;
+  border-radius: 43px;
+  padding: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+.stepper-form .form h1 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 33px;
+  color: #011f15;
+}
+
+.stepper-form .form .fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.stepper-form .form .fields .field {
+  position: relative;
+}
+
+.stepper-form .form .fields .field label {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.4px;
+  color: #C0C6C3;
+  position: absolute;
+  top: -10px;
+  right: 12px;
+}
+.stepper-form .form .fields .field input {
+  border: 1px solid #b8bcba;
+  border-radius: 10px;
+  height: 56px;
+  width: 100%;
+  padding-right: 5px;
+}
+
+.stepper-form .form .fields .field input::placeholder {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  color: #d7dad9;
+}
+
+.stepper-form .form .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.stepper-form .form .actions button {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1px;
+  border: none;
+  height: 54px;
+  min-width: 129px;
+}
+.stepper-form .form .actions .next {
+  color: #ffffff;
+  background: #056946;
+  border-radius: 100px;
+}
+
+.stepper-form .form .actions .back {
+  color: #056946;
+  background: transparent;
+}
+/******* End style stepper form ******/
+/******* Start style stepper details ******/
+.stepper-form .details {
+  background: #ffffff;
+  border-radius: 43px;
+  padding: 32px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.stepper-form .details hr {
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+
+.stepper-form .details .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.stepper-form .details .title h1 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 62px;
+  color: #011f15;
+  margin: 0;
+}
+.stepper-form .details .title p {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: #66716d;
+  margin: 0;
+}
+
+.stepper-form .details .step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin: auto;
+}
+
+.stepper-form .details .step .step-title {
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  color: #011f15;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.stepper-form .details .step .step-title .number {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #011f15;
+  border: 1px solid #011f15;
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  color: #e6f0ec;
+}
+.stepper-form .details .step .step-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+.stepper-form .details .step .step-details .field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.stepper-form .details .step .step-details .field label {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  color: #66716d;
+}
+.stepper-form .details .step .step-details .field p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  color: #2c302f;
+}
+.stepper-form .details .step .step-action button {
+  background: #e6f0ec;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #056946;
+  border: none;
+  min-width: 249px;
+  height: 54px;
+}
+.stepper-form .details .action {
+  align-self: flex-end;
+}
+.stepper-form .details .action button {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.1px;
+  border: none;
+  height: 54px;
+  min-width: 129px;
+  color: #ffffff;
+  background: #056946;
+  border-radius: 100px;
+}
+/******* End style stepper details ******/
+/******* Start style stepper modal ******/
+
+.modal-content {
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content .exit-btn {
+  align-self: flex-start;
+  color: #AFB5B3;
+  font-size: 34px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body .title {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 41px;
+  text-align: center;
+  color: #011f15;
+}
+
+.modal-body .desc {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #2c302f;
+}
+.modal-body .action {
+  border: none;
+  width: 224px;
+  height: 88px;
+  background: #056946;
+  border-radius: 100px;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  color: #e6f0ec;
+  justify-content: center;
+}
+/******* End style stepper modal ******/
+
+@media (max-width: 768px) {
+  .stepper-form {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .stepper-form .stepper {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .stepper-form .stepper .title {
+    display: block;
+  }
+
+  .stepper-form .stepper p {
+    display: none;
+  }
+
+  .stepper-form .stepper .steps {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .stepper-form .stepper .steps .step,
+  .last-step {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    line-height: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /******* start mobile style stepper form ******/
+  .stepper-form .form .fields {
+    grid-template-columns: 1fr;
+  }
+
+  .stepper-form .form .actions {
+    flex-direction: column-reverse;
+    width: 100%;
+    min-width: 100%;
+  }
+  /******* End mobile style stepper form ******/
+  /******* Start mobile style stepper details ******/
+  .stepper-form .details {
+    padding: 16px;
+    gap: 20px;
+  }
+  .stepper-form .details .title h1 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .stepper-form .details .title p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .stepper-form .details .step .step-title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .stepper-form .details .step .step-title .number {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .stepper-form .details .step .step-details {
+    width: 100%;
+  }
+  .stepper-form .details .step .step-details .field label {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .stepper-form .details .step .step-details .field p {
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  /******* End mobile style stepper details ******/
+  /******* Start mobile style stepper modal ******/
+  .modal-content .exit-btn {
+    font-size: 30px;
+  }
+  .modal-body .title {
+    font-size: 20px;
+    line-height: 33px;
+  }
+  .modal-body .desc {
+    font-size: 12px;
+    line-height: 19px;
+  }
+  .modal-body .action {
+    width: 100%;
+    height: 54px;
+  }
+  /******* End mobile style stepper modal ******/
+}
+
+/* .cnt{
     text-align: right;
     background-color: #F5F5F5;
     display: flex;
@@ -97,7 +611,6 @@ align-items: center;
 text-align: right;
 letter-spacing: 0.1px;
 
-/* Gray - white/W1 */
 
 color: #E6F0EC;
 margin-top: 20px;
@@ -124,7 +637,7 @@ align-items: center;
 text-align: right;
 letter-spacing: 0.1px;
 
-/* Gray - white/W1 */
+
 
 color: #056946;
 margin-top: 20px;
@@ -139,7 +652,7 @@ font-size: 14px;
 line-height: 22px;
 text-align: right;
 
-/* Gray - Dark/G2 */
+
 
 color: #66716D;
 
@@ -399,4 +912,4 @@ margin-left: 19%;
   .modal{
     background: #00110B;
 opacity: 0.97;
-  }
+  } */

@@ -1,89 +1,89 @@
 .pageContainer {
-    padding: 64px;
+  padding: 64px;
+  background: #f5f5f5;
 }
 
 .homecards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 .lastCard {
-    width: 341px;
-    height: 329px;
-    padding: 10px;
-    background: #3B6959;
-    border: 1px solid #B4D2C7;
-    border-radius: 43px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 341px;
+  height: 265px;
+  padding: 10px;
+  background: #3b6959;
+  border: 1px solid #b4d2c7;
+  border-radius: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.lastCard .mat-mdc-card-content{
-    display: flex;
-    width: 341px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.lastCard .mat-mdc-card-content {
+  display: flex;
+  width: 341px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 .lastCard h1 {
-    font-family: 'Bahij TheSansArabic';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 49px;
-    text-align: right;
-    color: #FFFFFF;
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 49px;
+  color: #ffffff;
+  margin: 0;
 }
 
-.homeBottom  {
-    margin-top: 10%;
-    background: #69A590;
-    border-radius: 51px;
-    padding-bottom: 16px;
-    position: relative;
+.homeBottom {
+  margin-top: 10%;
+  background: #69a590;
+  border-radius: 51px;
+  padding-bottom: 16px;
+  position: relative;
 }
 
 .homeBottomContent {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  gap: 50px;
 }
 
 .homeBottomContent img {
-    margin-top: -5%;
-    width: 45%;
+  margin-top: -5%;
+  width: 45%;
 }
 
 .homeBottomContent .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-right: 32px;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 32px;
 }
 
 .homeBottomContent .details h1 {
-    font-family: 'Bahij TheSansArabicLight';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 56.03px;
-    line-height: 86px;
-    text-align: right;
-    color: #FFFFFF;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 56.03px;
+  line-height: 86px;
+  text-align: right;
+  color: #ffffff;
 }
 .homeBottomContent .details p {
-    font-family: 'Bahij TheSansArabicExtraLight';
-    font-style: normal;
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 28px;
-    text-align: right;
-    color: #FFFFFF;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: right;
+  color: #ffffff;
 }
 
 .homeBottomContent .details button {
@@ -91,55 +91,58 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background: #011F15;
+  background: #011f15;
   border-radius: 100px;
-  font-family: 'Bahij TheSansArabicLight';
+  font-family: "Bahij TheSansArabicLight";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 31px;
-  color: #E6F0EC;
+  color: #e6f0ec;
   width: 284px;
   height: 79px;
-
 }
 
 .homeBottomContent .details button img {
-    width: 18px;
+  width: 18px;
 }
 @media (max-width: 768px) {
-    
-    .homecards  {
-      grid-template-columns: 1fr;
-    }
+  .services-description {
+    margin: 0 16px;
   }
+  .homecards {
+    grid-template-columns: 1fr;
+    margin: 0 16px;
+  }
+
+  .homeBottomContent .details {
+    margin-right: 16px;
+  }
+}
 @media screen and (max-width: 1023px) {
-    .pageContainer {
-        padding: 64px 0;
-    }
-    .homeBottomContent {
+  .pageContainer {
+    padding: 64px 0;
+  }
+  .homeBottomContent {
     display: flex;
     flex-direction: column;
     margin-right: 5px;
-    }
-    .homeBottomContent img {
-        width: 90%;
-    }
-    .homeBottomContent .details h1 {
-        font-size: 46px;
-    }
-    .homeBottomContent .details p{
-        font-size: 12px;
-    }
+  }
+  .homeBottomContent img {
+    width: 90%;
+  }
+  .homeBottomContent .details h1 {
+    font-size: 46px;
+  }
+  .homeBottomContent .details p {
+    font-size: 12px;
+  }
 }
-.p8{
-    font-family: 'Bahij TheSansArabic';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    color: #011F15;
+.p8 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #011f15;
 }
-
-
-

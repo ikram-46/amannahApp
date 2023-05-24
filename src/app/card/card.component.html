@@ -7,7 +7,7 @@
       <p>{{ cardDetails.description}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <h6>{{cardDetails.action}}</h6>
+      <h6 *ngIf="cardDetails.action!==''">{{cardDetails.action}}</h6>
       <button mat-button> الخدمات <img src="../../assets/leftUpIcon.svg"/></button>
     </mat-card-actions>
   </mat-card>

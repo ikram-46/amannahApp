@@ -31,10 +31,9 @@
      color: #66716D;
    }
 .homecards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .lastCard {
@@ -137,6 +136,16 @@
     width: 18px;
 }
 
+@media (max-width: 768px) {
+    .services-description {
+        margin: 0 16px;
+    }
+
+    .homecards  {
+      grid-template-columns: 1fr;
+      margin: 0 16px;
+    }
+  }
 @media screen and (max-width: 1023px) {
     .pageContainer {
         padding: 64px 0;

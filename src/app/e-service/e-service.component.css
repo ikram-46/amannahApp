@@ -487,4 +487,34 @@ span {
   }
 }
 /***** end style bloc certificate-services  *****/
+.bottom-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
+.bottom-content .find-service {
+  position: absolute;
+  width: 95%;
+}
+
+.bottom-content .footer {
+  margin-top: 38%;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .bottom-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bottom-content .find-service {
+    position: relative;
+    margin: auto;
+  }
+
+  .bottom-content .footer {
+    margin-top: 0;
+  }
+}
