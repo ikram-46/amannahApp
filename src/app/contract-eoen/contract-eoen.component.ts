@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./contract-eoen.component.css']
 })
 export class ContractEOEnComponent {
+  defaultLanguage: String="en";
   name:any="";
   step=false;
   Next(){

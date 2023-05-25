@@ -154,6 +154,7 @@
     line-height: 38px;
     color: #414a47;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
   }
@@ -313,6 +314,7 @@
   .asked-questions .questions {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     gap: 20px;
     width: 100%;
   }
@@ -352,7 +354,7 @@
     border-radius: 43px;
     width: 100%;
     padding: 32px;
-    min-height: 200px;
+    min-height: 400px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -366,8 +368,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    margin-top: 10px;
-    right: 16px;
+    left: 16px;
   }
   .asked-questions .questions .response .step {
     display: flex;
@@ -464,14 +465,14 @@
     .asked-questions .questions .response {
       flex: 100%;
       width: auto;
-      min-height: 302px;
+      min-height: 400px;
     }
   
     .asked-questions .questions .response .step {
       gap: 5px;
     }
     .asked-questions .questions .response .steps {
-      right: 22px;
+      left: 22px;
       gap: 10%;
     }
     .asked-questions .questions .response .step .number {

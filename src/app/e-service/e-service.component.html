@@ -1,4 +1,21 @@
 <div class="pageContent" dir="rtl">
+  <div class="topHeader">
+    <mat-button-toggle-group
+      name="fontStyle"
+      aria-label="Font Style"
+      [(ngModel)]="defaultLanguage"
+    >
+      <mat-button-toggle value="en" routerLink="/e-service-en"
+        >English</mat-button-toggle
+      >
+      <mat-button-toggle value="ar" routerLink="/e-service">العربية</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="socialIcons">
+      <p>تفضلوا بالانضمام إلينا</p>
+      <i class="fa fa-youtube-play"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+  </div>
   <app-navbar></app-navbar>
   <div class="header">
     <h1>خدمة إنشاء معاملة الكترونية</h1>

@@ -9,6 +9,7 @@ export interface card {
   styleUrls: ['./home-en.component.css']
 })
 export class HomeEnComponent {
+  defaultLanguage: String="en";
   cardsen : card[]= [
     {src:"../../assets/eng-services.svg", title:"Engineering offices"},
     {src:"../../assets/contractors.svg", title:"contractors"},

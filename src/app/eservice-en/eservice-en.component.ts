@@ -22,6 +22,7 @@ export interface card {
   styleUrls: ['./eservice-en.component.css']
 })
 export class EServiceEnComponent {
+  defaultLanguage: String="en";
   panelOpenState = false;
   activeQuestion: string = "4";
   showElement: boolean = true;
@@ -35,51 +36,52 @@ export class EServiceEnComponent {
       id:"1",
       title: 'How do I inquire about an administrative transaction ?',
       response: [
-        { order: '1', content: 'بتسجيل الدخول على البوابة الإلكترونية' },
-        { order: '2', content: 'اختيار الخدمات الإلكترونية' },
+        { order: '1', content: 'by logging in to the electronic portal' },
+        { order: '2', content: 'Selecting electronic services' },
         {
           order: '3',
-          content: 'اختيار نظام سداد ثم اختيار الاستعلام عن فاتورة سداد',
+          content: 'Selecting the payment system and then choosing to inquire about a payment invoice',
         },
-        { order: '4', content: 'طريقة معرفة تفاصيل الفواتير وطباعتها؟' },
+        { order: '4', content: 'ntering the identification number and invoice number, then clicking on search, and then selecting to print the invoice to view the details' },
       ],
     },
     {
       id:"2",
       title: 'Can I print the license from the website?',
       response: [
-        { order: '1', content: 'بتسجيل الدخول على البوابة الإلكترونية' },
-        { order: '2', content: ' الخدمات الإلكترونية' },
+        { order: '1', content: 'by logging in to the electronic portal' },
+        { order: '2', content: 'Selecting electronic services' },
         {
           order: '3',
-          content: 'اختيار نظام سداد ثم اختيار الاستعلام عن فاتورة سداد',
+          content: 'Selecting the payment system and then choosing to inquire about a payment invoice',
         },
-        { order: '4', content: 'طريقة معرفة تفاصيل الفواتير وطباعتها؟' },
+        { order: '4', content: 'ntering the identification number and invoice number, then clicking on search, and then selecting to print the invoice to view the details' },
       ],
     },
     
     { id:"3",
       title: 'How do I calculate service fees?',
       response: [
-        { order: '1', content: 'بتسجيل الدخول على البوابة الإلكترونية' },
-        { order: '2', content: 'اختيار الخدمات الإلكترونية' },
+        { order: '1', content: 'by logging in to the electronic portal' },
+        { order: '2', content: 'Selecting electronic services' },
         {
           order: '3',
-          content: 'اختيار نظام سداد ثم اختيار الاستعلام عن فاتورة سداد',
+          content: 'Selecting the payment system and then choosing to inquire about a payment invoice',
         },
-        { order: '4', content: 'طريقة معرفة تفاصيل الفواتير وطباعتها؟' },
+        { order: '4', content: 'ntering the identification number and invoice number, then clicking on search, and then selecting to print the invoice to view the details' },
       ],
     },
     { id:"4",
       title: 'How to know the invoice details and print them?',
       response: [
-        { order: '1', content: 'بتسجيل الدخول على البوابة الإلكترونية' },
-        { order: '2', content: 'اختيار الخدمات الإلكترونية' },
+        { order: '1', content: 'by logging in to the electronic portal' },
+        { order: '2', content: 'Selecting electronic services' },
+        { order: '3', content: 'Selecting electronic services' },
         {
-          order: '3',
-          content: 'اختيار نظام سداد ثم اختيار الاستعلام عن فاتورة سداد',
+          order: '4',
+          content: 'Selecting the payment system and then choosing to inquire about a payment invoice',
         },
-        { order: '4', content: 'طريقة معرفة تفاصيل الفواتير وطباعتها؟' },
+        { order: '5', content: 'ntering the identification number and invoice number, then clicking on search, and then selecting to print the invoice to view the details' },
       ],
     },
   ];

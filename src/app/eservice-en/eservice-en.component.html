@@ -1,4 +1,15 @@
-<div class="pageContent" dir="rtl">
+<div class="pageContent" dir="ltr">
+  <div class="topHeader" >
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
+      <mat-button-toggle value="en" routerLink="/e-service-en">English</mat-button-toggle>
+      <mat-button-toggle value="ar" routerLink="/e-service">العربية</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="socialIcons">
+      <p>Join Us</p>
+      <i class="fa fa-youtube-play"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+  </div>
     <app-navbar-en></app-navbar-en>
     <div class="header">
       <h1>Electronic Services Portal</h1>

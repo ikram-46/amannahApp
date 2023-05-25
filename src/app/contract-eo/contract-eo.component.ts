@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./contract-eo.component.css']
 })
 export class ContractEOComponent {
+  defaultLanguage: String="ar";
   name:any="";
   step=false;
   Next(){

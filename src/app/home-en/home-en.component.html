@@ -1,4 +1,15 @@
 <div class="AppContainer" dir="ltr">
+<div class="topHeader" >
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
+      <mat-button-toggle value="en" routerLink="/home-en">English</mat-button-toggle>
+      <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="socialIcons">
+      <p>Join Us</p>
+      <i class="fa fa-youtube-play"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+</div>
 <app-header-en></app-header-en>
 <main class="pageContainer">
   <div class="services-description">

@@ -21,6 +21,7 @@ export interface card {
   styleUrls: ['./e-service.component.css'],
 })
 export class EServiceComponent {
+  defaultLanguage: String="ar";
   panelOpenState = false;
   activeQuestion: string = "4";
   showElement: boolean = true;

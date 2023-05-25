@@ -1,25 +1,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <div class="topHeader" >
-  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
-    <mat-button-toggle value="en" routerLink="/home-en">English</mat-button-toggle>
-    <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
-  </mat-button-toggle-group>
-  <div class="socialIcons">
-    <p>Join Us</p>
-    <i class="fa fa-youtube-play"></i>
-    <i class="fa fa-twitter"></i>
-  </div>
-</div>
 <mat-sidenav-container>
 	<mat-sidenav #sidenav mode="over">
 		<!-- <label>My Application</label> -->
         <img src="../../assets/شعار الأمانه افقي.svg"/> 
     <hr/>   
 		<nav>
-			<a routerLink="home-en"      (click)="clickHandler()" routerLinkActive="active">Home</a>
-			<a routerLink="page1"     (click)="clickHandler()" routerLinkActive="active">E-Service</a>
+			<a routerLink="/home-en"      (click)="clickHandler()" routerLinkActive="active">Home</a>
+			<a routerLink="/e-service-en"     (click)="clickHandler()" routerLinkActive="active">E-Service</a>
 			<a routerLink="page2"     (click)="clickHandler()" routerLinkActive="active"> Service</a>
-			<a routerLink="page3"   (click)="clickHandler()" routerLinkActive="active">Help And Support</a>
+			<a routerLink="/contract-eo-en"   (click)="clickHandler()" routerLinkActive="active">Help And Support</a>
 		</nav> 
     <hr />
     <div aria-label="user selection" [matMenuTriggerFor]="menu" class="userMenuMobile">
@@ -44,10 +33,10 @@
                 <img src="../../assets/شعار الأمانه افقي.svg"/> 
 
         <nav>
-          <a routerLink="home"    routerLinkActive="active">Home</a>
-          <a routerLink="page1"   routerLinkActive="active">E-Service</a>
+          <a routerLink="/home-en"    routerLinkActive="active">Home</a>
+          <a routerLink="/e-service-en"   routerLinkActive="active">E-Service</a>
           <a routerLink="page2"   routerLinkActive="active">Service </a>
-          <a routerLink="page3" routerLinkActive="active">Help And Support</a>
+          <a routerLink="/contract-eo-en" routerLinkActive="active">Help And Support</a>
         </nav>
         <div aria-label="user selection" [matMenuTriggerFor]="menu" class="userMenu">
           <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user"/>

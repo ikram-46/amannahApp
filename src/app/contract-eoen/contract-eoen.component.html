@@ -4,6 +4,17 @@
 />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <div dir="ltr">
+  <div class="topHeader" >
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
+      <mat-button-toggle value="en" routerLink="/contract-eo-en">English</mat-button-toggle>
+      <mat-button-toggle value="ar" routerLink="/contract-eo">العربية</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="socialIcons">
+      <p>Join Us</p>
+      <i class="fa fa-youtube-play"></i>
+      <i class="fa fa-twitter"></i>
+    </div>
+  </div>
   <app-navbar-en></app-navbar-en>
   <div class="grid-container cnt" *ngIf="!step">
     <div class="container cnt2">
