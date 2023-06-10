@@ -14,6 +14,8 @@ export interface card {
   src: string;
   title: string;
   action: string;
+  link:string;
+  serviceDetailsLink: string
 }
 @Component({
   selector: 'app-e-service',
@@ -85,8 +87,8 @@ export class EServiceComponent {
   ];
 
   cards : card[]= [
-    {src:"../../assets/icon1.svg", title:"التعاقد مع مكتب هندسي", action:"تفاصيل الخدمة"},
-    {src:"../../assets/icon1.svg", title:"طباعة تصاريح وشهادات", action:"تفاصيل الخدمة"},
-    {src:"../../assets/icon1.svg", title:"تحديث بيانات مكتب هندسي", action:"تفاصيل الخدمة"},
+    {src:"../../assets/icon1.svg", title:"التعاقد مع مكتب هندسي", action:"بدء الخدمة", link:"/contact-eo", serviceDetailsLink:"/e-service"},
+    {src:"../../assets/icon1.svg", title:"طباعة تصاريح وشهادات", action:"بدء الخدمة ", link:"/contact-eo", serviceDetailsLink:"/e-service"},
+    {src:"../../assets/icon1.svg", title:"تحديث بيانات مكتب هندسي", action:" بدء الخدمة", link:"/contact-eo", serviceDetailsLink:"/e-service"},
   ]
 }

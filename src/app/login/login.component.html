@@ -34,9 +34,13 @@
           </button>
         </mat-menu>
       </div>
-      
+
       <div class="log-menu" *ngIf="userv === 'أفراد'">
-        <div aria-label="user selection" [matMenuTriggerFor]="menu" class="selected-option">
+        <div
+          aria-label="user selection"
+          [matMenuTriggerFor]="menu"
+          class="selected-option"
+        >
           <span> أفراد </span>
           <i class="fa fa-angle-down" style="padding-right: 10px"></i>
         </div>
@@ -54,10 +58,13 @@
       </div>
 
       <div class="log-menu" *ngIf="userv === 'الأعمال والجهات الحكومية'">
-        <div aria-label="user selection" [matMenuTriggerFor]="menu" class="selected-option">
+        <div
+          aria-label="user selection"
+          [matMenuTriggerFor]="menu"
+          class="selected-option"
+        >
           <span>الأعمال والجهات الحكومية</span>
           <i class="fa fa-angle-down" style="padding-right: 10px"></i>
-        
         </div>
 
         <mat-menu #menu="matMenu">
@@ -83,26 +90,14 @@
 
     <div class="log-form">
       <h1 class="title" *ngIf="user">تسجيل الدخول</h1>
-      <div class="username">
-        <label>اسم المستخدم</label>
-        <input
-          type="text"
-          name="username"
-          [(ngModel)]="form.username"
-          placeholder="رقم الإثبات"
-          value=""
-        />
-      </div>
-      <div class="password">
-        <label>كلمة المرور</label>
-        <input
-          type="text"
-          name="mdp"
-          [(ngModel)]="form.mdp"
-          placeholder="كلمة المرور"
-          value=""
-        />
-      </div>
+      <mat-form-field appearance="outline">
+        <mat-label class="input-label">اسم المستخدم</mat-label>
+        <input matInput placeholder="رقم الإثبات" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label class="input-label">كلمة المرور</mat-label>
+        <input matInput placeholder="كلمة المرور" />
+      </mat-form-field>
 
       <div class="forgot-password">نسيت بيانات المرور؟</div>
 
@@ -112,15 +107,10 @@
           <div class="captcha-img">
             <img src="../../assets/captcha.svg" />
           </div>
-          <div class="input-captcha">
-            <label>أدخل النص المبين في الصورة</label>
-            <input
-              type="text"
-              placeholder="كلمة المرور"
-              name="captcha"
-              [(ngModel)]="form.captcha"
-            />
-          </div>
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label class="input-label">أدخل النص المبين في الصورة</mat-label>
+            <input matInput placeholder="كلمة المرور" />
+          </mat-form-field>
         </div>
       </div>
       <button class="log-action" *ngIf="(!form.username || !form.mdp) && user">

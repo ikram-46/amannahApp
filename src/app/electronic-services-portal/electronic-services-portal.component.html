@@ -1,14 +1,16 @@
 <div class="pageContent" dir="rtl">
   <app-header></app-header>
   <div class="tabs">
-    <mat-tab-group>
-      <mat-tab label="الرخص الإنشائية"></mat-tab>
-      <mat-tab label="الأنشطة التجارية "></mat-tab>
-      <mat-tab label="التجهيز"></mat-tab>
-      <mat-tab label="الإستثمار"></mat-tab>
+    <mat-tab-group mat-stretch-tabs="false">
+      <!--       <mat-tab label="الرخص الإنشائية"></mat-tab>
+      <mat-tab label="الأنشطة التجارية "></mat-tab> -->
+      <mat-tab label="التجهيز" style="flex-grow: 0;"></mat-tab>
+      <!--       <mat-tab label="الإستثمار"></mat-tab>
+ -->
       <mat-tab label="الشهادة الصحية "></mat-tab>
+      <!-- 
       <mat-tab label="بطاقة دلال"></mat-tab>
-      <mat-tab label="مواقع البيع والمباسطة"></mat-tab>
+      <mat-tab label="مواقع البيع والمباسطة"></mat-tab> -->
     </mat-tab-group>
     <div class="cards">
       <app-card *ngFor="let card of cards" [cardDetails]="card"></app-card>

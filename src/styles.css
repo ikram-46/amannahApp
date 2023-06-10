@@ -23,7 +23,9 @@ body {
 .mat-mdc-tab-header {
   z-index: 0;
 }
-
+.mat-mdc-tab-label-container {
+  flex-grow: 0;
+}
 .mat-toolbar {
   font-family: "Bahij TheSansArabic";
   background: linear-gradient(294.79deg, #033f2a 25.65%, #00975f 149.82%);
@@ -48,7 +50,7 @@ body {
   font-weight: 900 !important;
 }
 .userMenu {
-  background: #3b6959;
+  background: #005B39;;
   border-radius: 33px;
   padding: 0 5px;
   height: 59px;
@@ -59,8 +61,9 @@ body {
 }
 
 .mat-mdc-menu-panel.mat-mdc-menu-panel {
-  width: 220px;
-  background: #f5f5f5;
+  min-width: 220px !important;
+  max-width: 100% !important;
+  /* background: #f5f5f5; */
   border: 1px solid #e6f0ec;
   border-radius: 36px;
   padding: 0px 16px;
@@ -99,7 +102,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 25px;
-  font-family: "Bahij TheSansArabicLight";
+  font-family: "Bahij TheSansArabicExtraLight";
 }
 .mat-sidenav-container {
   height: 100%;
@@ -124,6 +127,8 @@ body {
 .mat-sidenav-container .mat-sidenav nav a {
   display: block;
   font-family: "Bahij TheSansArabicLight";
+  font-size: 16px;
+  font-weight: 500;
   outline: 0px;
   margin: 5px 0px;
   text-decoration: none;
@@ -164,7 +169,7 @@ body {
   width: 100%;
 }
 
-.mat-sidenav-container .mat-sidenav-content .mat-toolbar header .mat-icon {
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header .menu-icon {
   display: none;
   cursor: pointer;
   font-size: 32px;
@@ -182,6 +187,10 @@ body {
   border-radius: 5px;
   font-weight: 500;
   font-size: 14px;
+  display: inline-flex;
+}
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a .mat-icon {
+  align-self: center;
 }
 
 .mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
@@ -221,7 +230,7 @@ body {
   font-family: "Bahij TheSansArabicExtraLight";
   font-style: normal;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 25px;
   text-align: center;
   color: #ffffff;
@@ -279,6 +288,8 @@ body {
   border-radius: 40.5px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 .headerBottom .search {
   display: flex;
@@ -309,16 +320,17 @@ body {
 .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label,
 .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active
   .mdc-tab__text-label {
-  color: #e77a45;
   background: #005b39;
   border: 0.5px solid #ffffff;
   border-radius: 49px;
   padding: 8px 16px;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
   color: #f4f4f4;
+  font-family: "Bahij TheSansArabicLight" !important;
+
 }
 
 .mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline,
@@ -333,7 +345,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  color: #000000;
+  color: #66716D;
 }
 
 .mdc-tab {
@@ -359,14 +371,14 @@ body {
     display: none;
   }
   .userMenuMobile {
-    background: #3b6959;
+    background: #005B39;
     border-radius: 33px;
-    padding: 0 5px;
+    padding: 0 10px;
     height: 59px;
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
+    
   }
   .userMenuMobile img {
     width: 54px;
@@ -376,9 +388,13 @@ body {
 
   .userMenuMobile span {
     color: #e6f0ec;
-    font-family: "Bahij TheSansArabic";
+    font-family: "Bahij TheSansArabicExtraLight";
     display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
     align-items: center;
+    width: 95%;
   }
 
   .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
@@ -387,7 +403,7 @@ body {
     padding-top: 20px;
     height: 500px;
   }
-  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header .mat-icon {
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header .menu-icon {
     display: block;
     cursor: pointer;
   }

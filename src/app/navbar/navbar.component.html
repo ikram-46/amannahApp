@@ -2,29 +2,82 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
-<mat-sidenav-container>
+<mat-sidenav-container dir="rtl">
   <mat-sidenav #sidenav mode="over">
-    <!-- <label>My Application</label> -->
-    <img src="../../assets/شعار الأمانه افقي.svg" />
+    <div class="sideHeader">
+      <img src="../../assets/شعار الأمانه افقي.svg" />
+      <img
+        (click)="toggleSideNav(); sidenav.toggle()"
+        src="../../assets/navbarIcons/exitIcon.svg"
+      />
+    </div>
     <hr />
     <nav>
       <a routerLink="home" (click)="clickHandler()" routerLinkActive="active"
         >الرئيسية</a
       >
+      <hr />
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              الخدمات الالكترونية
+              <mat-icon *ngIf="!panelOpenState">keyboard_arrow_down</mat-icon>
+              <mat-icon *ngIf="panelOpenState">keyboard_arrow_up</mat-icon>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="electronic-services">
+            <div class="sidemenu-services">
+              <div class="title">
+                <p>الخدمات</p>
+                <p>كل الخدمات</p>
+              </div>
+              <div class="sidemenu-links">
+                <div *ngFor="let link of mobileServicesLinks" >
+                  <div class="link">
+                    <img src="{{ link.icon }}" />
+                    <div class="content" routerLink="{{ link.route }}">
+                      <span> {{ link?.title }}</span>
+                      <p>{{ link?.description }}</p>
+                    </div>
+                  </div>
+                  <hr style="color:#7c998e;"/>
+                  
+                </div>
+              </div>
+            </div>
+            <hr style="color:#7c998e;"/>
+            <div class="sidemenu-services">
+              <div class="title">
+                <p>الأكثر إستخداماً</p>
+              </div>
+              <div class="sidemenu-links">
+                <div *ngFor="let link of usedLinks" >
+                  <div class="link">
+                  <img
+                    src="{{ link.icon }}"
+                    style="width: 19px; height: 19px"
+                  />
+                  <div class="content">
+                    <span>{{ link.title }}</span>
+                  </div>
+                  </div>
+                  <hr style="color:#7c998e;"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <hr />
       <a
-        routerLink="/e-service"
+        routerLink="/contract-eo"
         (click)="clickHandler()"
         routerLinkActive="active"
-        >الخدمات الالكترونية</a
-      >
-      <a
-        routerLink="/electronic-service-portal"
-        (click)="clickHandler()"
-        routerLinkActive="active"
-      >
-        الخدمات</a
-      >
-      <a routerLink="/contract-eo" (click)="clickHandler()" routerLinkActive="active"
         >الدعم والمساعدة</a
       >
     </nav>
@@ -58,20 +111,77 @@
   <mat-sidenav-content>
     <mat-toolbar>
       <header>
-        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        <mat-icon (click)="toggleSideNav(); sidenav.toggle()" class="menu-icon"
+          >menu</mat-icon
+        >
         <!-- label>My Application</label> -->
         <img src="../../assets/شعار الأمانه افقي.svg" />
 
         <nav>
           <a routerLink="/home" routerLinkActive="active">الرئيسية</a>
-          <a routerLink="/e-service" routerLinkActive="active"
-            >الخدمات الالكترونية</a
+          <a
+            #createPlanmenuTrigger="matMenuTrigger"
+            [matMenuTriggerFor]="submenu"
+            (mouseover)="createPlanmenuTrigger.openMenu()"
+            (mouseout)="
+              $event.stopPropagation(); createPlanmenuTrigger.openMenu()
+            "
           >
-          <a routerLink="/electronic-service-portal" routerLinkActive="active">
-            الخدمات
+            الخدمات الالكترونية
+
+            <mat-icon *ngIf="!createPlanmenuTrigger.menuOpen"
+              >keyboard_arrow_down</mat-icon
+            >
+            <mat-icon *ngIf="createPlanmenuTrigger.menuOpen"
+              >keyboard_arrow_up</mat-icon
+            >
           </a>
-          <a routerLink="/contract-eo" routerLinkActive="active">الدعم والمساعدة</a>
+          <a routerLink="/contract-eo" routerLinkActive="active"
+            >الدعم والمساعدة</a
+          >
         </nav>
+        <div>
+          <mat-menu
+            #submenu="matMenu"
+            xPosition="before"
+            style="margin: 0 auto"
+          >
+            <div class="services_menu">
+              <div class="services">
+                <div class="title">
+                  <h1>الخدمات</h1>
+                  <p>كل الخدمات</p>
+                </div>
+                <div class="links">
+                  <div *ngFor="let link of servicesLinks" class="link">
+                    <img src="{{ link.icon }}" />
+                    <div class="content" routerLink="{{ link.route }}">
+                      <span> {{ link?.title }}</span>
+                      <p>{{ link?.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <mat-divider [vertical]="true" style="width: 1px"></mat-divider>
+              <div class="services">
+                <div class="title">
+                  <h1>الأكثر إستخداماً</h1>
+                </div>
+                <div class="links">
+                  <div *ngFor="let link of usedLinks" class="link">
+                    <img
+                      src="{{ link.icon }}"
+                      style="width: 19px; height: 19px"
+                    />
+                    <div>
+                      <span>{{ link.title }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-menu>
+        </div>
         <div
           aria-label="user selection"
           [matMenuTriggerFor]="menu"
@@ -84,7 +194,7 @@
           </span>
         </div>
 
-        <mat-menu #menu="matMenu">
+        <mat-menu #menu="matMenu" style="width: 220px">
           <button mat-menu-item routerLink="/login">
             تبديل الحساب <mat-icon>shuffle</mat-icon>
           </button>

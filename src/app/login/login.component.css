@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 32px;
   gap: 30px;
-  background: #f5f5f5;
+  background: #FFFFFF;
 }
 
 .log-img {
@@ -96,11 +96,12 @@
 }
 
 .log-way {
-  background: #f5fffb;
+  background: #FFFFFF;
   border: 1px solid #b4d2c7;
   border-radius: 10px;
   display: flex;
   gap: 30px;
+  height: 56px;
   align-items: center;
   max-width: 471px;
 }
@@ -141,31 +142,16 @@
   position: relative;
   width: 100%;
 }
-.log-form .username label,
-.password label,
-.log-captcha .captcha-content .input-captcha label {
-  font-family: "Bahij TheSansArabic";
+.input-label {
+  font-family: "Bahij TheSansArabicExtraLight";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-  text-align: right;
   letter-spacing: 0.4px;
-  color: #66716d;
-  position: absolute;
-  top: -10px;
-  right: 8px;
 }
 
 .log-form input,
-.input-captcha input {
-  border: 1px solid #b8bcba;
-  border-radius: 10px;
-  height: 56px;
-  width: 100%;
-  padding-right: 5px;
-}
-
 .log-form .forgot-password {
   font-family: "Bahij TheSansArabic";
   font-style: normal;
@@ -233,17 +219,6 @@
   color: #e6f0ec;
 }
 
-input::placeholder {
-  font-family: "Bahij TheSansArabicExtraLight";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.5px;
-  color: #d7dad9;
-}
 
 @media (max-width: 768px) {
   .loginContainer {

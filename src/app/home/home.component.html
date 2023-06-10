@@ -1,31 +1,93 @@
 <div class="AppContainer" dir="rtl">
-<app-header></app-header>
-<main class="pageContainer" dir="rtl">
+  
+  <div class="page-top">
+    <div class="topHeader">
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        [(ngModel)]="defaultLanguage"
+      >
+        <mat-button-toggle value="en" routerLink="/e-service-en"
+          >English</mat-button-toggle
+        >
+        <mat-button-toggle value="ar" routerLink="/e-service">العربية</mat-button-toggle>
+      </mat-button-toggle-group>
+      <div class="socialIcons">
+        <p>تفضلوا بالانضمام إلينا</p>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-twitter"></i>
+      </div>
+    </div>
+    <app-header (sideNavToggled)="onSideNavToggled()"></app-header>
+    <div class="headerBottom" *ngIf="!isSideNavOpen">
+      <div class="search">
+        <mat-icon>search</mat-icon>
+        <input placeholder="ابحث عن خدمة " />
+      </div>
+      <mat-divider vertical style="height: 53px"></mat-divider>
+      <mat-tab-group mat-stretch-tabs="false" (selectedTabChange)="selectedTabValue($event)">
+        <mat-tab label="أفراد">
+        </mat-tab>
+        <mat-tab label="الأعمال والجهات الحكومية" ></mat-tab>
+        <mat-tab label="التوظيف وتدريب التعاوني"></mat-tab>
+        <mat-tab label="موظف"></mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+  <main class="pageContainer" dir="rtl">
     <div class="services-description">
       <h1>الخدمات الالكترونية</h1>
-      <p>لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ .</p>
+      <p>
+        لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى)
+        ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار
+        للنص الشكلي منذ .
+      </p>
     </div>
-    <div class="homecards">
-      <app-card *ngFor="let card of cards"[cardDetails]="card"></app-card>
+    <div class="homecards" *ngIf="activeTabs==='أفراد'">
+      <app-card
+        *ngFor="let card of indivCards"
+        [cardDetails]="card"
+        [hideActionDetails]="true"
+      ></app-card>
       <mat-card class="lastCard">
-        <mat-card-content>
-          <img src="../../assets/whiteArrow.svg"/>
+        <mat-card-content >
+          <img src="../../assets/whiteArrow.svg" />
           <h1>كل الخدمات</h1>
         </mat-card-content>
       </mat-card>
     </div>
 
-    <div class="homeBottom">
-      <div class="homeBottomContent">
-        <img src="../../assets/lapTop.svg"/>
-        <div class="details">
-            <h1>تفاعل مع الأمانة</h1>
-            <p>نحن نسعى دائما نحو تقديم أفضل الحلول للمواطنين والمقيمين بمدينة الرياض، هذا يتحقق بمشاركة المجتمع المحلي مع المشاركة بالاستبيانات المقدمة من جهتنا والذي من شأنه رفع مستوى جودة الخدمات المقدمة</p>
-            <button>أرشيف الإستبينات <img src="../../assets/whiteArrow.svg"/></button>
-        </div>
+    <div class="homecards" *ngIf="activeTabs==='الأعمال والجهات الحكومية'">
+      <app-card
+        *ngFor="let card of businessCards"
+        [cardDetails]="card"
+        [hideActionDetails]="true"
+      ></app-card>
+      <mat-card class="lastCard">
+        <mat-card-content>
+          <img src="../../assets/whiteArrow.svg" />
+          <h1>كل الخدمات</h1>
+        </mat-card-content>
+      </mat-card>
     </div>
+  </main>
+  <div class="homeBottom">
+    <div class="interactWith-card">
+      <img src="../../assets/lapTop.svg" />
+      <div class="details">
+        <h1>تفاعل مع الأمانة</h1>
+        <p>
+          نحن نسعى دائما نحو تقديم أفضل الحلول للمواطنين والمقيمين بمدينة
+          الرياض، هذا يتحقق بمشاركة المجتمع المحلي مع المشاركة بالاستبيانات
+          المقدمة من جهتنا والذي من شأنه رفع مستوى جودة الخدمات المقدمة
+        </p>
+        <button>
+          أرشيف الإستبينات <img src="../../assets/whiteArrow.svg" />
+        </button>
+      </div>
     </div>
-    
-</main>
-<app-sh-footer></app-sh-footer>
+    <div class="footer">
+    <app-sh-footer></app-sh-footer>
+    </div>
+  </div>
 </div>
