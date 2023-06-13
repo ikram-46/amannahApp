@@ -37,7 +37,7 @@
                 <p>كل الخدمات</p>
               </div>
               <div class="sidemenu-links">
-                <div *ngFor="let link of mobileServicesLinks" >
+                <div *ngFor="let link of mobileServicesLinks">
                   <div class="link">
                     <img src="{{ link.icon }}" />
                     <div class="content" routerLink="{{ link.route }}">
@@ -45,28 +45,27 @@
                       <p>{{ link?.description }}</p>
                     </div>
                   </div>
-                  <hr style="color:#7c998e;"/>
-                  
+                  <hr style="color: #7c998e" />
                 </div>
               </div>
             </div>
-            <hr style="color:#7c998e;"/>
+            <hr style="color: #7c998e" />
             <div class="sidemenu-services">
               <div class="title">
                 <p>الأكثر إستخداماً</p>
               </div>
               <div class="sidemenu-links">
-                <div *ngFor="let link of usedLinks" >
+                <div *ngFor="let link of usedLinks">
                   <div class="link">
-                  <img
-                    src="{{ link.icon }}"
-                    style="width: 19px; height: 19px"
-                  />
-                  <div class="content">
-                    <span>{{ link.title }}</span>
+                    <img
+                      src="{{ link.icon }}"
+                      style="width: 19px; height: 19px"
+                    />
+                    <div class="content">
+                      <span>{{ link.title }}</span>
+                    </div>
                   </div>
-                  </div>
-                  <hr style="color:#7c998e;"/>
+                  <hr style="color: #7c998e" />
                 </div>
               </div>
             </div>
@@ -111,12 +110,11 @@
   <mat-sidenav-content>
     <mat-toolbar>
       <header>
+        <img src="../../assets/logos/mobile_logo.svg" class="mobile-logo" />
+        <img src="../../assets/شعار الأمانه افقي.svg" class="screen-logo" />
         <mat-icon (click)="toggleSideNav(); sidenav.toggle()" class="menu-icon"
           >menu</mat-icon
         >
-        <!-- label>My Application</label> -->
-        <img src="../../assets/شعار الأمانه افقي.svg" />
-
         <nav>
           <a routerLink="/home" routerLinkActive="active">الرئيسية</a>
           <a
@@ -140,7 +138,7 @@
             >الدعم والمساعدة</a
           >
         </nav>
-        <div>
+        <div class="submenu">
           <mat-menu
             #submenu="matMenu"
             xPosition="before"
@@ -220,20 +218,6 @@
           عليك سوى اختيار الخدمة
         </p>
       </div>
-
-      <!--  <div class="headerBottom">
-        <div class="search">
-          <mat-icon>search</mat-icon>
-          <input placeholder="ابحث عن خدمة " />
-        </div>
-        <mat-divider vertical style="height: 53px"></mat-divider>
-        <mat-tab-group>
-          <mat-tab label="أفراد"></mat-tab>
-          <mat-tab label="الأعمال والجهات الحكومية"></mat-tab>
-          <mat-tab label="التوظيف وتدريب التعاوني"></mat-tab>
-          <mat-tab label="موظف"></mat-tab>
-        </mat-tab-group>
-      </div> -->
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>

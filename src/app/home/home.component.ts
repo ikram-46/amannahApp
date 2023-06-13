@@ -1,6 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
-import { HeaderComponent } from '../header/header.component';
+import { Component} from '@angular/core';
 export interface card {
   src: string;
   title: string;

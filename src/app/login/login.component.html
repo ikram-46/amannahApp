@@ -2,144 +2,161 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
-
-<div class="loginContainer" dir="rtl">
-  <div class="log-img"></div>
-  <div class="log-inputs">
-    <div class="go-home" routerLink="/home" *ngIf="user">
-      الرئيسية
-      <i class="fa fa-angle-left"></i>
-    </div>
-    <div style="height: 30px" *ngIf="!user"></div>
-    <div class="log-header">
-      <h1 class="title">تسجيل الدخول</h1>
-      <div class="log-menu" *ngIf="userv === 'إختر هويتك'">
-        <div
-          aria-label="user selection"
-          [matMenuTriggerFor]="menu"
-          class="selected-option"
+<div dir="rtl">
+  <div class="topPage">
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        [(ngModel)]="defaultLanguage"
+      >
+        <mat-button-toggle value="en" routerLink="/login-en"
+          >English</mat-button-toggle
         >
-          إختر هويتك
-          <i class="fa fa-angle-down" style="padding-right: 10px"></i>
-        </div>
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="changeUser('أفراد')">أفراد</button>
-          <button
-            mat-menu-item
-            (click)="changeUser('الأعمال والجهات الحكومية')"
-            name="userv"
-            [(ngModel)]="userv"
+        <mat-button-toggle value="ar" routerLink="/login">العربية</mat-button-toggle>
+      </mat-button-toggle-group>
+    <span routerLink="/home">الرئيسية<i class="fa fa-angle-left"></i></span>
+  </div>
+  <div class="pageContent">
+    <div class="log-img"></div>
+    <div class="log-inputs">
+      <div style="height: 30px" *ngIf="!user"></div>
+      <div class="log-header">
+        <h1 class="title">تسجيل الدخول</h1>
+        <div class="log-menu" *ngIf="userv === 'إختر هويتك'">
+          <div
+            aria-label="user selection"
+            [matMenuTriggerFor]="menu"
+            class="selected-option"
           >
-            الأعمال والجهات الحكومية
-          </button>
-        </mat-menu>
-      </div>
-
-      <div class="log-menu" *ngIf="userv === 'أفراد'">
-        <div
-          aria-label="user selection"
-          [matMenuTriggerFor]="menu"
-          class="selected-option"
-        >
-          <span> أفراد </span>
-          <i class="fa fa-angle-down" style="padding-right: 10px"></i>
-        </div>
-
-        <mat-menu #menu="matMenu">
-          <button
-            mat-menu-item
-            (click)="changeUser('الأعمال والجهات الحكومية')"
-            name="userv"
-            [(ngModel)]="userv"
-          >
-            الأعمال والجهات الحكومية
-          </button>
-        </mat-menu>
-      </div>
-
-      <div class="log-menu" *ngIf="userv === 'الأعمال والجهات الحكومية'">
-        <div
-          aria-label="user selection"
-          [matMenuTriggerFor]="menu"
-          class="selected-option"
-        >
-          <span>الأعمال والجهات الحكومية</span>
-          <i class="fa fa-angle-down" style="padding-right: 10px"></i>
-        </div>
-
-        <mat-menu #menu="matMenu">
-          <button mat-menu-item (click)="changeUser('أفراد')">أفراد</button>
-        </mat-menu>
-      </div>
-    </div>
-
-    <div class="title" *ngIf="user">بوابة النفاذ الوطني الموحد</div>
-    <p class="desc" *ngIf="user">
-      يمكنك الدخول عن طريق اسم المستخدم و كلمة المرور المستخدمة في منصة النفاذ
-      الوطني الموحد .. لكي تستفيد من الخدمات الإلكترونية المقدمة
-    </p>
-
-    <div class="log-way" *ngIf="user">
-      <div class="logo">
-        <img src="../../assets/borderImg.svg" />
-      </div>
-      <div class="divider"></div>
-      <div class="title">عن طريق بوابة النفاذ الوطني الموحد</div>
-    </div>
-    <div class="divider-horizontal"></div>
-
-    <div class="log-form">
-      <h1 class="title" *ngIf="user">تسجيل الدخول</h1>
-      <mat-form-field appearance="outline">
-        <mat-label class="input-label">اسم المستخدم</mat-label>
-        <input matInput placeholder="رقم الإثبات" />
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label class="input-label">كلمة المرور</mat-label>
-        <input matInput placeholder="كلمة المرور" />
-      </mat-form-field>
-
-      <div class="forgot-password">نسيت بيانات المرور؟</div>
-
-      <div class="log-captcha" *ngIf="!user">
-        <p class="title">أدخل النص المبين في الصورة</p>
-        <div class="captcha-content">
-          <div class="captcha-img">
-            <img src="../../assets/captcha.svg" />
+            إختر هويتك
+            <i class="fa fa-angle-down" style="padding-right: 10px"></i>
           </div>
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label class="input-label">أدخل النص المبين في الصورة</mat-label>
-            <input matInput placeholder="كلمة المرور" />
-          </mat-form-field>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="changeUser('أفراد')">أفراد</button>
+            <button
+              mat-menu-item
+              (click)="changeUser('الأعمال والجهات الحكومية')"
+              name="userv"
+              [(ngModel)]="userv"
+            >
+              الأعمال والجهات الحكومية
+            </button>
+          </mat-menu>
+        </div>
+
+        <div class="log-menu" *ngIf="userv === 'أفراد'">
+          <div
+            aria-label="user selection"
+            [matMenuTriggerFor]="menu"
+            class="selected-option"
+          >
+            <span> أفراد </span>
+            <i class="fa fa-angle-down" style="padding-right: 10px"></i>
+          </div>
+
+          <mat-menu #menu="matMenu">
+            <button
+              mat-menu-item
+              (click)="changeUser('الأعمال والجهات الحكومية')"
+              name="userv"
+              [(ngModel)]="userv"
+            >
+              الأعمال والجهات الحكومية
+            </button>
+          </mat-menu>
+        </div>
+
+        <div class="log-menu" *ngIf="userv === 'الأعمال والجهات الحكومية'">
+          <div
+            aria-label="user selection"
+            [matMenuTriggerFor]="menu"
+            class="selected-option"
+          >
+            <span>الأعمال والجهات الحكومية</span>
+            <i class="fa fa-angle-down" style="padding-right: 10px"></i>
+          </div>
+
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="changeUser('أفراد')">أفراد</button>
+          </mat-menu>
         </div>
       </div>
-      <button class="log-action" *ngIf="(!form.username || !form.mdp) && user">
-        تسجيل الدخول
-        <i class="fa fa-angle-left" style="padding-right: 5%"></i>
-      </button>
-      <button
-        class="log-action"
-        *ngIf="(!form.username || !form.mdp || !form.captcha) && !user"
-      >
-        تسجيل الدخول
-        <i class="fa fa-angle-left" style="padding-right: 5%"></i>
-      </button>
-      <button
-        class="log-action"
-        [class.active-btn]="form.username && form.mdp && user"
-        *ngIf="form.username && form.mdp && user"
-      >
-        تسجيل الدخول
-        <i class="fa fa-angle-left" style="padding-right: 5%"> </i>
-      </button>
-      <button
-        class="log-action"
-        [class.active-btn]="form.username && form.mdp && form.captcha && !user"
-        *ngIf="form.username && form.mdp && form.captcha && !user"
-      >
-        تسجيل الدخول
-        <i class="fa fa-angle-left" style="padding-right: 5%"> </i>
-      </button>
+
+      <div class="title" *ngIf="user">بوابة النفاذ الوطني الموحد</div>
+      <p class="desc" *ngIf="user">
+        يمكنك الدخول عن طريق اسم المستخدم و كلمة المرور المستخدمة في منصة النفاذ
+        الوطني الموحد .. لكي تستفيد من الخدمات الإلكترونية المقدمة
+      </p>
+
+      <div class="log-way" *ngIf="user">
+        <div class="logo">
+          <img src="../../assets/borderImg.svg" />
+        </div>
+        <div class="divider"></div>
+        <div class="title">عن طريق بوابة النفاذ الوطني الموحد</div>
+      </div>
+      <div class="divider-horizontal" *ngIf="user"></div>
+
+      <div class="log-form">
+        <h1 class="title" *ngIf="user">تسجيل الدخول</h1>
+        <mat-form-field appearance="outline">
+          <mat-label class="input-label">اسم المستخدم</mat-label>
+          <input matInput placeholder="رقم الإثبات" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label class="input-label">كلمة المرور</mat-label>
+          <input matInput placeholder="كلمة المرور" />
+        </mat-form-field>
+
+        <div class="forgot-password">نسيت بيانات المرور؟</div>
+
+        <div class="log-captcha" *ngIf="!user">
+          <p class="title">أدخل النص المبين في الصورة</p>
+          <div class="captcha-content">
+            <div class="captcha-img">
+              <img src="../../assets/captcha.svg" />
+            </div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label class="input-label"
+                >أدخل النص المبين في الصورة</mat-label
+              >
+              <input matInput placeholder="كلمة المرور" />
+            </mat-form-field>
+          </div>
+        </div>
+        <button
+          class="log-action"
+          *ngIf="(!form.username || !form.mdp) && user"
+        >
+          تسجيل الدخول
+          <i class="fa fa-angle-left" style="padding-right: 5%"></i>
+        </button>
+        <button
+          class="log-action"
+          *ngIf="(!form.username || !form.mdp || !form.captcha) && !user"
+        >
+          تسجيل الدخول
+          <i class="fa fa-angle-left" style="padding-right: 5%"></i>
+        </button>
+        <button
+          class="log-action"
+          [class.active-btn]="form.username && form.mdp && user"
+          *ngIf="form.username && form.mdp && user"
+        >
+          تسجيل الدخول
+          <i class="fa fa-angle-left" style="padding-right: 5%"> </i>
+        </button>
+        <button
+          class="log-action"
+          [class.active-btn]="
+            form.username && form.mdp && form.captcha && !user
+          "
+          *ngIf="form.username && form.mdp && form.captcha && !user"
+        >
+          تسجيل الدخول
+          <i class="fa fa-angle-left" style="padding-right: 5%"> </i>
+        </button>
+      </div>
     </div>
   </div>
 </div>

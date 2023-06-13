@@ -275,6 +275,9 @@ body {
   .headerContent p {
     font-size: 11px;
   }
+  .mat-mdc-tab-header .mdc-tab {
+    padding: 0;
+  }
 }
 
 .headerBottom {
@@ -367,7 +370,7 @@ body {
     /* height: 100vh; */
     padding: 0px;
   }
-  .userMenu span {
+  .userMenu {
     display: none;
   }
   .userMenuMobile {

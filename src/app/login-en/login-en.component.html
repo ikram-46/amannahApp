@@ -1,134 +1,175 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-  <div class="container cntr"  >
-    <div class="container row">
-        <div class="col logImg"></div>
-      <div class="container col">
-       <a class="p1" routerLink="/home-en"    *ngIf="user"><p>Home <i class="fa fa-angle-right"  style="padding-left: 5px"></i ></p></a>
-        <div style="height:30px" *ngIf="!user"></div>
-        <div class=" row">
-            <div class="col">
-                <h2>Logn In</h2>
-                </div>
-                
-          <div class="col col1" *ngIf="userv==='Choose your identity' ">
-
-            <div aria-label="user selection" [matMenuTriggerFor]="menu" class="btn">
-              <span >Choose your identity</span>
-              <i class="fa fa-angle-down" style="padding-left: 10px"></i>
-            </div>
-    
-            <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="changeUser('Individuals')">Individuals </button>
-            <button mat-menu-item  (click)="changeUser('Business and government agencies')" name="userv"  [(ngModel)]="userv">Business and government agencies</button>
-             
-            </mat-menu>  
-              </div>
-
-            <div class="col col1" *ngIf="userv==='Individuals' " >
-
-          <div aria-label="user selection" [matMenuTriggerFor]="menu" class="btn">
-            <i class="fa fa-angle-down" style="padding-right: 10px"></i>
-            <span >
-                Individuals
-            </span>
-          </div>
-  
-          <mat-menu #menu="matMenu">
-          <button mat-menu-item  (click)="changeUser('Business and government agencies')" name="userv"  [(ngModel)]="userv">Business and government agencies </button>
-         
-          </mat-menu>  
-            </div>
-
-            <div class="col col1" *ngIf="userv==='Business and government agencies' ">
-
-              <div aria-label="user selection" [matMenuTriggerFor]="menu" class="btn">
-                <i class="fa fa-angle-down" style="padding-right: 10px"></i>
-                <span >Business and government agencies</span>
-              </div>
-      
-              <mat-menu #menu="matMenu">
-              <button mat-menu-item (click)="changeUser('Individuals')">Individuals </button>
-             
-              </mat-menu>  
-                </div>
-
-            
-
-        </div>
-       
-            <h3  *ngIf="user">Unified National Access Portal</h3>
-            <p class="par1"  *ngIf="user">You can log in using the username and password used in the unified national access platform .. 
-                in order to benefit from the electronic services provided</p>
-     
-        
-            <div class="border row bordercl"  *ngIf="user">
-                <div class="col">
-                    <div class="vl"></div>
-                    <div class="borderImg "><img src="../../assets/borderImg.svg" style="width:50% ;"></div>
-                   
-                </div>
-                <div class="p5 col ">
-                  <p >With unified national access portal</p>
-                 
-                </div>
-                
-                
-            </div>
-                
-          
-        
-        <div class="logform">
-          <p class="p6" *ngIf="user">Log  In</p>
-           
-          <label>User Name</label>
-            <input   name="username"  [(ngModel)]="form.username" placeholder="User Name"  value="" >
-          
-          <label>Password</label>
-            <input type="text" name="mdp"  [(ngModel)]="form.mdp" placeholder="Password" value="">
-         
-          <!--<mat-form-field class="example-full-width">
-            <mat-label>User Name</mat-label>
-            <input matInput  name="username"  [(ngModel)]="form.username" placeholder="User Name"  value="" >
-          </mat-form-field>
-
-        
-            
-          <mat-form-field class="example-full-width">
-            <mat-label>Password</mat-label>
-            <input matInput name="mdp"  [(ngModel)]="form.mdp" placeholder="Password" value="">
-          </mat-form-field>-->
-
-          <p class="p7">Forget Password ?</p>
-        <div class=" user2" *ngIf="!user">
-          <p class=" p8">Enter the text shown in the image</p>
-          <div class=" cnt row">
-            <div class="  col">
-                <img class="cnt2 border" src="../../assets/captcha.svg" >
-              </div>
-             <div class="cnt1 col">
-                <label>Enter the text shown in the image</label>
-                <input type="text"  placeholder="كلمة المرور" name="captcha"  [(ngModel)]="form.captcha">
-              
-             </div>
-             
-          </div>
-        </div>
-        <button class="btn2" *ngIf="(!form.username || !form.mdp) &&( user)">Log In<i class="fa fa-angle-right" style="padding-left: 5%;"></i></button>
-        <button class="btn2" *ngIf="(!form.username || !form.mdp || !form.captcha) &&( !user)">Log In<i class="fa fa-angle-right" style="padding-left: 5%;"></i></button>
-        <button class="btn3" *ngIf="form.username && form.mdp && user">Log In<i class="fa fa-angle-right" style="padding-left: 5%;"></i></button>
-        <button class="btn3" *ngIf="form.username && form.mdp && form.captcha && !user">Log In<i class="fa fa-angle-right" style="padding-left: 5%;"></i></button>
-        
-         
-          
-        </div>
-        
-      </div>
-      
-
-     
-    </div>
-    
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<div dir="ltr">
+  <div class="topPage">
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        [(ngModel)]="defaultLanguage"
+      >
+        <mat-button-toggle value="en" routerLink="/login-en"
+          >English</mat-button-toggle
+        >
+        <mat-button-toggle value="ar" routerLink="/login"
+          >العربية</mat-button-toggle
+        >
+      </mat-button-toggle-group>
+    <span routerLink="/home">Home<i class="fa fa-angle-right"></i></span>
   </div>
-  
+  <div class="pageContent">
+    <div class="log-img"></div>
+    <div class="log-inputs">
+      <div style="height: 30px" *ngIf="!user"></div>
+      <div class="log-header">
+        <h1 class="title">Logn In</h1>
+        <div class="log-menu" *ngIf="userv === 'Choose your identity'">
+          <div
+            aria-label="user selection"
+            [matMenuTriggerFor]="menu"
+            class="selected-option"
+          >
+            Choose your identity
+            <i class="fa fa-angle-down" style="padding-right: 10px; font-size: large;"></i>
+          </div>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="changeUser('individuals')">
+              individuals
+            </button>
+            <button
+              mat-menu-item
+              (click)="changeUser('Business and government agencies')"
+              name="userv"
+              [(ngModel)]="userv"
+            >
+              Business and government agencies
+            </button>
+          </mat-menu>
+        </div>
+
+        <div class="log-menu" *ngIf="userv === 'individuals'">
+          <div
+            aria-label="user selection"
+            [matMenuTriggerFor]="menu"
+            class="selected-option"
+          >
+            <span> individuals </span>
+            <i class="fa fa-angle-down" style="padding-right: 10px"></i>
+          </div>
+
+          <mat-menu #menu="matMenu">
+            <button
+              mat-menu-item
+              (click)="changeUser('Business and government agencies')"
+              name="userv"
+              [(ngModel)]="userv"
+            >
+              Business and government agencies
+            </button>
+          </mat-menu>
+        </div>
+
+        <div
+          class="log-menu"
+          *ngIf="userv === 'Business and government agencies'"
+        >
+          <div
+            aria-label="user selection"
+            [matMenuTriggerFor]="menu"
+            class="selected-option"
+          >
+            <span> Business and government agencies</span>
+            <i class="fa fa-angle-down" style="padding-right: 10px"></i>
+          </div>
+
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="changeUser('individuals')">
+              individuals
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+
+      <div class="title" *ngIf="user">Unified National Access Portal</div>
+      <p class="desc" *ngIf="user">
+        You can log in using the username and password used in the unified
+        national access platform .. in order to benefit from the electronic
+        services provided
+      </p>
+
+      <div class="log-way" *ngIf="user">
+        <div class="logo">
+          <img src="../../assets/borderImg.svg" />
+        </div>
+        <div class="divider"></div>
+        <div class="title">With unified national access portal</div>
+      </div>
+      <div class="divider-horizontal" *ngIf="user"></div>
+
+      <div class="log-form">
+        <h1 class="title" *ngIf="user">Log In</h1>
+        <mat-form-field appearance="outline">
+          <mat-label class="input-label"> User Name</mat-label>
+          <input matInput placeholder=" User Name" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label class="input-label">Password</mat-label>
+          <input matInput placeholder="Password" />
+        </mat-form-field>
+
+        <div class="forgot-password">Forget Password ?</div>
+
+        <div class="log-captcha" *ngIf="!user">
+          <p class="title">Enter the text shown in the image</p>
+          <div class="captcha-content">
+            <div class="captcha-img">
+              <img src="../../assets/captcha.svg" />
+            </div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label class="input-label"
+                >Enter the text shown in the image</mat-label
+              >
+              <input
+                matInput
+                placeholder=" Enter the text shown in the image"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+        <button
+          class="log-action"
+          *ngIf="(!form.username || !form.mdp) && user"
+        >
+          Log In
+          <i class="fa fa-angle-left" style="padding-right: 5%"></i>
+        </button>
+        <button
+          class="log-action"
+          *ngIf="(!form.username || !form.mdp || !form.captcha) && !user"
+        >
+          Log In
+          <i class="fa fa-angle-left" style="padding-right: 5%"></i>
+        </button>
+        <button
+          class="log-action"
+          [class.active-btn]="form.username && form.mdp && user"
+          *ngIf="form.username && form.mdp && user"
+        >
+          Log In
+          <i class="fa fa-angle-left" style="padding-right: 5%"> </i>
+        </button>
+        <button
+          class="log-action"
+          [class.active-btn]="
+            form.username && form.mdp && form.captcha && !user
+          "
+          *ngIf="form.username && form.mdp && form.captcha && !user"
+        >
+          Log In
+          <i class="fa fa-angle-left" style="padding-right: 5%"> </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

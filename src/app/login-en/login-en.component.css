@@ -1,278 +1,280 @@
-.cntr{
-    padding-top: 20px;min-height: 100vh;
-   
+.topPage {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px 10% 16px 20px;
   }
-.p1{
-    font-family: 'Bahij TheSansArabicExtraLight';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 25px;
-text-align: right;
-text-decoration: none;
-width: 100%;
-
-/* Primary Dark/Primary Dark */
-
-color: #011F15;
-}
-.col1{
-    padding-right: 25% ;
-}
-.btn{
+  
+  .topPage span {
+    font-family: "Bahij TheSansArabicLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #011f15;
+    cursor: pointer;
+  }
+  .pageContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    gap: 30px;
+    background: #ffffff;
+  }
+  
+  .log-img {
+    flex: 50%;
+    background: linear-gradient(
+        180deg,
+        #00975f 0%,
+        rgba(0, 151, 95, 0) 100%,
+        rgba(5, 105, 70, 0.13) 100%
+      ),
+      url("../../assets/logImg.svg") no-repeat;
+    border-radius: 55px;
+    height: 100vh;
+  }
+  
+  .log-inputs {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .log-inputs .log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .log-inputs .log-header h1 {
+    font-family: "Bahij TheSansArabic";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 39px;
+    color: #011f15;
+    margin: 0;
+  }
+  
+  .log-inputs .log-header .log-menu {
     min-width: 139px;
-    width: max-content;
     height: 54px;
     border: 1px solid #056946;
     border-radius: 100px;
-
-    font-family: 'Bahij TheSansArabic';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 22px;
-/* identical to box height */
-
-display: flex;
-align-items: center;
-justify-content: center;
-
-/* Primary/Primary color */
-
-color: #056946;
-
-
-
-}
-
-h2{
-    font-family: 'Bahij TheSansArabic';
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 39px;
-text-align: left;
-color: #011F15;
-margin-top: 10px;
-}
-h3{
-font-family: 'Bahij TheSansArabicLight';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 25px;
-color: #2C302F;
-text-align: left;
-padding-top: 50px;
-
-}
-.par1{
-    font-family: 'Bahij TheSansArabicExtraLight';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 19px;
-text-align: left;
-width: 90%;
-margin-right: 10%;
-color: #66716D;
-margin-bottom: 40px;
-
-}
-.p5{
-font-family: 'Bahij TheSansArabicExtraLight';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-
-color: #2C302F;
-margin-left: -20%;
-margin-right: 10%;
-  
-    /*border-right: 1px solid #B4D2C7;*/
-    height: 50px;
-    text-align: left;
     display: flex;
     align-items: center;
-}
-.vl {
-    border-right: 2px solid #B4D2C7;;
-    height: 30px;
-    position: absolute;
-    margin-left: 10%;
-    margin-top: 10px;
-    
-    
+    padding: 0 5px;
   }
-.bordercl{
-    width: 90%;
-    margin-right: 10%;
   
-    border: 1px solid #B4D2C7;
+  .log-inputs .log-header .log-menu .selected-option {
+    font-family: "Bahij TheSansArabicLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #056946;
+    height: 100%;
+    min-width: 100%;
+  }
+  
+  .log-inputs .title {
+    font-family: "Bahij TheSansArabicLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #2c302f;
+  }
+  
+  .log-inputs .desc {
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    color: #66716d;
+  }
+  
+  .log-way {
+    background: #f5fffb;
+    border: 1px solid #b4d2c7;
     border-radius: 10px;
-    min-height: 50px;
-    height: max-content;
-    
-    text-align: left;
     display: flex;
+    gap: 30px;
+    height: 56px;
     align-items: center;
-    
-
-    
-}
-.borderImg{
-    height: 50px;
-   text-align: left;
-    
-}
-.p6{
-    font-family: 'Bahij TheSansArabic';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 25px;
-text-align: right;
-
-/* Gray - Dark/G1 */
-
-color: #2C302F;
-}
-.logform{
-    margin-top: 36px;
-    text-align:right;
-}
-.p6{
-    font-family: 'Bahij TheSansArabicLight';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 25px;
-color: #2C302F;
-margin-top: 30px;
-border-top: 1px solid #D7DAD9;
-padding-top: 40px;
-text-align: left;
-}
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
+    /* max-width: 471px; */
+  }
+  .log-way .title {
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2c302f;
+  }
+  .log-way .divider {
+    border-left: 2px solid #66716d;
+    height: 30px;
+  }
+  
+  .log-inputs .divider-horizontal {
+    border-top: 1px solid #d7dad9;
+    height: 1px;
+  }
+  
+  .log-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .log-form .title {
+    font-family: "Bahij TheSansArabic";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #2c302f;
+  }
+  
+  .log-form .username,
+  .password {
+    position: relative;
+    width: 100%;
+  }
+  .input-label {
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+  }
+  
+  .log-form input,
+  .log-form .forgot-password {
+    font-family: "Bahij TheSansArabic";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    align-self: flex-end;
+    letter-spacing: 0.5px;
+    color: #056946;
+  }
+  
+  .log-captcha {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
   }
   
-  .example-full-width {
-    width: 100%;
-  }
-
-  .p7{
- font-family: 'Bahij TheSansArabic';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 24px;
-align-items: center;
-letter-spacing: 0.5px;
-color: #056946;
-text-align: right;
-  }
-  
-  .btn2{
-    background: #DDDDDD;
-    border-radius: 100px;
-    width: 154px;
-    height: 54px;
-    border: 1px solid #DDDDDD;
-    
-    font-family: 'Bahij TheSansArabic';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-align-items: center;
-letter-spacing: 0.1px;
-
-/* Gray - white/W1 */
-
-color: #B6B6B6;
-margin-top: 20px;
-margin-bottom: 20px;
-padding-right: 5%;
-
- }
-  
-
-.logImg {
-    background: linear-gradient(180deg, #00975F 0%, rgba(0, 151, 95, 0) 100%, rgba(5, 105, 70, 0.13) 100%), url("../../assets/logImg.svg") no-repeat;
-    border-radius: 55px;
-    margin-right: 3%;
-    margin-left: -5%;
-    min-height: 95vh;
-}
-
-.btn3{
-    background: #056946;
-    border-radius: 100px;
-    width: 154px;
-    height: 54px;;
-    border: 1px solid #DDDDDD;
-    
-    font-family: 'Bahij TheSansArabic';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 20px;
-
-align-items: center;
-letter-spacing: 0.1px;
-color: #E6F0EC;
-margin-top: 20px;
-margin-bottom: 20px;
-padding-right: 5%;
-
- }
- .p8{
-
-    font-family: 'Bahij TheSansArabicLight';
+  .log-captcha .title {
+    font-family: "Bahij TheSansArabic";
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-    color: #011F15;
-    margin-top: 30px;
-    margin-bottom: 40px;
-    text-align: left;
- }
- 
- .user2{
-    text-align: left;
- }
- .cnt2{
-   
-    background: #FFFFFF;
-    border: 1px solid #E8E8E8;
-    border-radius: 10px;
-    width: 40%;
-    height: 54px;
-     }
-     .cnt1{
-        margin-left: -40%;
-        margin-top: -10px;
-
-     }
-     input{
-        border: 1px solid #E8E8E8;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #011f15;
+  }
+  
+  .log-captcha .captcha-content {
+    display: flex;
+    gap: 30px;
     width: 100%;
-    height: 55px;
-    margin-top: -10px;
-    margin-bottom: 35px;
-     }
-     label{
-        width: 100%;
-        text-align: left;
-        margin-left: 40px;
-        position: relative;
-        color: #66716D;
-        letter-spacing: 0.4px;
-
-        
-     }
+  }
+  
+  .log-captcha .input-captcha {
+    position: relative;
+    width: 100%;
+  }
+  
+  .log-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 154px;
+    height: 54px;
+    background: #dddddd;
+    border-radius: 100px;
+    font-family: "Bahij TheSansArabic";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: #b6b6b6;
+    border: none;
+    align-self: flex-end;
+  }
+  
+  .active-btn {
+    background: #056946;
+    border-radius: 100px;
+    color: #e6f0ec;
+  }
+  
+  @media (max-width: 768px) {
+    .pageContent {
+      padding: 16px;
+    }
+    .log-img {
+      display: none;
+    }
+    .log-inputs .log-header {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .log-inputs .log-header .log-menu,
+    .log-inputs .log-header .log-menu .selected-option {
+      width: 100%;
+    }
+  
+    .log-inputs .log-header h1 {
+      font-size: 20px;
+      line-height: 33px;
+    }
+  
+    .log-inputs .title,
+    .log-way .title {
+      font-size: 14px;
+      line-height: 22px;
+      width: 100%;
+    }
+    .log-inputs .desc {
+      font-size: 10px;
+      line-height: 16px;
+    }
+  
+    .log-way {
+      gap: 10px;
+    }
+  
+    .log-captcha .captcha-content {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .log-action {
+      width: 100%;
+    }
+    .log-form {
+      margin-top: 7%;
+    }
+  }
+  

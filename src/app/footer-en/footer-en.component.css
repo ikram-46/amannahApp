@@ -1,56 +1,67 @@
 .FooterContainer {
-    background: #033F2A;
-    border-radius: 51px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
-    height: 600px;
+    background: #00975F;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  height: 600px;
 }
 
 .FooterContainer p {
-    max-width: 600px;
-    font-family: 'Bahij TheSansArabicExtraLight';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
+  max-width: 600px;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
 }
 .FooterContainer nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
-.FooterContainer nav a{
-    color: white;
-    font-family: 'Bahij TheSansArabicLight';
-    padding: 5px 10px;
-    margin-left: 5px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 14px;
+.FooterContainer nav a {
+  color: white;
+  font-family: "Bahij TheSansArabicLight";
+  padding: 5px 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
 }
 .FooterContainer nav a:hover {
-    /* color: yellow */
-    border-bottom: 2px solid #E6F0EC;
-    padding-bottom: 2px;
-    border-radius: unset;
-  }
-  .FooterContainer nav a.active {
-    /* color: yellow; */
-    border-bottom: 2px solid #E6F0EC;
-    padding-bottom: 2px;
-    border-radius: unset;
-  }
+  /* color: yellow */
+  border-bottom: 2px solid #e6f0ec;
+  padding-bottom: 2px;
+  border-radius: unset;
+}
+.FooterContainer nav a.active {
+  /* color: yellow; */
+  border-bottom: 2px solid #e6f0ec;
+  padding-bottom: 2px;
+  border-radius: unset;
+}
 
-  @media screen and (max-width: 980px) {
-    .FooterContainer {
-        max-height: 500px;
-    }
+@media screen and (max-width: 980px) {
+  .FooterContainer {
+    padding: 16px;
+    max-height: 500px;
+    gap: 40px;
+    align-items: center;
   }
+  .FooterContainer p {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 17px;
+  }
+  .FooterContainer nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

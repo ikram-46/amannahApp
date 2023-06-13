@@ -84,7 +84,7 @@
 }
 
 .interactWith-card img {
-  margin-top: -5%;
+  margin-top: -7%;
   width: 50%;
 }
 
@@ -157,7 +157,9 @@
     margin: 0 16px;
   }
   .interactWith-card {
-    height: auto;
+    height: 659px;
+    justify-content: flex-start;
+    gap: 5px;
     top: 0;
   }
 

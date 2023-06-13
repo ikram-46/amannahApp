@@ -1,42 +1,78 @@
 .cardContainer {
     max-width: 341px;
-    height: 329px;
+    height: 265px;
     padding: 10px;
-    background: #FFFFFF;
-    border: 1px solid #F0F0F0;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
     border-radius: 43px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-}
-
-.mat-mdc-card-content h1 {
-    font-family: 'Bahij TheSansArabic';
+    box-shadow: none;
+    border: 1px solid #f0f0f0;
+  }
+  .mat-mdc-card-header img {
+    width: 35px;
+    height: 35px;
+  }
+  .mat-mdc-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mat-mdc-card-content h1 {
+    font-family: "Bahij TheSansArabic";
     /* max-width: 65%; */
     font-style: normal;
     font-weight: 500;
     font-size: 23px;
     line-height: 49px;
-    text-align: left;
-    color: #0F0F0F;
-}
-
-.mdc-card__actions button {
+   margin: 0;
+    color: #0f0f0f;
+  }
+  
+  .mat-mdc-card-content p {
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #66716d;
+  }
+  
+  .mdc-card__actions {
+    display: flex;
+   justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mdc-card__actions h6 {
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 31px;
+    color: #414141;
+    margin: 0;
+    cursor: pointer;
+  }
+  .hide-action  {
+    display: none;
+  }
+  .mdc-card__actions button {
     background: transparent;
     border-radius: 100px;
     display: flex;
     align-items: center;
     gap: 10px;
-    height: 64px;
     border: none;
-    width: 268px;
-    font-family: 'Bahij TheSansArabic';
+    font-family: "Bahij TheSansArabic";
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0.1px;
     color: #777777;
-}
-
+    cursor: pointer;
+  }
+  

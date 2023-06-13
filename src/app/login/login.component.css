@@ -1,9 +1,28 @@
-.loginContainer {
+.topPage {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 10% 16px 20px;
+}
+
+.topPage span {
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #011f15;
+  cursor: pointer;
+}
+.pageContent {
   display: flex;
   justify-content: space-between;
   padding: 32px;
   gap: 30px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .log-img {
@@ -24,16 +43,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.log-inputs .go-home {
-  font-family: "Bahij TheSansArabicLight";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 25px;
-  text-align: left;
-  color: #011f15;
 }
 
 .log-inputs .log-header {
@@ -96,14 +105,14 @@
 }
 
 .log-way {
-  background: #FFFFFF;
+  background: #f5fffb;
   border: 1px solid #b4d2c7;
   border-radius: 10px;
   display: flex;
   gap: 30px;
   height: 56px;
   align-items: center;
-  max-width: 471px;
+  /* max-width: 471px; */
 }
 .log-way .title {
   font-family: "Bahij TheSansArabicExtraLight";
@@ -219,15 +228,13 @@
   color: #e6f0ec;
 }
 
-
 @media (max-width: 768px) {
-  .loginContainer {
-    padding: 16px 9px;
+  .pageContent {
+    padding: 16px;
   }
   .log-img {
     display: none;
   }
-
   .log-inputs .log-header {
     flex-direction: column;
     justify-content: flex-start;
@@ -259,7 +266,15 @@
     gap: 10px;
   }
 
-  .log-action{
+  .log-captcha .captcha-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .log-action {
     width: 100%;
+  }
+  .log-form {
+    margin-top: 7%;
   }
 }

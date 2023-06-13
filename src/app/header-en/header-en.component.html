@@ -1,84 +1,224 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<mat-sidenav-container>
-	<mat-sidenav #sidenav mode="over">
-		<!-- <label>My Application</label> -->
-        <img src="../../assets/شعار الأمانه افقي.svg"/> 
-    <hr/>   
-		<nav>
-			<a routerLink="/home-en"      (click)="clickHandler()" routerLinkActive="active">Home</a>
-			<a routerLink="/e-service-en"     (click)="clickHandler()" routerLinkActive="active">E-Service</a>
-			<a routerLink="page2"     (click)="clickHandler()" routerLinkActive="active"> Service</a>
-			<a routerLink="/contract-eo-en"   (click)="clickHandler()" routerLinkActive="active">Help And Support</a>
-		</nav> 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<mat-sidenav-container dir="ltr">
+  <mat-sidenav #sidenav mode="over">
+    <div class="sideHeader">
+      <img src="../../assets/logos/mobile_logo.svg" />
+      <img
+        (click)="toggleSideNav(); sidenav.toggle()"
+        src="../../assets/navbarIcons/exitIcon.svg"
+      />
+    </div>
     <hr />
-    <div aria-label="user selection" [matMenuTriggerFor]="menu" class="userMenuMobile">
-        <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user"/>
-        <span>
-        User Name Here
-        <mat-icon>keyboard_arrow_down</mat-icon>
-        </span>
-      </div>
+    <nav>
+      <a routerLink="home" (click)="clickHandler()" routerLinkActive="active"
+        >Home</a
+      >
       <hr />
-      <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
-        <mat-button-toggle value="en" routerLink="/home-en">English</mat-button-toggle>
-        <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
-      </mat-button-toggle-group>
-	</mat-sidenav>
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+          hideToggle
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              e-Service
+              <mat-icon *ngIf="!panelOpenState">keyboard_arrow_down</mat-icon>
+              <mat-icon *ngIf="panelOpenState">keyboard_arrow_up</mat-icon>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="electronic-services">
+            <div class="sidemenu-services">
+              <div class="title">
+                <p>الخدمات</p>
+                <p>كل الخدمات</p>
+              </div>
+              <div class="sidemenu-links">
+                <div *ngFor="let link of mobileServicesLinks">
+                  <div class="link">
+                    <img src="{{ link.icon }}" />
+                    <div class="content" routerLink="{{ link.route }}">
+                      <span> {{ link?.title }}</span>
+                      <p>{{ link?.description }}</p>
+                    </div>
+                  </div>
+                  <hr style="color: #7c998e" />
+                </div>
+              </div>
+            </div>
+            <hr style="color: #7c998e" />
+            <div class="sidemenu-services">
+              <div class="title">
+                <p>الأكثر إستخداماً</p>
+              </div>
+              <div class="sidemenu-links">
+                <div *ngFor="let link of usedLinks">
+                  <div class="link">
+                    <img
+                      src="{{ link.icon }}"
+                      style="width: 19px; height: 19px"
+                    />
+                    <div class="content">
+                      <span>{{ link.title }}</span>
+                    </div>
+                  </div>
+                  <hr style="color: #7c998e" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <hr />
+      <a
+        routerLink="/contract-eo"
+        (click)="clickHandler()"
+        routerLinkActive="active"
+      >
+        Help And Support</a
+      >
+    </nav>
+    <hr />
+    <div
+      aria-label="user selection"
+      [matMenuTriggerFor]="menu"
+      class="userMenuMobile"
+    >
+      <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
+      <span>
+        اسم المستخدم
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </span>
+    </div>
+    <hr />
+    <mat-button-toggle-group
+      name="fontStyle"
+      aria-label="Font Style"
+      [(ngModel)]="defaultLanguage"
+    >
+      <mat-button-toggle value="en" routerLink="/home-en"
+        >English</mat-button-toggle
+      >
+      <mat-button-toggle value="ar" routerLink="/home"
+        >العربية</mat-button-toggle
+      >
+    </mat-button-toggle-group>
+  </mat-sidenav>
 
-	<mat-sidenav-content>
-		<mat-toolbar>
-			<header>
-				<mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-				<!-- label>My Application</label> -->
-                <img src="../../assets/شعار الأمانه افقي.svg"/> 
-
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <header>
+        <img src="../../assets/logos/mobile_logo.svg" class="mobile-logo" />
+        <img src="../../assets/شعار الأمانه افقي.svg"  class="screen-logo"/>
+        <mat-icon (click)="toggleSideNav(); sidenav.toggle()" class="menu-icon"
+          >menu</mat-icon
+        >
         <nav>
-          <a routerLink="/home-en"    routerLinkActive="active">Home</a>
-          <a routerLink="/e-service-en"   routerLinkActive="active">E-Service</a>
-          <a routerLink="page2"   routerLinkActive="active">Service </a>
-          <a routerLink="/contract-eo-en" routerLinkActive="active">Help And Support</a>
+          <a routerLink="/home" routerLinkActive="active">Home</a>
+          <a
+            #createPlanmenuTrigger="matMenuTrigger"
+            [matMenuTriggerFor]="submenu"
+            (mouseover)="createPlanmenuTrigger.openMenu()"
+            (mouseout)="
+              $event.stopPropagation(); createPlanmenuTrigger.openMenu()
+            "
+          >
+            e-Service
+
+            <mat-icon *ngIf="!createPlanmenuTrigger.menuOpen"
+              >keyboard_arrow_down</mat-icon
+            >
+            <mat-icon *ngIf="createPlanmenuTrigger.menuOpen"
+              >keyboard_arrow_up</mat-icon
+            >
+          </a>
+          <a routerLink="/contract-eo" routerLinkActive="active">
+            Help And Support</a
+          >
         </nav>
-        <div aria-label="user selection" [matMenuTriggerFor]="menu" class="userMenu">
-          <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user"/>
+        <div class="submenu">
+          <mat-menu
+            #submenu="matMenu"
+            xPosition="before"
+            style="margin: 0 auto"
+          >
+            <div class="services_menu">
+              <div class="services">
+                <div class="title">
+                  <h1>الخدمات</h1>
+                  <p>كل الخدمات</p>
+                </div>
+                <div class="links">
+                  <div *ngFor="let link of servicesLinks" class="link">
+                    <img src="{{ link.icon }}" />
+                    <div class="content" routerLink="{{ link.route }}">
+                      <span> {{ link?.title }}</span>
+                      <p>{{ link?.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <mat-divider [vertical]="true" style="width: 1px"></mat-divider>
+              <div class="services">
+                <div class="title">
+                  <h1>الأكثر إستخداماً</h1>
+                </div>
+                <div class="links">
+                  <div *ngFor="let link of usedLinks" class="link">
+                    <img
+                      src="{{ link.icon }}"
+                      style="width: 19px; height: 19px"
+                    />
+                    <div>
+                      <span>{{ link.title }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-menu>
+        </div>
+        <div
+          aria-label="user selection"
+          [matMenuTriggerFor]="menu"
+          class="userMenu"
+        >
+          <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
           <span>
             User Name Here
-          <mat-icon>keyboard_arrow_down</mat-icon>
+            <mat-icon>keyboard_arrow_down</mat-icon>
           </span>
         </div>
 
-        <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/login-en">Change Account<mat-icon>shuffle</mat-icon></button>
-        <span style="color:#056946;">Businesses And Government</span>
-        <mat-divider style="width:90%; margin: 10px auto;"></mat-divider>
-        <button mat-menu-item routerLink="/login-en"> <mat-icon>person_add</mat-icon> New Account</button>
-        <span>  Recruitement And Training</span>
-        <br/>
-        <span>Employee</span>
-        <mat-divider style="width:90%; margin: 10px auto;"></mat-divider>
-        <button mat-menu-item><img src="./assets/logoutIcon.svg"/>Log out</button>
-        </mat-menu>       
+        <mat-menu #menu="matMenu" style="width: 220px">
+          <button mat-menu-item routerLink="/login">
+            تبديل الحساب <mat-icon>shuffle</mat-icon>
+          </button>
+          <span style="color: #056946">الأعمال والجهات الحكومية</span>
+          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          <button mat-menu-item routerLink="/login">
+            <mat-icon>person_add</mat-icon> حساب جديد
+          </button>
+          <span> التوظيف وتدريب التعاوني</span>
+          <br />
+          <span>موظف</span>
+          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          <button mat-menu-item>
+            <img src="./assets/logoutIcon.svg" />Log out
+          </button>
+        </mat-menu>
       </header>
-      <div class="headerContent-en">
-        <h1>
-            Electronic Services Portal</h1>
-        <p>The Electronic Services System provides all the services that citizens in Riyath  city need, which saves time, 
-          <br/>effort,and traditional paper transactions, All you have to do is choose the service."
-           </p>
+      <div class="headerContent">
+        <h1>Electronic Services Portal</h1>
+        <p>
+          The Electronic Services System provides all the services that citizens
+          in Riyadh city need, which saves time, effort, and traditional paper
+          transactions. All you have to do is choose the service."
+        </p>
       </div>
-      
-      <div class="headerBottom">
-        <div class="search">
-          <mat-icon>search</mat-icon>
-          <input placeholder="Search In services "/>
-        </div>
-        <mat-divider vertical style="height:53px"></mat-divider>
-        <mat-tab-group>
-          <mat-tab label="Individuals"></mat-tab>
-          <mat-tab label="Businesses And Government"></mat-tab>
-          <mat-tab label="Recruitement And Training"></mat-tab>
-          <mat-tab label="Employee"></mat-tab>
-        </mat-tab-group>
-      </div>
-		</mat-toolbar>
-</mat-sidenav-content>
+    </mat-toolbar>
+  </mat-sidenav-content>
 </mat-sidenav-container>

@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-en.component.css']
 })
 export class LoginEnComponent {
+  defaultLanguage: String="en";
   form:any={
     username:"",
     mdp:"",

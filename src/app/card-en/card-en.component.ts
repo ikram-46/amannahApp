@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CardEnComponent {
   @Input() cardDetails: any;
+  @Input() hideActionDetails: boolean = false;
 }

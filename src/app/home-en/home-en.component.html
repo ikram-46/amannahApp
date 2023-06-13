@@ -1,42 +1,97 @@
 <div class="AppContainer" dir="ltr">
-<div class="topHeader" >
-    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" [(ngModel)]="defaultLanguage" >
-      <mat-button-toggle value="en" routerLink="/home-en">English</mat-button-toggle>
-      <mat-button-toggle value="ar" routerLink="/home">العربية</mat-button-toggle>
-    </mat-button-toggle-group>
-    <div class="socialIcons">
-      <p>Join Us</p>
-      <i class="fa fa-youtube-play"></i>
-      <i class="fa fa-twitter"></i>
+  <div class="page-top">
+    <div class="topHeader">
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        [(ngModel)]="defaultLanguage"
+      >
+        <mat-button-toggle value="en" routerLink="/home-en"
+          >English</mat-button-toggle
+        >
+        <mat-button-toggle value="ar" routerLink="/home"
+          >العربية</mat-button-toggle
+        >
+      </mat-button-toggle-group>
+      <div class="socialIcons">
+        <p>Join Us</p>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-twitter"></i>
+      </div>
     </div>
-</div>
-<app-header-en></app-header-en>
-<main class="pageContainer">
-  <div class="services-description">
-    <h1>electronic services</h1>
-    <p>The Electronic Services System provides all the services that citizens in Riyadh city need, which saves time, effort, and traditional paper transactions. All you have to do is choose the service.</p>
+    <app-header-en (sideNavToggled)="onSideNavToggled()"></app-header-en>
+    <div class="headerBottom" *ngIf="!isSideNavOpen">
+      <div class="search">
+        <mat-icon>search</mat-icon>
+        <input placeholder=" Search In services" />
+      </div>
+      <mat-divider vertical style="height: 53px"></mat-divider>
+      <mat-tab-group
+        mat-stretch-tabs="false"
+        (selectedTabChange)="selectedTabValue($event)"
+      >
+        <mat-tab label="individuals"> </mat-tab>
+        <mat-tab label="businesses and government"></mat-tab>
+        <mat-tab label="Recruitment and Training"></mat-tab>
+        <mat-tab label="employee"></mat-tab>
+      </mat-tab-group>
+    </div>
   </div>
-    <div class="homecards">
-      <app-card-en *ngFor="let card of cardsen"[cardDetails]="card" class="card"></app-card-en>
+  <main class="pageContainer" dir="ltr">
+    <div class="services-description">
+      <h1>Electronic Services Portal</h1>
+      <p>
+        The Electronic Services System provides all the services that citizens
+        in Riyadh city need, which saves time, effort, and traditional paper
+        transactions. All you have to do is choose the service."
+      </p>
+    </div>
+    <div class="homecards" *ngIf="activeTabs === 'individuals'">
+      <app-card-en
+        *ngFor="let card of indivCards"
+        [cardDetails]="card"
+        [hideActionDetails]="true"
+      ></app-card-en>
       <mat-card class="lastCard">
         <mat-card-content>
-          <img src="../../assets/whiteArrow-en.svg"/>
+          <img src="../../assets/whiteArrow.svg" />
           <h1>All Services</h1>
         </mat-card-content>
       </mat-card>
     </div>
 
-    <div class="homeBottom">
-      <div class="homeBottomContent">
-        <img src="../../assets/lapTop-en.svg"/>
-        <div class="details">
-            <h1>Interact with</h1>
-            <p>We always strive to provide the best solutions for citizens and residents of Riyadh city. This is achieved through the participation of the local community in our surveys, which helps improve the quality of services provided.</p>
-            <button>Survey Archives<img src="../../assets/whiteArrow-en.svg"/></button>
-        </div>
+    <div class="homecards" *ngIf="activeTabs === 'businesses and government'">
+      <app-card-en
+        *ngFor="let card of businessCards"
+        [cardDetails]="card"
+        [hideActionDetails]="true"
+      ></app-card-en>
+      <mat-card class="lastCard">
+        <mat-card-content>
+          <img src="../../assets/whiteArrow.svg" />
+          <h1>All Services</h1>
+        </mat-card-content>
+      </mat-card>
     </div>
+  </main>
+  <div class="homeBottom">
+    <div class="interactWith-card">
+      <img src="../../assets/lapTop.svg" />
+      <div class="details">
+        <h1>Interact with</h1>
+        <p>
+          We always strive to provide the best solutions for citizens and
+          residents of Riyadh city. This is achieved through the participation
+          of the local community in our surveys, which helps improve the quality
+          of services provided.
+        </p>
+        <button>
+          Survey Archives <img src="../../assets/whiteArrow.svg" />
+        </button>
+      </div>
     </div>
-    
-</main>
-<app-footer-en></app-footer-en>
+    <div class="footer">
+      <app-footer-en></app-footer-en>
+    </div>
+  </div>
 </div>
