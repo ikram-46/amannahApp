@@ -1,6 +1,6 @@
 .cardContainer {
-    max-width: 341px;
-    height: 265px;
+    max-width: 456px;
+    min-height: 265px;
     padding: 10px;
     background: #ffffff;
     border: 1px solid #f0f0f0;

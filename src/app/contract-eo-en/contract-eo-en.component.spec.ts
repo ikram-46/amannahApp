@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContractEOEnComponent } from './contract-eoen.component';
+import { ContractEOEnComponent } from './contract-eo-en.component';
 
 describe('ContractEOEnComponent', () => {
   let component: ContractEOEnComponent;

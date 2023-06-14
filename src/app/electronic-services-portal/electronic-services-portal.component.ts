@@ -11,6 +11,7 @@ export interface serviceCard {
   src: string;
   title: string;
   description: string;
+  action:string;
 }
 @Component({
   selector: 'app-electronic-services-portal',
@@ -21,7 +22,19 @@ export class ElectronicServicesPortalComponent {
   @ViewChild('sidenav') sidenav: MatSidenav;
   opened: boolean;
   defaultLanguage: String="ar";
+  isSideNavOpen = false;
+
+  onSideNavToggled() {
+    this.isSideNavOpen = !this.isSideNavOpen;
+  }
   
+  activeTabs: string = "أفراد";
+  showAllServices : Boolean= false;
+  selectedTabValue(event:any){
+    console.log(event);
+    this.activeTabs = event.tab.textLabel;
+    console.log(this.activeTabs)
+  }
   clickHandler() {
     this.sidenav.close();
   }
@@ -32,9 +45,9 @@ export class ElectronicServicesPortalComponent {
     {src:"../../assets/icon1.svg", title:"تحديث بيانات مكتب هندسي", action:"بدء الخدمة", link:"/contract-eo", serviceDetailsLink:"/e-service"},
   ]
   services : serviceCard[]= [
-    {src:"../../assets/icon1.svg", title:"الإستعلامات", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات "},
-    {src:"../../assets/icon1.svg", title:"المشهد الحضري", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات "},
-    {src:"../../assets/icon1.svg", title:"المنح والعقارات", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات "},
-    {src:"../../assets/icon1.svg", title:"بلاغات وشكاوي 940", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات "},
+    {src:"../../assets/icon1.svg", title:"الإستعلامات", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات ", action:"الخدمات"},
+    {src:"../../assets/icon1.svg", title:"المشهد الحضري", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات ", action:"الخدمات"},
+    {src:"../../assets/icon1.svg", title:"المنح والعقارات", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات ", action:"الخدمات"},
+    {src:"../../assets/icon1.svg", title:"بلاغات وشكاوي 940", description:"يوفر نظام الخدمات الالكترونية جميع الخدمات التي يحتاجها المواطنين في مدينة الرياض الذي يوفر يوفر نظام الخدمات ", action:"الخدمات"},
   ]
 }

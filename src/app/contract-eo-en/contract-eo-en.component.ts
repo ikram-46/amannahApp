@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-contract-eoen',
-  templateUrl: './contract-eoen.component.html',
-  styleUrls: ['./contract-eoen.component.css']
+  selector: 'app-contract-eo-en',
+  templateUrl: './contract-eo-en.component.html',
+  styleUrls: ['./contract-eo-en.component.css']
 })
 export class ContractEOEnComponent {
   defaultLanguage: String="en";

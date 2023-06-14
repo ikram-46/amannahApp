@@ -19,7 +19,14 @@
         <i class="fa fa-twitter"></i>
       </div>
     </div>
-    <app-header-en (sideNavToggled)="onSideNavToggled()"></app-header-en>
+    <app-header-en (sideNavToggled)="onSideNavToggled()">
+      <h1>Electronic Services Portal</h1>
+      <p>
+        The Electronic Services System provides all the services that citizens
+        in Riyadh city need, which saves time, effort, and traditional paper
+        transactions. All you have to do is choose the service."
+      </p>
+    </app-header-en>
     <div class="headerBottom" *ngIf="!isSideNavOpen">
       <div class="search">
         <mat-icon>search</mat-icon>

@@ -1,5 +1,47 @@
 <div class="pageContent" dir="rtl">
-  <app-header></app-header>
+  <div class="page-top">
+    <div class="topHeader">
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        [(ngModel)]="defaultLanguage"
+      >
+        <mat-button-toggle value="en" routerLink="/electronic-service-portal-en"
+          >English</mat-button-toggle
+        >
+        <mat-button-toggle value="ar" routerLink="/electronic-service-portal">العربية</mat-button-toggle>
+      </mat-button-toggle-group>
+      <div class="socialIcons">
+        <p>تفضلوا بالانضمام إلينا</p>
+        <i class="fa fa-youtube-play"></i>
+        <i class="fa fa-twitter"></i>
+      </div>
+    </div>
+    <app-header (sideNavToggled)="onSideNavToggled()">
+      <h1>الرخص والشهادات </h1>
+      <nav>
+        <h6 class="mb-0" class="breadCrumb">
+          <a href="/home" class="text-reset">الخدمات الإلكترونية</a>
+          <span>></span>
+          <a href="/electronic-services-portal" class="text-reset">الرخص والشهادات </a>
+        </h6>
+      </nav>
+    </app-header>
+    <div class="headerBottom" *ngIf="!isSideNavOpen">
+      <div class="search">
+        <mat-icon>search</mat-icon>
+        <input placeholder="ابحث عن خدمة " />
+      </div>
+      <mat-divider vertical style="height: 53px"></mat-divider>
+      <mat-tab-group mat-stretch-tabs="false" (selectedTabChange)="selectedTabValue($event)">
+        <mat-tab label="أفراد">
+        </mat-tab>
+        <mat-tab label="الأعمال والجهات الحكومية" ></mat-tab>
+        <mat-tab label="التوظيف وتدريب التعاوني"></mat-tab>
+        <mat-tab label="موظف"></mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
   <div class="tabs">
     <mat-tab-group mat-stretch-tabs="false">
       <!--       <mat-tab label="الرخص الإنشائية"></mat-tab>
@@ -23,6 +65,7 @@
       <app-card
         *ngFor="let service of services"
         [cardDetails]="service"
+        [hideActionDetails]="true"
       ></app-card>
     </div>
   </div>

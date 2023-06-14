@@ -238,6 +238,25 @@ body {
   max-width: 548px;
 }
 
+.headerContent .breadCrumb {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-top: -20px;
+}
+.headerContent .breadCrumb a,
+.headerContent .breadCrumb span {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 86px;
+  color: #E6F0EC !important;
+  text-decoration: none;
+}
+
 .headerContent-en {
   margin: auto 0;
   display: flex;
@@ -267,9 +286,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  .headerContent .breadCrumb a,
+  .headerContent .breadCrumb span {
+    font-size: 10px;
+  }
   .headerContent h1,
   .headerContent-en h1 {
     font-size: 19px;
+    margin: 0;
   }
   .headerContent p,
   .headerContent p {
@@ -425,7 +449,7 @@ body {
   }
   .headerContent h1 {
     font-family: "Bahij TheSansArabic";
-    font-size: 28px;
+    font-size: 20px;
     line-height: 56px;
   }
   .headerContent-en h1 {

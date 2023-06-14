@@ -30,18 +30,18 @@ export class HomeEnComponent {
   }
  
   indivCards : card[]= [
-    {src:"../../assets/eng-services.svg", title:"Engineering offices",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/contractors.svg", title:"contractors",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/healthy.svg", title:"healthy",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/gov-agencies.svg", title:"Government agencies ",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/invest-services.svg", title:"Investment services",action:"Service", link:"/electronic-service-portal"},
+    {src:"../../assets/eng-services.svg", title:"Engineering offices",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/contractors.svg", title:"contractors",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/healthy.svg", title:"healthy",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/gov-agencies.svg", title:"Government agencies ",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/invest-services.svg", title:"Investment services",action:"Service", link:"/electronic-service-portal-en"},
   ]
   businessCards : card[]= [
-    {src:"../../assets/eng-services.svg", title:"Engineering offices",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/contractors.svg", title:"contractors",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/healthy.svg", title:"healthy",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/gov-agencies.svg", title:"Government agencies ",action:"Service", link:"/electronic-service-portal"},
-    {src:"../../assets/invest-services.svg", title:"Investment services",action:"Service", link:"/electronic-service-portal"},
+    {src:"../../assets/eng-services.svg", title:"Engineering offices",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/contractors.svg", title:"contractors",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/healthy.svg", title:"healthy",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/gov-agencies.svg", title:"Government agencies ",action:"Service", link:"/electronic-service-portal-en"},
+    {src:"../../assets/invest-services.svg", title:"Investment services",action:"Service", link:"/electronic-service-portal-en"},
   ]
 
 }

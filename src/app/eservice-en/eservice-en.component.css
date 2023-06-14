@@ -1,492 +1,581 @@
 .pageContent {
-    background: #f5f5f5;
-  }
-  /***** start style bloc e-service header  *****/
-  
-  .header {
-    background: #ffffff;
-    border-radius: 51.1479px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 379px;
-  }
-  
+  background: #f5f5f5;
+}
+
+.cards .top-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 20%;
+}
+
+.top-card img {
+  width: 27px;
+  height: 27px;
+}
+
+.top-card h1, .top-card p {
+  font-family: 'Bahij TheSansArabicLight';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  color: #414A47;
+  margin: 0;
+}
+/***** start style bloc e-service header  *****/
+
+.header {
+  background: #ffffff;
+  border-radius: 51.1479px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 379px;
+}
+
+.header h1 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 62px;
+  color: #033f2a;
+  margin: 0;
+}
+.header .breadCrumb {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.header .breadCrumb a,
+.header .breadCrumb span {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 86px;
+  color: #033f2a;
+  text-decoration: none;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: absolute;
+  bottom: -10%;
+}
+
+.actions button {
+  width: 225px;
+  height: 81px;
+  background: #e6f0ec;
+  border: 1px solid #056946;
+  border-radius: 100px;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #056946;
+}
+
+.actions .start-service {
+  background: #056946;
+  color: #e6f0ec;
+}
+
+@media (max-width: 768px) {
   .header h1 {
-    font-family: "Bahij TheSansArabic";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 62px;
-    color: #033f2a;
-    margin: 0;
-  }
-  .header .breadCrumb {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+    font-size: 20px;
+    line-height: 35px;
   }
   .header .breadCrumb a,
-  span {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 86px;
-    color: #033f2a;
-    text-decoration: none;
+  .header .breadCrumb span {
+    font-size: 10px;
   }
-  
-  .actions {
-    display: flex;
+
+  .header .breadCrumb {
+    /* gap: 3px;
+    margin-right: 30px; */
+    display: block;
+  }
+}
+/***** end style bloc e-service header  *****/
+
+/***** start style bloc e-service details *****/
+.eservice-details {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-between;
+  background: #ffffff;
+  border-radius: 43px;
+  min-height: 100%;
+  padding: 5%;
+  gap: 30px;
+  margin-top: 8%;
+}
+.service-inforamtion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.service-inforamtion h1 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 65px;
+  text-align: right;
+  color: #011f15;
+}
+
+.service-inforamtion p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #2c302f;
+}
+.eservice-details .questions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+.eservice-details .questions .question {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.eservice-details .questions .question .question-text {
+  width: 458px;
+  height: 92px;
+  background: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 20px;
+  padding: 0 10px;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  color: #7a7a7a;
+  cursor: pointer;
+}
+
+.eservice-details .questions .question .selected {
+  color: #00975f;
+  background: #f2fffa;
+  border: 1px solid #00975f;
+}
+.eservice-details .questions .response {
+  flex: 50%;
+  background: #ffffff;
+  border: 1px solid #b4d2c7;
+  border-radius: 43px;
+  width: 100%;
+  padding: 32px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.eservice-details .questions .response .steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  position: absolute;
+  left: 16px;
+}
+.eservice-details .questions .response .step {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.eservice-details .questions .response .step .number {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #c9c9c9;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #848484;
+}
+.eservice-details .questions .response .step p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  color: #636363;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .eservice-details .questions {
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    position: absolute;
-    bottom: -10%;
+    width: auto;
   }
-  
-  .actions button {
-    width: 225px;
-    height: 81px;
-    background: #e6f0ec;
-    border: 1px solid #056946;
-    border-radius: 100px;
-    font-family: "Bahij TheSansArabicLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .eservice-details .questions .question .question-text {
+    max-width: 276px;
+    height: 64px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .eservice-details .questions .response {
+    flex: 100%;
+    width: auto;
+    min-height: 302px;
+  }
+
+  .eservice-details .questions .response .step {
     gap: 5px;
-    color: #056946;
   }
-  
-  .actions .start-service {
-    background: #056946;
-    color: #e6f0ec;
+  .eservice-details .questions .response .steps {
+    right: 22px;
+    gap: 10%;
   }
-  
-  @media (max-width: 768px) {
-    .header h1 {
-      font-size: 20px;
-      line-height: 35px;
-    }
-    .header .breadCrumb a,
-    span {
-      font-size: 10px;
-    }
-  
-    .header .breadCrumb {
-      /* gap: 3px;
-      margin-right: 30px; */
-      display: block;
-    }
+  .eservice-details .questions .response .step .number {
+    font-size: 11px;
+    line-height: 17px;
+    width: 19px;
+    height: 19px;
   }
-  /***** end style bloc e-service header  *****/
-  
-  /***** start style bloc e-service details *****/
+  .eservice-details .questions .response .step p {
+    font-size: 13px;
+    line-height: 20px;
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
   .eservice-details {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    background: #ffffff;
-    border-radius: 43px;
-    min-height: 100%;
-    padding: 10% 5%;
-    margin-top: 8%;
+    margin-top: 20%;
   }
   .service-inforamtion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 386px;
+    justify-content: flex-start;
   }
   .service-inforamtion h1 {
-    font-family: "Bahij TheSansArabic";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 65px;
-    text-align: left;
-    color: #011f15;
+    font-size: 23px;
   }
-  
+
   .service-inforamtion p {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 25px;
-    color: #2c302f;
+    font-size: 14px;
   }
-  
   .mat-accordion {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .mat-accordion .mat-expansion-panel {
-    background: #ffffff;
-    border: 1px solid #ebecf0;
-    border-radius: 20px;
-    height: 100%;
-    max-width: 560px;
-  }
-  
-  .mat-accordion .mat-expansion-panel .mat-expansion-panel-header {
-    height: 92px;
+    max-width: 300px;
   }
   .mat-accordion .mat-expansion-panel .mat-expansion-panel-header-title {
-    font-family: "Bahij TheSansArabicLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 38px;
-    color: #414a47;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 14px;
   }
-  
-  .mat-accordion
-    .mat-expansion-panel
-    .mat-expansion-panel-header-title
-    .mat-icon {
-    height: 26px;
-  }
-  
-  .mat-expansion-panel-header.mat-expanded .mat-expansion-panel-header-title {
-    color: #056946 !important;
-  }
-  
-  .mat-accordion .mat-expansion-panel p {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 25px;
-    text-align: left;
-    color: #66716d;
-  }
-  
-  @media (max-width: 768px) {
-    .eservice-details {
-      margin-top: 20%;
-    }
-    .service-inforamtion {
-      justify-content: flex-start;
-    }
-    .service-inforamtion h1 {
-      font-size: 23px;
-    }
-  
-    .service-inforamtion p {
-      font-size: 14px;
-    }
-    .mat-accordion {
-      max-width: 300px;
-    }
-    .mat-accordion .mat-expansion-panel .mat-expansion-panel-header-title {
-      font-size: 14px;
-    }
-  }
-  /***** end style bloc e-service details  *****/
-  
-  /***** start style bloc e-service guide  *****/
-  
-  .service-guide {
-    margin-top: 8%;
-    background: #00975f;
-    border: 1px solid #b4d2c7;
-    border-radius: 43px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    min-height: 389px;
-  }
-  
+}
+/***** end style bloc e-service details  *****/
+
+/***** start style bloc e-service guide  *****/
+
+.service-guide {
+  margin-top: 8%;
+  background: #00975f;
+  border: 1px solid #b4d2c7;
+  border-radius: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 389px;
+}
+
+.service-guide h1 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 65px;
+  text-align: right;
+  color: #ffffff;
+}
+.service-guide p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #f4f4f4;
+  max-width: 684px;
+}
+.service-guide button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 250px;
+  height: 81px;
+  background: #e6f0ec;
+  border-radius: 100px;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #056946;
+  border: none;
+}
+
+@media (max-width: 768px) {
   .service-guide h1 {
-    font-family: "Bahij TheSansArabic";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 65px;
-    text-align: left;
-    color: #ffffff;
+    font-size: 26px;
   }
+
   .service-guide p {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 25px;
-    text-align: center;
-    color: #f4f4f4;
-    max-width: 684px;
+    font-size: 14px;
   }
-  .service-guide button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 250px;
-    height: 81px;
-    background: #e6f0ec;
-    border-radius: 100px;
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-    color: #056946;
-    border: none;
+}
+
+/***** end style bloc e-service guide  *****/
+/***** start style bloc asked-questions  *****/
+.asked-questions {
+  margin-top: 8%;
+  background: #ffffff;
+  border-radius: 43px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 100%;
+  /*  width: 100%; */
+  padding: 8%;
+}
+
+.asked-questions .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.asked-questions .title h1 {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 65px;
+  text-align: right;
+  color: #011f15;
+}
+
+.asked-questions .title p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #66716d;
+  max-width: 472px;
+}
+
+
+ .mat-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mat-accordion .mat-expansion-panel {
+  background: #ffffff;
+  border: 1px solid #ebecf0;
+  border-radius: 20px;
+  height: 100%;
+
+}
+
+.mat-accordion .mat-expansion-panel .mat-expansion-panel-header {
+  height: 92px;
+}
+.mat-accordion .mat-expansion-panel .mat-expansion-panel-header-title {
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  color: #414a47;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mat-accordion
+  .mat-expansion-panel
+  .mat-expansion-panel-header-title
+  .mat-icon {
+  height: 26px;
+}
+
+.mat-expansion-panel-header.mat-expanded .mat-expansion-panel-header-title {
+  color: #056946 !important;
+}
+
+.mat-accordion .mat-expansion-panel p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: #66716d;
+}
+/***** end style bloc asked-questions  *****/
+/***** end style bloc certificate-services  *****/
+.certificate-services {
+  margin-top: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 8%;
+}
+
+.certificate-services .title {
+  font-family: "Bahij TheSansArabic";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 86px;
+  color: #011f15;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .certificate-services {
+    gap: 15px;
   }
-  
-  @media (max-width: 768px) {
-    .service-guide h1 {
-      font-size: 26px;
-    }
-  
-    .service-guide p {
-      font-size: 14px;
-    }
+  .certificate-services .title {
+    font-size: 20px;
+    line-height: 86px;
   }
-  
-  /***** end style bloc e-service guide  *****/
-  /***** start style bloc asked-questions  *****/
-  .asked-questions {
-    margin-top: 8%;
-    background: #ffffff;
-    border-radius: 43px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    height: 100%;
-    /*  width: 100%; */
-    padding: 8%;
+  .cards {
+    grid-template-columns: 1fr;
   }
-  
-  .asked-questions .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
+
   .asked-questions .title h1 {
-    font-family: "Bahij TheSansArabic";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 65px;
-    text-align: left;
-    color: #011f15;
+    font-size: 23px;
+    text-align: right;
+    line-height: 38px;
   }
-  
   .asked-questions .title p {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 25px;
-    text-align: center;
-    color: #66716d;
-    max-width: 472px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
   }
-  
   .asked-questions .questions {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    gap: 20px;
-    width: 100%;
-  }
-  .asked-questions .questions .question {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    width: auto;
   }
   .asked-questions .questions .question .question-text {
-    width: 458px;
-    height: 92px;
-    background: #ffffff;
-    border: 1px solid #ebecf0;
-    border-radius: 20px;
-    padding: 0 10px;
-    font-family: "Bahij TheSansArabicLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 38px;
-    justify-content: flex-start;
-    display: flex;
-    align-items: center;
-    color: #7a7a7a;
-    cursor: pointer;
+    max-width: 276px;
+    height: 64px;
+    font-size: 14px;
+    line-height: 22px;
   }
-  
-  .asked-questions .questions .question .selected {
-    color: #00975f;
-    background: #f2fffa;
-    border: 1px solid #00975f;
-  }
+
   .asked-questions .questions .response {
-    flex: 50%;
-    background: #ffffff;
-    border: 1px solid #b4d2c7;
-    border-radius: 43px;
-    width: 100%;
-    padding: 32px;
-    min-height: 400px;
-    overflow: hidden;
-    display: flex;
-    position: relative;
+    flex: 100%;
+    width: auto;
+    min-height: 302px;
   }
-  
-  .asked-questions .questions .response .steps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15%;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 16px;
-  }
+
   .asked-questions .questions .response .step {
-    display: flex;
-    gap: 20px;
-    width: 100%;
+    gap: 5px;
+  }
+  .asked-questions .questions .response .steps {
+    right: 22px;
+    gap: 10%;
   }
   .asked-questions .questions .response .step .number {
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    background: #ffffff;
-    border: 1px solid #c9c9c9;
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 39px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #848484;
+    font-size: 11px;
+    line-height: 17px;
+    width: 19px;
+    height: 19px;
   }
   .asked-questions .questions .response .step p {
-    font-family: "Bahij TheSansArabicLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 31px;
-    color: #000000;
-    margin: 0;
+    font-size: 13px;
+    line-height: 20px;
+    max-width: 220px;
   }
-  
-  /***** end style bloc asked-questions  *****/
-  /***** end style bloc certificate-services  *****/
-  .certificate-services {
-    margin-top: 8%;
+}
+/***** end style bloc certificate-services  *****/
+.bottom-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bottom-content .find-service {
+  position: absolute;
+  width: 95%;
+}
+
+.bottom-content .footer {
+  margin-top: 38%;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .bottom-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 30px;
-    margin-bottom: 8%;
+    justify-content: center;
   }
-  
-  .certificate-services .title {
-    font-family: "Bahij TheSansArabic";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 35px;
-    line-height: 86px;
-    text-align: left;
-    color: #011f15;
+  .bottom-content .find-service {
+    position: relative;
+    margin: auto;
   }
-  
-  .certificate-services .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+  .bottom-content .footer {
+    margin-top: -12%;
+    
   }
-  
-  @media (max-width: 768px) {
-    .certificate-services {
-      gap: 15px;
-    }
-    .certificate-services .title {
-      font-size: 20px;
-      line-height: 86px;
-    }
-    .certificate-services .cards {
-      grid-template-columns: 1fr;
-    }
-  
-    .asked-questions .title h1 {
-      font-size: 23px;
-      text-align: left;
-      line-height: 38px;
-    }
-    .asked-questions .title p {
-      font-size: 14px;
-      line-height: 22px;
-      text-align: left;
-    }
-    .asked-questions .questions {
-      flex-wrap: wrap;
-      width: auto;
-    }
-    .asked-questions .questions .question .question-text {
-      max-width: 276px;
-      height: 64px;
-      font-size: 14px;
-      line-height: 22px;
-    }
-  
-    .asked-questions .questions .response {
-      flex: 100%;
-      width: auto;
-      min-height: 400px;
-    }
-  
-    .asked-questions .questions .response .step {
-      gap: 5px;
-    }
-    .asked-questions .questions .response .steps {
-      left: 22px;
-      gap: 10%;
-    }
-    .asked-questions .questions .response .step .number {
-      font-size: 11px;
-      line-height: 17px;
-      width: 19px;
-      height: 19px;
-    }
-    .asked-questions .questions .response .step p {
-      font-size: 13px;
-      line-height: 20px;
-      max-width: 220px;
-    }
-  }
-  /***** end style bloc certificate-services  *****/
-  
-  
+}

@@ -9,7 +9,8 @@ import { LoginEnComponent } from './login-en/login-en.component';
 import { ElectronicServicesPortalComponent } from './electronic-services-portal/electronic-services-portal.component';
 import { ContractEOComponent } from './contract-eo/contract-eo.component';
 import { EServiceEnComponent } from './eservice-en/eservice-en.component';
-import { ContractEOEnComponent } from './contract-eoen/contract-eoen.component';
+import { ContractEOEnComponent } from './contract-eo-en/contract-eo-en.component';
+import { ElectronicServicePortalEnComponent } from './electronic-service-portal-en/electronic-service-portal-en.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'login', component: LoginComponent },
       { path: 'login-en', component: LoginEnComponent },
       { path: 'electronic-service-portal', component: ElectronicServicesPortalComponent },
+      { path: 'electronic-service-portal-en', component: ElectronicServicePortalEnComponent },
       { path: 'contract-eo', component: ContractEOComponent },
       { path: 'contract-eo-en', component: ContractEOEnComponent },
 ]

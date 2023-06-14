@@ -36,27 +36,27 @@ export class NavbarEnComponent {
     this.sidenav.close();
   }
   servicesLinks : serviceLink[]= [
-    {route :"/electronic-service-portal",title:"مكاتب هندسية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس",icon:"../../assets/eng-services.svg" },
-    {route :"/electronic-service-portal",title:"مقاولين", description:"شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/contractors.svg"},
-    {route :"/electronic-service-portal",title:"صحية", description:" إيبسوم هو ببساطة نص شكلي", icon:"../../assets/healthy.svg"},
-    {route :"/electronic-service-portal",title:"جهات حكومية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/gov-agencies.svg"},
-    {route :"/electronic-service-portal",title:"خدمات الإستثمار", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل المحتوى) ", icon:"../../assets/invest-services.svg"},
+    {route :"/electronic-service-portal",title:"Engineering offices", description:"Le Lorem Ipsum est simplement du faux texte employé dans",icon:"../../assets/navbarIcons/green-comment-icon.svg" },
+    {route :"/electronic-service-portal",title:"Contractors", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/navbarIcons/green-files-icon.svg"},
+    {route :"/electronic-service-portal",title:"Healthy", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/navbarIcons/green-comment-icon.svg"},
+    {route :"/electronic-service-portal",title:"Government entities", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/navbarIcons/green-comment-icon.svg"},
+    {route :"/electronic-service-portal",title:"Investment services", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/navbarIcons/green-comment-icon.svg"},
   ]
   mobileServicesLinks : serviceLink[]= [
-    {route :"/electronic-service-portal",title:"مكاتب هندسية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس",icon:"../../assets/navbarIcons/eng-services-mb.svg" },
-    {route :"/electronic-service-portal",title:"مقاولين", description:"شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/navbarIcons/contractors-mb.svg"},
-    {route :"/electronic-service-portal",title:"صحية", description:" إيبسوم هو ببساطة نص شكلي", icon:"../../assets/navbarIcons/healthy-mb.svg"},
-    {route :"/electronic-service-portal",title:"جهات حكومية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/navbarIcons/gov-agencies-mb.svg"},
-    {route :"/electronic-service-portal",title:"خدمات الإستثمار", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل المحتوى) ", icon:"../../assets/navbarIcons/invest-services-mb.svg"},
+    {route :"/electronic-service-portal",title:"Engineering offices", description:"Le Lorem Ipsum est simplement du faux texte employé dans",icon:"../../assets/eng-services.svg" },
+    {route :"/electronic-service-portal",title:"Contractors", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/contractors.svg"},
+    {route :"/electronic-service-portal",title:"Healthy", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/healthy.svg"},
+    {route :"/electronic-service-portal",title:"Government entities", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/gov-agencies.svg"},
+    {route :"/electronic-service-portal",title:"Investment services", description:"Le Lorem Ipsum est simplement du faux texte employé dans", icon:"../../assets/invest-services.svg"},
   ]
 
   usedLinks : usedLink[]= [
-    {route :"",title:"الإستعلام عن طلب دفن مشائم واعضاء بشرية",icon:"../../assets/navbarIcons/comment.svg" },
-    {route :"",title:"إضافة مقاولي العقد والتأمين", icon:"../../assets/navbarIcons/comment.svg"},
-    {route :"",title:"صندوق طلبت التنسيق الواردة من المقاول ", icon:"../../assets/navbarIcons/comment.svg"},
-    {route :"",title:"شهادة اشغال لرخصة بناء", icon:"../../assets/navbarIcons/comment.svg"},
-    {route :"",title:"نقل ملكية لرخصة بناء",  icon:"../../assets/navbarIcons/comment.svg"},
-    {route :"",title:"إستعلام عن طلبات التجديد",  icon:"../../assets/navbarIcons/comment.svg"},
+    {route :"",title:"Inquiry about a request for burying curses and human organs.",icon:"../../assets/navbarIcons/comment.svg" },
+    {route :"",title:"Adding contract and insurance contractors.", icon:"../../assets/navbarIcons/comment.svg"},
+    {route :"",title:"Box of coordination requests received from the contractor.", icon:"../../assets/navbarIcons/comment.svg"},
+    {route :"",title:"Certificate of completion for a building permit", icon:"../../assets/navbarIcons/comment.svg"},
+    {route :"",title:"Transfer of ownership for a building permit.",  icon:"../../assets/navbarIcons/comment.svg"},
+    {route :"",title:"Inquiry about renewal requests.",  icon:"../../assets/navbarIcons/comment.svg"},
   ]
 
 }
