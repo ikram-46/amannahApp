@@ -12,6 +12,37 @@
   font-family: "Bahij TheSansArabicLight";
   src: url("./assets/Bahij TheSansArabicLight.ttf");
 }
+
+/*********/
+.mat-stepper-horizontal {
+  background: transparent;
+}
+.mat-stepper-horizontal .mat-horizontal-stepper-wrapper {
+  display: flex;
+  flex-direction: row !important;
+} 
+
+.mat-horizontal-stepper-header-container {
+  display: flex;
+  flex-direction:  column !important;
+  max-width: 326px;
+  padding: 32px 16px;
+  background: #ffffff;
+  border-radius: 31px;
+  
+}
+
+.mat-stepper-horizontal-line {
+  border-left-width: 1px !important;
+  border-top-width : 0 !important;
+  border-left-style: solid;
+  border-left-color: rgba(0,0,0,.12) !important;
+  height: 20px !important;
+  width: 2px !important;
+  min-width: 0px !important;
+}
+
+/********/
 html,
 body {
   font-family: "Bahij TheSansArabic";
@@ -121,7 +152,12 @@ body {
 }
 
 .mat-sidenav-container .mat-sidenav nav {
+  margin: 0 auto;
   margin-top: 15px;
+}
+
+nav {
+  margin: 0 auto;
 }
 
 .mat-sidenav-container .mat-sidenav nav a {
