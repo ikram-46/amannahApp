@@ -27,6 +27,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { EServiceEnComponent } from './eservice-en/eservice-en.component';
 import { ContractEOEnComponent } from './contract-eo-en/contract-eo-en.component';
 import { ElectronicServicePortalEnComponent } from './electronic-service-portal-en/electronic-service-portal-en.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { CodeConfirmationComponent } from './code-confirmation/code-confirmation.component';
+import { EServicesComponent } from './e-services/e-services.component';
+import { EServicesEnComponent } from './e-services-en/e-services-en.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,10 @@ import { ElectronicServicePortalEnComponent } from './electronic-service-portal-
     EServiceEnComponent,
     ContractEOEnComponent,
     ElectronicServicePortalEnComponent,
+    ForgotPasswordComponent,
+    CodeConfirmationComponent,
+    EServicesComponent,
+    EServicesEnComponent,
 
     
   ],

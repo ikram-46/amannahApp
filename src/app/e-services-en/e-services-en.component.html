@@ -1,0 +1,67 @@
+<div class="pageContent" dir="ltr">
+    <div class="page-top">
+      <div class="topHeader">
+        <mat-button-toggle-group
+          name="fontStyle"
+          aria-label="Font Style"
+          [(ngModel)]="defaultLanguage"
+        >
+          <mat-button-toggle value="en" routerLink="/electronic-service-portal-en"
+            >English</mat-button-toggle
+          >
+          <mat-button-toggle value="ar" routerLink="/electronic-service-portal">العربية</mat-button-toggle>
+        </mat-button-toggle-group>
+        <div class="socialIcons">
+          <p>Join us</p>
+          <i class="fa fa-youtube-play"></i>
+          <i class="fa fa-twitter"></i>
+        </div>
+      </div>
+      <app-header-en (sideNavToggled)="onSideNavToggled()">
+        <h1>Services </h1>
+        <nav>
+          <h6 class="mb-0" class="breadCrumb">
+            <a href="/home" class="text-reset">e-Service</a>
+            <span><</span>
+            <a href="/electronic-services-portal" class="text-reset">Engineering offices</a>
+          </h6>
+        </nav>
+      </app-header-en>
+      <div class="headerBottom" *ngIf="!isSideNavOpen">
+        <div class="search">
+          <mat-icon>search</mat-icon>
+          <input placeholder=" Search In services" />
+        </div>
+        <mat-divider vertical style="height: 53px"></mat-divider>
+        <mat-tab-group
+          mat-stretch-tabs="false"
+          (selectedTabChange)="selectedTabValue($event)"
+        >
+          <mat-tab label="individuals"> </mat-tab>
+          <mat-tab label="businesses and government"></mat-tab>
+          <mat-tab label="Recruitment and Training"></mat-tab>
+          <mat-tab label="employee"></mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  
+    <div class="electronic-services">
+      <div class="services">
+        <app-card-en
+          *ngFor="let service of services"
+          [cardDetails]="service"
+          [hideActionDetails]="true"
+        ></app-card-en>
+      </div>
+    </div>
+  
+    <div class="bottom-content">
+      <div class="find-service">
+        <app-find-service-en></app-find-service-en>
+      </div>
+      <div class="footer">
+        <app-footer-en></app-footer-en>
+      </div>
+    </div>
+  </div>
+  

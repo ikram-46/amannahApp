@@ -36,11 +36,11 @@ export class HeaderComponent {
     this.sidenav.close();
   }
   servicesLinks : serviceLink[]= [
-    {route :"/electronic-service-portal",title:"مكاتب هندسية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس",icon:"../../assets/eng-services.svg" },
-    {route :"/electronic-service-portal",title:"مقاولين", description:"شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/contractors.svg"},
-    {route :"/electronic-service-portal",title:"صحية", description:" إيبسوم هو ببساطة نص شكلي", icon:"../../assets/healthy.svg"},
-    {route :"/electronic-service-portal",title:"جهات حكومية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/gov-agencies.svg"},
-    {route :"/electronic-service-portal",title:"خدمات الإستثمار", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل المحتوى) ", icon:"../../assets/invest-services.svg"},
+    {route :"/electronic-service-portal",title:"مكاتب هندسية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس",icon:"../../assets/navbarIcons/green-comment-icon.svg" },
+    {route :"/electronic-service-portal",title:"مقاولين", description:"شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/navbarIcons/green-comment-icon.svg"},
+    {route :"/electronic-service-portal",title:"صحية", description:" إيبسوم هو ببساطة نص شكلي", icon:"../../assets/navbarIcons/green-files-icon.svg"},
+    {route :"/electronic-service-portal",title:"جهات حكومية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس المحتوى) ", icon:"../../assets/navbarIcons/green-comment-icon.svg"},
+    {route :"/electronic-service-portal",title:"خدمات الإستثمار", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل المحتوى) ", icon:"../../assets/navbarIcons/green-comment-icon.svg"},
   ]
   mobileServicesLinks : serviceLink[]= [
     {route :"/electronic-service-portal",title:"مكاتب هندسية", description:" إيبسوم هو ببساطة نص شكلي أن الغاية هي الشكل وليس",icon:"../../assets/navbarIcons/eng-services-mb.svg" },

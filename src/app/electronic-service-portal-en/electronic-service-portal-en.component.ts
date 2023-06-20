@@ -21,7 +21,7 @@ export interface serviceCard {
 export class ElectronicServicePortalEnComponent {
   @ViewChild('sidenav') sidenav: MatSidenav;
   opened: boolean;
-  defaultLanguage: String="ar";
+  defaultLanguage: String="en";
   isSideNavOpen = false;
 
   onSideNavToggled() {
@@ -45,9 +45,9 @@ export class ElectronicServicePortalEnComponent {
     {src:"../../assets/icon1.svg", title:"Updating the information of an engineering office", action:"Start Service", link:"/contract-eo-en", serviceDetailsLink:"/e-service-en"},
   ]
   services : serviceCard[]= [
-    {src:"../../assets/icon1.svg", title:"urban landscape", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
-    {src:"../../assets/icon1.svg", title:"Licenses and certificates", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
-    {src:"../../assets/icon1.svg", title:"Reports and complaints 940", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
-    {src:"../../assets/icon1.svg", title:"Financial grants and real estate", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
+    {src:"../../assets/Icons/urban.svg", title:"urban landscape", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
+    {src:"../../assets/Icons/licences.svg", title:"Licenses and certificates", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
+    {src:"../../assets/Icons/reports.svg", title:"Reports and complaints 940", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
+    {src:"../../assets/Icons/grants.svg", title:"Financial grants and real estate", description:"The electronic services system provides all the services that citizens need in the city of Riyadh, which provides a system of...", action:"Services List"},
   ]
 }

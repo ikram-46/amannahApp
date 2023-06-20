@@ -30,8 +30,8 @@
 }
 
 .lastCard {
-  width: 341px;
-  height: 265px;
+  max-width: 456px;
+  min-height: 265px;
   padding: 10px;
   background: #00975f;
   border: 1px solid #b4d2c7;
@@ -40,6 +40,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .lastCard .mat-mdc-card-content {
   display: flex;

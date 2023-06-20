@@ -26,8 +26,7 @@
         مدينة الرياض الذي يوفر الوقت والجهد والمعاملات الورقية التقليدية، ما
         عليك سوى اختيار الخدمة
       </p>
-    </app-header
-    >
+    </app-header>
     <div class="headerBottom" *ngIf="!isSideNavOpen">
       <div class="search">
         <mat-icon>search</mat-icon>
@@ -60,7 +59,7 @@
         [cardDetails]="card"
         [hideActionDetails]="true"
       ></app-card>
-      <mat-card class="lastCard">
+      <mat-card class="lastCard"  routerLink="/e-services">
         <mat-card-content>
           <img src="../../assets/whiteArrow.svg" />
           <h1>كل الخدمات</h1>
@@ -74,7 +73,7 @@
         [cardDetails]="card"
         [hideActionDetails]="true"
       ></app-card>
-      <mat-card class="lastCard">
+      <mat-card class="lastCard" routerLink="/e-services">
         <mat-card-content>
           <img src="../../assets/whiteArrow.svg" />
           <h1>كل الخدمات</h1>
