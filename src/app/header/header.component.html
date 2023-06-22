@@ -148,7 +148,7 @@
               <div class="services">
                 <div class="title">
                   <h1>الخدمات</h1>
-                  <p>كل الخدمات</p>
+                  <p>(الأعمال والجهات الحكومية)</p>
                 </div>
                 <div class="links">
                   <div *ngFor="let link of servicesLinks" class="link">
@@ -157,6 +157,12 @@
                       <span> {{ link?.title }}</span>
                       <p>{{ link?.description }}</p>
                     </div>
+                    <p class="all-services" routerLink="/e-services">
+                      كل الخدمات
+                      <img
+                        src="../../assets/navbarIcons/arrow-left-up-green.svg"
+                      />
+                    </p>
                   </div>
                 </div>
               </div>
@@ -193,21 +199,33 @@
         </div>
 
         <mat-menu #menu="matMenu" style="width: 220px">
-          <button mat-menu-item routerLink="/login">
-            تبديل الحساب <mat-icon>shuffle</mat-icon>
-          </button>
-          <span style="color: #056946">الأعمال والجهات الحكومية</span>
-          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
-          <button mat-menu-item routerLink="/login">
-            <mat-icon>person_add</mat-icon> حساب جديد
-          </button>
-          <span> التوظيف وتدريب التعاوني</span>
-          <br />
-          <span>موظف</span>
-          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          <div class="option selected-option">
+            <button mat-menu-item routerLink="/login">
+              تبديل الحساب <mat-icon>shuffle</mat-icon>
+            </button>
+            <span style="color: #056946">الأعمال والجهات الحكومية</span>
+            <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          </div>
+          <div class="option">
+            <button mat-menu-item routerLink="/login">
+              <mat-icon>person_add</mat-icon> حساب جديد
+            </button>
+            <span> التوظيف وتدريب التعاوني</span>
+            <br />
+            <span>موظف</span>
+            <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          </div>
+          <div class="option">
+            <button mat-menu-item routerLink="/login">
+              <mat-icon>person_add</mat-icon> حسابي
+            </button>
+            <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          </div>
+          <div class="option">
           <button mat-menu-item>
-            <img src="./assets/logoutIcon.svg" />Log out
+            <img src="./assets/logoutIcon.svg" /> خروج
           </button>
+          </div>
         </mat-menu>
       </header>
       <div class="headerContent">

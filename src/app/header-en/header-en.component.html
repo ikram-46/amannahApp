@@ -150,7 +150,7 @@
               <div class="services">
                 <div class="title">
                   <h1>Services</h1>
-                  <p>All services </p>
+                  <p>businesses and government  </p>
                 </div>
                 <div class="links">
                   <div *ngFor="let link of servicesLinks" class="link">
@@ -159,6 +159,8 @@
                       <span> {{ link?.title }}</span>
                       <p>{{ link?.description }}</p>
                     </div>
+                    <p class="all-services" routerLink="/e-services">All services<img src="../../assets/navbarIcons/arrow-left-up-green.svg" /></p>
+
                   </div>
                 </div>
               </div>

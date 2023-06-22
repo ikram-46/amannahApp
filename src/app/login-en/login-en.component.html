@@ -4,18 +4,18 @@
 />
 <div dir="ltr">
   <div class="topPage">
-      <mat-button-toggle-group
-        name="fontStyle"
-        aria-label="Font Style"
-        [(ngModel)]="defaultLanguage"
+    <mat-button-toggle-group
+      name="fontStyle"
+      aria-label="Font Style"
+      [(ngModel)]="defaultLanguage"
+    >
+      <mat-button-toggle value="en" routerLink="/login-en"
+        >English</mat-button-toggle
       >
-        <mat-button-toggle value="en" routerLink="/login-en"
-          >English</mat-button-toggle
-        >
-        <mat-button-toggle value="ar" routerLink="/login"
-          >العربية</mat-button-toggle
-        >
-      </mat-button-toggle-group>
+      <mat-button-toggle value="ar" routerLink="/login"
+        >العربية</mat-button-toggle
+      >
+    </mat-button-toggle-group>
     <span routerLink="/home">Home<i class="fa fa-angle-right"></i></span>
   </div>
   <div class="pageContent">
@@ -31,20 +31,27 @@
             class="selected-option"
           >
             Choose your identity
-            <i class="fa fa-angle-down" style="padding-right: 10px; font-size: large;"></i>
+            <i
+              class="fa fa-angle-down"
+              style="padding-right: 10px; font-size: large"
+            ></i>
           </div>
           <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="changeUser('individuals')">
-              individuals
-            </button>
-            <button
-              mat-menu-item
-              (click)="changeUser('Business and government agencies')"
-              name="userv"
-              [(ngModel)]="userv"
-            >
-              Business and government agencies
-            </button>
+            <div class="option">
+              <button mat-menu-item (click)="changeUser('individuals')">
+                individuals
+              </button>
+            </div>
+            <div class="option">
+              <button
+                mat-menu-item
+                (click)="changeUser('Business and government agencies')"
+                name="userv"
+                [(ngModel)]="userv"
+              >
+                Business and government agencies
+              </button>
+            </div>
           </mat-menu>
         </div>
 

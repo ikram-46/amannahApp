@@ -72,6 +72,9 @@
   }
   
   @media (max-width: 768px) {
+    .electronic-services {
+      padding: 15% 8%;
+    }
     .headerBottom {
         flex-wrap: nowrap;
         gap: 5px;

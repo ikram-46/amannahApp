@@ -93,6 +93,7 @@
     justify-content: space-between;
     gap: 10px;
     background: #ffffff;
+    padding: 16px;
   }
   
   .services_menu .services {
@@ -103,7 +104,7 @@
   
   .services_menu .services .title {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
   }
   .services_menu .services .title h1 {
@@ -125,13 +126,22 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.1px;
-    color: #056946;
+    color: #66716D;
   }
   
   .services_menu .services .links {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  .services_menu .services .links .link:hover {
+    background: #E6F0EC;
+    border-radius: 15px;
+    padding: 16px;
+  }
+  .services_menu .services .links .link:hover .all-services {
+    visibility: visible;
   }
   
   .services_menu .services .links .link {
@@ -146,7 +156,29 @@
     height: 24px;
   }
   
+  .services_menu .services .links .link .all-services {
+    visibility: hidden;
+    color: #056946;
+    justify-self: end;
+    margin: 0;
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    letter-spacing: 0.1px;
+  }
+  
+  .services_menu .services .links .link .all-services img {
+    width: 18px;
+    height: 18px;
+  }
+  
   .services_menu .services .links .link .content {
+    flex: 1;
     display: flex;
     flex-direction: column;
   }
