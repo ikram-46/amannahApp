@@ -1,11 +1,7 @@
-import { Component } from '@angular/core';
-import {FormBuilder, Validators, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import {FormBuilder, Validators, FormGroup} from '@angular/forms';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatStepperModule} from '@angular/material/stepper';
+import {MatStepper} from '@angular/material/stepper';
 export interface Food {
    value: string;
    display: string;
@@ -23,6 +19,7 @@ export interface Food {
   ],
 })
 export class ContractEOComponent {
+  @ViewChild(MatStepper) stepper!: MatStepper;
   defaultLanguage: String="ar";
   name:any="";
   step=false;
@@ -41,4 +38,15 @@ export class ContractEOComponent {
          secondCtrl: ['', Validators.required]
       });
    }
+
+   currentStepIndex: number = 0;
+
+   navigateToStep(index: number) {
+     this.currentStepIndex = index;
+   }
+   navigateToFirstStep() {
+    this.currentStepIndex = 0;
+    this.stepper.selectedIndex = this.currentStepIndex;
+    /* this.stepper.reset(); */
+  }
 }

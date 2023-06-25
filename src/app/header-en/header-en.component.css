@@ -1,215 +1,232 @@
 .cdk-overlay-container {
-    left: 20%;
-  }
-  .sideHeader {
-    display: flex;
-    justify-content: space-between;
-    max-width: 95%;
-  }
-  
-  .mat-accordion .mat-expansion-panel {
-    background: transparent;
-    box-shadow: none;
-  }
-  
-  .mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
-    .mat-expansion-panel-header:hover {
-    background: transparent;
-  }
-  .mat-expansion-panel-header.mat-expanded:hover {
-    background: transparent;
-    box-shadow: none;
-  }
-  
-  .mat-expansion-panel-header-title {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Bahij TheSansArabicLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 25px;
-    color: #e6f0ec;
-  }
-  
-  .electronic-services {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .electronic-services .sidemenu-services {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .electronic-services .sidemenu-services .title {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .electronic-services .sidemenu-services .title p {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 19px;
-    color: #d6fff0;
-  }
-  
-  .electronic-services .sidemenu-services .sidemenu-links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .electronic-services .sidemenu-services .sidemenu-links .link {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .electronic-services .sidemenu-services .sidemenu-links div:last-child  hr {display: none;}
-  
-  .electronic-services .sidemenu-services .sidemenu-links .link .content span {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 22px;
-    color: #ffffff;
-  }
-  
-  .electronic-services .sidemenu-services .sidemenu-links .link .content p {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 16px;
-    color: #ffffff;
-  }
-  
-  .services_menu {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    background: #ffffff;
-    padding: 16px;
-  }
-  
-  .services_menu .services {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .services_menu .services .title {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  .services_menu .services .title h1 {
-    margin: 0;
-    font-family: "Bahij TheSansArabicLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px;
-    color: #011f15;
-  }
-  .services_menu .services .title p {
-    margin: 0;
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.1px;
-    color: #66716D;
-  }
-  
-  .services_menu .services .links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+  left: 20%;
+}
+.sideHeader {
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+}
 
-  .services_menu .services .links .link:hover {
-    background: #E6F0EC;
-    border-radius: 15px;
-    padding: 16px;
-  }
-  .services_menu .services .links .link:hover .all-services {
-    visibility: visible;
-  }
-  
-  .services_menu .services .links .link {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    cursor: pointer;
-  }
-  .services_menu .services .links .link img {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .services_menu .services .links .link .all-services {
-    visibility: hidden;
-    color: #056946;
-    justify-self: end;
-    margin: 0;
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    letter-spacing: 0.1px;
-  }
-  
-  .services_menu .services .links .link .all-services img {
-    width: 18px;
-    height: 18px;
-  }
-  
-  .services_menu .services .links .link .content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .services_menu .services .links .link .content span {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 25px;
-    color: #011f15;
-    margin: 0;
-  }
-  .services_menu .services .links .link .content p {
-    font-family: "Bahij TheSansArabicExtraLight";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #66716d;
-    margin: 0;
-  }
-  
+.mat-accordion .mat-expansion-panel {
+  background: transparent;
+  box-shadow: none;
+}
+
+.mat-expansion-panel:not(.mat-expanded):not([aria-disabled="true"])
+  .mat-expansion-panel-header:hover {
+  background: transparent;
+}
+.mat-expansion-panel-header.mat-expanded:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.mat-expansion-panel-header-title {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: #e6f0ec;
+}
+
+.electronic-services {
+  display: flex;
+  flex-direction: column;
+}
+
+.electronic-services .sidemenu-services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.electronic-services .sidemenu-services .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.electronic-services .sidemenu-services .title p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  color: #d6fff0;
+}
+
+.electronic-services .sidemenu-services .sidemenu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.electronic-services .sidemenu-services .sidemenu-links .link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.electronic-services .sidemenu-services .sidemenu-links div:last-child  hr {display: none;}
+
+.electronic-services .sidemenu-services .sidemenu-links .link .content span {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.electronic-services .sidemenu-services .sidemenu-links .link .content p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.services_menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.services_menu .services {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services_menu .services .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.services_menu .services .title h1 {
+  margin: 0;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: #011f15;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.services_menu .services .title h1 p {
+  margin: 0;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1px;
+  color: #66716D;
+}
+
+.services_menu .services .title p {
+  color: #056946;
+  margin: 0;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.1px;
+}
+
+.services_menu .services .links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.services_menu .services .links .link {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.services_menu .services .links .link:hover {
+  background: #E6F0EC;
+  border-radius: 15px;
+  padding: 16px;
+}
+.services_menu .services .links .link:hover .all-services {
+  visibility: visible;
+}
+
+.services_menu .services .links .link img {
+  width: 24px;
+  height: 24px;
+}
+
+.services_menu .services .links .link .all-services {
+  visibility: hidden;
+  color: #056946;
+  justify-self: end;
+  margin: 0;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.1px;
+}
+
+.services_menu .services .links .link .all-services img {
+  width: 18px;
+  height: 18px;
+}
+
+.services_menu .services .links .link .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.services_menu .services .links .link .content span {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+  color: #011f15;
+  margin: 0;
+}
+.services_menu .services .links .link .content p {
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #66716d;
+  margin: 0;
+}
+.mobile-logo {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .mobile-logo {
+    display: block;
+  }
+  .screen-logo, .submenu {
     display: none;
   }
-
-  @media (max-width: 768px) {
-    .mobile-logo {
-      display: block;
-    }
-    .screen-logo, .submenu {
-      display: none;
-    }
-  }
+}

@@ -1,4 +1,4 @@
-import { Component, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, ViewChild, Output, EventEmitter, Input } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 export interface serviceLink {
   route: string;
@@ -18,6 +18,8 @@ export interface usedLink {
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  @Input() linkPageAr: string;
+  @Input() linkPageEn: string;
   @ViewChild('sidenav') sidenav: MatSidenav;
   opened: boolean;
   showSubmenu: boolean = false;

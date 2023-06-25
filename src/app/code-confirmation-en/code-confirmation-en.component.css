@@ -1,0 +1,75 @@
+.code-confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    height: 100vh;
+    gap: 10px;
+  }
+  
+  .code-confirmation h1 {
+    font-family: "Bahij TheSansArabicLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 39px;
+    color: #011f15;
+    margin: 0;
+  }
+  
+  p {
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 31px;
+    color: #66716d;
+    text-align: center;
+  }
+  
+  span {
+    color: #00975f;
+    margin: 0 5px;
+  }
+  
+  form {
+    padding: 1rem 2rem;
+    max-width: 400px;
+    gap: 10px;
+    .form-control {
+      display: block;
+      height: 77px;
+      width: 77px;
+      margin-right: 0.5rem;
+      text-align: center;
+      font-size: 1.25rem;
+      min-width: 0;
+      border: 1px solid #afb5b3;
+      border-radius: 16px;
+  
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+  
+  button {
+    width: 135px;
+    height: 54px;
+    border: none;
+    background: #00975f;
+    border-radius: 100px;
+    font-family: "Bahij TheSansArabicExtraLight";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.1px;
+    color: #ffffff;
+    margin: 30px auto;
+  }
+  

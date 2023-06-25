@@ -3,7 +3,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-<div dir="rtl" style="background: #f5f5f5;">
+<div dir="rtl" style="background: #f5f5f5">
   <div class="topHeader">
     <mat-button-toggle-group
       name="fontStyle"
@@ -13,7 +13,9 @@
       <mat-button-toggle value="en" routerLink="/contract-eo-en"
         >English</mat-button-toggle
       >
-      <mat-button-toggle value="ar" routerLink="/contract-eo">العربية</mat-button-toggle>
+      <mat-button-toggle value="ar" routerLink="/contract-eo"
+        >العربية</mat-button-toggle
+      >
     </mat-button-toggle-group>
     <div class="socialIcons">
       <p>تفضلوا بالانضمام إلينا</p>
@@ -22,32 +24,235 @@
     </div>
   </div>
   <app-navbar></app-navbar>
-  <!-- <mat-stepper>
-    <mat-step label="المرحلة الأولى" state="phone">
-      <p>Put down your phones.</p>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step label="المرحلة الثانية" state="chat">
-      <p>Socialize with each other.</p>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step>
-    <mat-step label="المرحلة الثالثة">
-      <p>You're welcome.</p>
-    </mat-step>
-
-    <ng-template matStepperIcon="phone">
-      <mat-icon>call_end</mat-icon>
-    </ng-template>
-    <ng-template matStepperIcon="chat">
-      <mat-icon>forum</mat-icon>
-    </ng-template>
-  </mat-stepper> -->
   <div class="stepper-form">
+    <div class="stepper">
+      <div class="title">خدمة إنشاء معاملة الكترونية</div>
+      <h1>مراحل الخدمة</h1>
+      <p>
+        لإتمام هذه الخدمة، يجب ملء جميع النماذج. يمكنك المتابعة للخطوة التالية
+        فقط بعد ملء جميع النماذج في الخطوة الحالية
+      </p>
+    </div>
+    <mat-stepper [selectedIndex]="currentStepIndex">
+      <mat-step label="المرحلة الأولى">
+        <div class="form">
+          <h1>التعاقد مع مكتب هندسي</h1>
+          <div class="fields">
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+          </div>
+          <div class="actions">
+            <button class="next" matStepperNext>
+              التالي
+              <i class="fa fa-angle-left" style="padding-right: 10px"></i>
+            </button>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step label="المرحلة الثانية">
+        <div class="form">
+          <h1>التعاقد مع مكتب هندسي</h1>
+          <div class="fields">
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+          </div>
+          <div class="actions">
+            <button class="back" mat-button matStepperPrevious>السابق</button>
+            <button class="next" matStepperNext>
+              التالي
+              <i class="fa fa-angle-left" style="padding-right: 10px"></i>
+            </button>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step label="المرحلة الثالثة">
+        <div class="form">
+          <h1>التعاقد مع مكتب هندسي</h1>
+          <div class="fields">
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">اللقب</mat-label>
+              <input matInput placeholder="اللقب" />
+            </mat-form-field>
+          </div>
+          <div class="actions">
+            <button class="back" mat-button matStepperPrevious>السابق</button>
+            <button class="next" matStepperNext>
+              التالي
+              <i class="fa fa-angle-left" style="padding-right: 10px"></i>
+            </button>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step>
+        <div class="stepper-details">
+          <div class="title">
+            <h1>التعاقد مع مكتب هندسي</h1>
+            <p>تفاصيل البيانات</p>
+          </div>
+          <hr />
+          <div class="step">
+            <div class="step-title">
+              <div class="number">1</div>
+              تراخيص ملصقات السيارات
+            </div>
+            <div class="step-details">
+              <div class="field">
+                <label>اسم املستفيد</label>
+                <p>12524</p>
+              </div>
+              <div class="field">
+                <label>صفة مقدم الطلب</label>
+                <p>تراخيص ملصقات السيارات</p>
+              </div>
+              <div class="field">
+                <label>رقم السجل التجاري</label>
+                <p>تراخيص ملصقات السيارات</p>
+              </div>
+            </div>
+            <div class="step-action">
+              <button (click)="navigateToFirstStep()">
+                تعديل البيانات
+                <i class="fa fa-pencil" style="padding-right: 10px"></i>
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="step">
+            <div class="step-title">
+              <div class="number">1</div>
+              تراخيص ملصقات السيارات
+            </div>
+            <div class="step-details">
+              <div class="field">
+                <label>اسم املستفيد</label>
+                <p>12524</p>
+              </div>
+              <div class="field">
+                <label>صفة مقدم الطلب</label>
+                <p>تراخيص ملصقات السيارات</p>
+              </div>
+              <div class="field">
+                <label>رقم السجل التجاري</label>
+                <p>تراخيص ملصقات السيارات</p>
+              </div>
+            </div>
+            <div class="step-action">
+              <button (click)="navigateToStep(1)">
+                تعديل البيانات
+                <i class="fa fa-pencil" style="padding-right: 10px"></i>
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="step">
+            <div class="step-title">
+              <div class="number">1</div>
+              تراخيص ملصقات السيارات
+            </div>
+            <div class="step-details">
+              <div class="field">
+                <label>اسم املستفيد</label>
+                <p>12524</p>
+              </div>
+              <div class="field">
+                <label>صفة مقدم الطلب</label>
+                <p>تراخيص ملصقات السيارات</p>
+              </div>
+              <div class="field">
+                <label>رقم السجل التجاري</label>
+                <p>تراخيص ملصقات السيارات</p>
+              </div>
+            </div>
+            <div class="step-action">
+              <button (click)="navigateToStep(2)">
+                تعديل البيانات
+                <i class="fa fa-pencil" style="padding-right: 10px"></i>
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="action">
+            <button data-bs-toggle="modal" data-bs-target="#myModal">
+              إرسال
+              <i class="fa fa-angle-left" style="padding-right: 10px"></i>
+            </button>
+          </div>
+        </div>
+      </mat-step>
+
+      <ng-template matStepperIcon="step1">
+        <mat-icon>call_end</mat-icon>
+      </ng-template>
+      <ng-template matStepperIcon="step2">
+        <mat-icon>forum</mat-icon>
+      </ng-template>
+    </mat-stepper>
+  </div>
+  <!-- <div class="stepper-form">
     <div class="stepper">
       <div class="title">خدمة إنشاء معاملة الكترونية</div>
       <h1>مراحل الخدمة</h1>
@@ -104,103 +309,8 @@
           <i class="fa fa-angle-left" style="padding-right: 10px"></i>
         </button>
       </div>
-    </div>
-    <div class="details" *ngIf="step">
-      <div class="title">
-        <h1>التعاقد مع مكتب هندسي</h1>
-        <p>تفاصيل البيانات</p>
-      </div>
-      <hr />
-      <div class="step">
-        <div class="step-title">
-          <div class="number">1</div>
-          تراخيص ملصقات السيارات
-        </div>
-        <div class="step-details">
-          <div class="field">
-            <label>اسم املستفيد</label>
-            <p>12524</p>
-          </div>
-          <div class="field">
-            <label>صفة مقدم الطلب</label>
-            <p>تراخيص ملصقات السيارات</p>
-          </div>
-          <div class="field">
-            <label>رقم السجل التجاري</label>
-            <p>تراخيص ملصقات السيارات</p>
-          </div>
-        </div>
-        <div class="step-action">
-          <button>
-            تعديل البيانات
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>
-          </button>
-        </div>
-      </div>
-      <hr />
-      <div class="step">
-        <div class="step-title">
-          <div class="number">1</div>
-          تراخيص ملصقات السيارات
-        </div>
-        <div class="step-details">
-          <div class="field">
-            <label>اسم املستفيد</label>
-            <p>12524</p>
-          </div>
-          <div class="field">
-            <label>صفة مقدم الطلب</label>
-            <p>تراخيص ملصقات السيارات</p>
-          </div>
-          <div class="field">
-            <label>رقم السجل التجاري</label>
-            <p>تراخيص ملصقات السيارات</p>
-          </div>
-        </div>
-        <div class="step-action">
-          <button>
-            تعديل البيانات
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>
-          </button>
-        </div>
-      </div>
-      <hr />
-      <div class="step">
-        <div class="step-title">
-          <div class="number">1</div>
-          تراخيص ملصقات السيارات
-        </div>
-        <div class="step-details">
-          <div class="field">
-            <label>اسم املستفيد</label>
-            <p>12524</p>
-          </div>
-          <div class="field">
-            <label>صفة مقدم الطلب</label>
-            <p>تراخيص ملصقات السيارات</p>
-          </div>
-          <div class="field">
-            <label>رقم السجل التجاري</label>
-            <p>تراخيص ملصقات السيارات</p>
-          </div>
-        </div>
-        <div class="step-action">
-          <button>
-            تعديل البيانات
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>
-          </button>
-        </div>
-      </div>
-      <hr />
-      <div class="action">
-        <button data-bs-toggle="modal" data-bs-target="#myModal">
-          إرسال
-          <i class="fa fa-angle-left" style="padding-right: 10px"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
+    </div> !-->
+  <!-- </div>  -->
   <div class="modal" id="myModal">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">

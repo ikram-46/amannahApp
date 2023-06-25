@@ -15,6 +15,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { CodeConfirmationComponent } from './code-confirmation/code-confirmation.component';
 import { EServicesComponent } from './e-services/e-services.component';
 import { EServicesEnComponent } from './e-services-en/e-services-en.component';
+import { ForgotPasswordEnComponent } from './forgot-password-en/forgot-password-en.component';
+import { CodeConfirmationEnComponent } from './code-confirmation-en/code-confirmation-en.component';
 
 
 const routes: Routes = [
@@ -31,7 +33,9 @@ const routes: Routes = [
       { path: 'contract-eo', component: ContractEOComponent },
       { path: 'contract-eo-en', component: ContractEOEnComponent },
       { path: 'forgot-password', component: ForgotPasswordComponent },
+      { path: 'forgot-password-en', component: ForgotPasswordEnComponent },
       { path: 'code-confirmation', component: CodeConfirmationComponent },
+      { path: 'code-confirmation-en', component: CodeConfirmationEnComponent },
       { path: 'e-services', component: EServicesComponent },
       { path: 'e-services-en', component: EServicesEnComponent },
 ]

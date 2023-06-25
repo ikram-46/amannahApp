@@ -104,8 +104,8 @@
 
 .services_menu .services .title {
   display: flex;
-  gap: 10px;
   align-items: center;
+  justify-content: space-between;
 }
 .services_menu .services .title h1 {
   margin: 0;
@@ -115,8 +115,11 @@
   font-size: 16px;
   line-height: 26px;
   color: #011f15;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.services_menu .services .title p {
+.services_menu .services .title h1 p {
   margin: 0;
   font-family: "Bahij TheSansArabicExtraLight";
   font-style: normal;
@@ -127,6 +130,20 @@
   align-items: center;
   letter-spacing: 0.1px;
   color: #66716D;
+}
+
+.services_menu .services .title p {
+  color: #056946;
+  margin: 0;
+  font-family: "Bahij TheSansArabicLight";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.1px;
 }
 
 .services_menu .services .links {
@@ -162,7 +179,7 @@
   color: #056946;
   justify-self: end;
   margin: 0;
-  font-family: "Bahij TheSansArabicExtraLight";
+  font-family: "Bahij TheSansArabicLight";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;

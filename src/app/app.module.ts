@@ -31,6 +31,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { CodeConfirmationComponent } from './code-confirmation/code-confirmation.component';
 import { EServicesComponent } from './e-services/e-services.component';
 import { EServicesEnComponent } from './e-services-en/e-services-en.component';
+import { ForgotPasswordEnComponent } from './forgot-password-en/forgot-password-en.component';
+import { CodeConfirmationEnComponent } from './code-confirmation-en/code-confirmation-en.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { EServicesEnComponent } from './e-services-en/e-services-en.component';
     CodeConfirmationComponent,
     EServicesComponent,
     EServicesEnComponent,
+    ForgotPasswordEnComponent,
+    CodeConfirmationEnComponent,
 
     
   ],

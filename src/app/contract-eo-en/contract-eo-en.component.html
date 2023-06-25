@@ -13,168 +13,239 @@
       <mat-button-toggle value="en" routerLink="/contract-eo-en"
         >English</mat-button-toggle
       >
-      <mat-button-toggle value="ar" routerLink="/contract-eo"
-        >العربية</mat-button-toggle
-      >
+      <mat-button-toggle value="ar" routerLink="/contract-eo">العربية</mat-button-toggle>
     </mat-button-toggle-group>
     <div class="socialIcons">
-      <p>تفضلوا بالانضمام إلينا</p>
+      <p>Join us</p>
       <i class="fa fa-youtube-play"></i>
       <i class="fa fa-twitter"></i>
     </div>
   </div>
   <app-navbar-en></app-navbar-en>
-
   <div class="stepper-form">
     <div class="stepper">
-      <div class="title">Contracting with an engineering office</div>
+      <div class="title">Service stages</div>
       <h1>Service Step</h1>
       <p>
         To complete this service, you must fill out all the forms. You can
         proceed to the next step only after you have filled out all the forms in
         the current step.
       </p>
-      <div class="steps">
-        <div class="step">
-          <i class="fa fa-check-circle"></i>
-          Car sticker licenses
-        </div>
-        <div class="step">
-          <i class="fa fa-check-circle"></i> Car sticker licenses
-        </div>
-        <div class="last-step">
-          <div class="step-number">3</div>
-          Car sticker licenses
-        </div>
-      </div>
     </div>
-    <div class="form" *ngIf="!step">
-      <h1>Contracting with an engineering office</h1>
-      <div class="fields">
-        <mat-form-field appearance="outline">
-          <mat-label class="input-label">User Name</mat-label>
-          <input matInput placeholder="User Name" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label class="input-label">User Name</mat-label>
-          <input matInput placeholder="User Name" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label class="input-label">User Name</mat-label>
-          <input matInput placeholder="User Name" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label class="input-label">User Name</mat-label>
-          <input matInput placeholder="User Name" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label class="input-label">User Name</mat-label>
-          <input matInput placeholder="User Name" />
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label class="input-label">User Name</mat-label>
-          <input matInput placeholder="User Name" />
-        </mat-form-field>
-      </div>
-      <div class="actions">
-        <button class="back">Previous</button>
-        <button class="next" (click)="Next()">
-          Next <i class="fa fa-angle-right" style="padding-left: 10px"></i>
-        </button>
-      </div>
-    </div>
-    <div class="details" *ngIf="step">
-      <div class="title">
-        <h1>Contracting with an engineering office</h1>
-        <p>Data details</p>
-      </div>
-      <hr />
-      <div class="step">
-        <div class="step-title">
-          <div class="number">1</div>
-          Car sticker licenses
-        </div>
-        <div class="step-details">
-          <div class="field">
-            <label>Beneficiary name</label>
-            <p>12524</p>
+    <mat-stepper [selectedIndex]="currentStepIndex">
+      <mat-step label=" First phase">
+        <div class="form">
+          <h1>Contracting with an engineering office</h1>
+          <div class="fields">
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
           </div>
-          <div class="field">
-            <label>applicant status</label>
-            <p>Car sticker licenses</p>
-          </div>
-          <div class="field">
-            <label>Commercial Registration No</label>
-            <p>Car sticker licenses</p>
+          <div class="actions">
+            <button class="next" matStepperNext>
+              Next <i class="fa fa-angle-right" style="padding-left: 10px"></i>
+            </button>
           </div>
         </div>
-        <div class="step-action">
-          <button>
-            Edit Form <i class="fa fa-pencil" style="padding-right: 10px"></i>
-          </button>
-        </div>
-      </div>
-      <hr />
-      <div class="step">
-        <div class="step-title">
-          <div class="number">1</div>
-          Car sticker licenses
-        </div>
-        <div class="step-details">
-          <div class="field">
-            <label>Beneficiary name</label>
-            <p>12524</p>
+      </mat-step>
+      <mat-step label="Second phase">
+        <div class="form">
+          <h1>Contracting with an engineering office</h1>
+          <div class="fields">
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
           </div>
-          <div class="field">
-            <label>applicant status</label>
-            <p>Car sticker licenses</p>
-          </div>
-          <div class="field">
-            <label>Commercial Registration No</label>
-            <p>Car sticker licenses</p>
-          </div>
-        </div>
-        <div class="step-action">
-          <button>
-            Edit Form
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>
-          </button>
-        </div>
-      </div>
-      <hr />
-      <div class="step">
-        <div class="step-title">
-          <div class="number">1</div>
-          Car sticker licenses
-        </div>
-        <div class="step-details">
-          <div class="field">
-            <label>Beneficiary name</label>
-            <p>12524</p>
-          </div>
-          <div class="field">
-            <label>applicant status</label>
-            <p>Car sticker licenses</p>
-          </div>
-          <div class="field">
-            <label>Commercial Registration No</label>
-            <p>Car sticker licenses</p>
+          <div class="actions">
+            <button class="back" mat-button matStepperPrevious>Previous</button>
+            <button class="next" matStepperNext>
+              Next <i class="fa fa-angle-right" style="padding-left: 10px"></i>
+            </button>
           </div>
         </div>
-        <div class="step-action">
-          <button>
-            Edit Form
-            <i class="fa fa-pencil" style="padding-right: 10px"></i>
-          </button>
+      </mat-step>
+      <mat-step label="Third phase">
+        <div class="form">
+          <h1>Contracting with an engineering office</h1>
+          <div class="fields">
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label class="input-label">User Name</mat-label>
+              <input matInput placeholder="User Name" />
+            </mat-form-field>
+          </div>
+          <div class="actions">
+            <button class="back" mat-button matStepperPrevious>Previous</button>
+            <button class="next" matStepperNext>
+              Next <i class="fa fa-angle-right" style="padding-left: 10px"></i>
+            </button>
+          </div>
         </div>
-      </div>
-      <hr />
-      <div class="action">
-        <button data-bs-toggle="modal" data-bs-target="#myModal">
-          Send <i class="fa fa-angle-right" style="padding-right: 10px"></i>
-        </button>
-      </div>
-    </div>
+      </mat-step>
+      <mat-step>
+        <div class="stepper-details">
+          <div class="title">
+            <h1>Service stages</h1>
+            <p>Data details</p>
+          </div>
+          <hr />
+          <div class="step">
+            <div class="step-title">
+              <div class="number">1</div>
+              Car sticker licenses
+            </div>
+            <div class="step-details">
+              <div class="field">
+                <label>Beneficiary name</label>
+                <p>12524</p>
+              </div>
+              <div class="field">
+                <label>applicant status</label>
+                <p>Car sticker licenses</p>
+              </div>
+              <div class="field">
+                <label>Commercial Registration No</label>
+                <p>Car sticker licenses</p>
+              </div>
+            </div>
+            <div class="step-action">
+              <button (click)="navigateToFirstStep()">
+                Edit Form
+                <i class="fa fa-pencil" style="padding-right: 10px"></i>
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="step">
+            <div class="step-title">
+              <div class="number">1</div>
+              Car sticker licenses
+            </div>
+            <div class="step-details">
+              <div class="field">
+                <label>Beneficiary name</label>
+                <p>12524</p>
+              </div>
+              <div class="field">
+                <label>applicant status</label>
+                <p>Car sticker licenses</p>
+              </div>
+              <div class="field">
+                <label>Commercial Registration No</label>
+                <p>Car sticker licenses</p>
+              </div>
+            </div>
+            <div class="step-action">
+              <button (click)="navigateToStep(1)">
+                Edit Form
+                <i class="fa fa-pencil" style="padding-right: 10px"></i>
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="step">
+            <div class="step-title">
+              <div class="number">1</div>
+              Car sticker licenses
+            </div>
+            <div class="step-details">
+              <div class="field">
+                <label>Beneficiary name</label>
+                <p>12524</p>
+              </div>
+              <div class="field">
+                <label>applicant status</label>
+                <p>Car sticker licenses</p>
+              </div>
+              <div class="field">
+                <label>Commercial Registration No</label>
+                <p>Car sticker licenses</p>
+              </div>
+            </div>
+            <div class="step-action">
+              <button (click)="navigateToStep(2)">
+                Edit Form
+                <i class="fa fa-pencil" style="padding-right: 10px"></i>
+              </button>
+            </div>
+          </div>
+          <hr />
+          <div class="action">
+            <button data-bs-toggle="modal" data-bs-target="#myModal">
+              Send <i class="fa fa-angle-right" style="padding-right: 10px"></i>
+            </button>
+          </div>
+        </div>
+      </mat-step>
+
+      <ng-template matStepperIcon="step1">
+        <mat-icon>call_end</mat-icon>
+      </ng-template>
+      <ng-template matStepperIcon="step2">
+        <mat-icon>forum</mat-icon>
+      </ng-template>
+    </mat-stepper>
   </div>
 
   <div class="modal" id="myModal">

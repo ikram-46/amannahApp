@@ -170,6 +170,11 @@
   align-self: flex-end;
   letter-spacing: 0.5px;
   color: #056946;
+
+}
+
+.log-form .forgot-password {
+  cursor: pointer;
 }
 
 .log-captcha {

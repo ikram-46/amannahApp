@@ -74,7 +74,7 @@
       </mat-accordion>
       <hr />
       <a
-        routerLink="/contract-eo"
+        routerLink="#"
         (click)="clickHandler()"
         routerLinkActive="active"
       >
@@ -89,7 +89,7 @@
     >
       <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
       <span>
-        User Name Here
+        اسم المستخدم
         <mat-icon>keyboard_arrow_down</mat-icon>
       </span>
     </div>
@@ -99,10 +99,10 @@
       aria-label="Font Style"
       [(ngModel)]="defaultLanguage"
     >
-      <mat-button-toggle value="en" routerLink="/home-en"
+      <mat-button-toggle value="en" routerLink={{linkPageEn}}
         >English</mat-button-toggle
       >
-      <mat-button-toggle value="ar" routerLink="/home"
+      <mat-button-toggle value="ar" routerLink={{linkPageAr}}
         >العربية</mat-button-toggle
       >
     </mat-button-toggle-group>
@@ -117,7 +117,7 @@
           >menu</mat-icon
         >
         <nav>
-          <a routerLink="/home" routerLinkActive="active">Home</a>
+          <a routerLink="/home-en" routerLinkActive="active">Home</a>
           <a
             #createPlanmenuTrigger="matMenuTrigger"
             [matMenuTriggerFor]="submenu"
@@ -125,6 +125,7 @@
             (mouseout)="
               $event.stopPropagation(); createPlanmenuTrigger.openMenu()
             "
+            
           >
             e-Service
 
@@ -135,7 +136,7 @@
               >keyboard_arrow_up</mat-icon
             >
           </a>
-          <a routerLink="/contract-eo" routerLinkActive="active">
+          <a routerLink="#" routerLinkActive="active">
             Help And Support</a
           >
         </nav>
@@ -148,8 +149,8 @@
             <div class="services_menu">
               <div class="services">
                 <div class="title">
-                  <h1>Services </h1>
-                  <p>All services</p>
+                  <h1>Services  <p>businesses and government  </p></h1>
+                  <p class="all-services" routerLink="/e-services">All services<img src="../../assets/navbarIcons/arrow-right-up-green.svg" /></p>
                 </div>
                 <div class="links">
                   <div *ngFor="let link of servicesLinks" class="link">
@@ -158,6 +159,8 @@
                       <span> {{ link?.title }}</span>
                       <p>{{ link?.description }}</p>
                     </div>
+                    <p class="all-services" routerLink="/e-services">All services<img src="../../assets/navbarIcons/arrow-right-up-green.svg" /></p>
+
                   </div>
                 </div>
               </div>
@@ -194,21 +197,33 @@
         </div>
 
         <mat-menu #menu="matMenu" style="width: 220px">
-          <button mat-menu-item routerLink="/login">
-            تبديل الحساب <mat-icon>shuffle</mat-icon>
-          </button>
-          <span style="color: #056946">الأعمال والجهات الحكومية</span>
-          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
-          <button mat-menu-item routerLink="/login">
-            <mat-icon>person_add</mat-icon> حساب جديد
-          </button>
-          <span> التوظيف وتدريب التعاوني</span>
-          <br />
-          <span>موظف</span>
-          <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
-          <button mat-menu-item>
-            <img src="./assets/logoutIcon.svg" />Log out
-          </button>
+          <div class="option selected-option">
+            <button mat-menu-item routerLink="/login-en">
+               Change account <mat-icon>shuffle</mat-icon>
+            </button>
+            <span style="color: #056946">businesses and government </span>
+            <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          </div>
+          <div class="option">
+            <button mat-menu-item routerLink="/login-en">
+              <mat-icon>person_add</mat-icon>  New account
+            </button>
+            <span>Recruitment and Training</span>
+            <br />
+            <span>Employee</span>
+            <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          </div>
+          <div class="option">
+            <button mat-menu-item routerLink="/login-en">
+              <mat-icon>person_add</mat-icon> My account
+            </button>
+            <mat-divider style="width: 90%; margin: 10px auto"></mat-divider>
+          </div>
+          <div class="option">
+            <button mat-menu-item>
+              <img src="./assets/logoutIcon.svg" /> Log out
+            </button>
+          </div>
         </mat-menu>
       </header>
     </mat-toolbar>

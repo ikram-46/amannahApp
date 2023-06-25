@@ -21,27 +21,151 @@
   display: flex;
   flex-direction: row !important;
 }
-
 .mat-horizontal-stepper-header-container {
   display: flex;
   flex-direction: column !important;
+  align-items: flex-start !important;
   max-width: 326px;
+  min-width: 326px;
+  height: 400px;
   padding: 32px 16px;
   background: #ffffff;
   border-radius: 31px;
+  padding-top: 16%;
+}
+
+.mat-horizontal-stepper-header {
+  height: 30px !important;
+}
+
+.mat-horizontal-stepper-header-container .mat-step-header:last-child,
+.mat-horizontal-stepper-header-container .mat-stepper-horizontal-line:last-of-type{
+  display: none !important;
 }
 
 .mat-stepper-horizontal-line {
   border-left-width: 1px !important;
   border-top-width: 0 !important;
   border-left-style: solid;
-  border-left-color: rgba(0, 0, 0, 0.12) !important;
-  height: 20px !important;
-  width: 2px !important;
+  border-left-color: #8c8c8c !important;
+  height: 40px !important;
   min-width: 0px !important;
+  width: 0px !important;
+  margin: 0 38px !important;
+ /*  padding: 0 18px; */
+}
+
+.mat-step-header .mat-step-label.mat-step-label-selected {
+  color: #66716d !important;
+  font-size: 16px;
+  font-family: "Bahij TheSansArabicLight";
+  font-weight: 500;
+}
+
+.mat-step-header .mat-step-icon-selected {
+  border-radius: 29px;
+  width: 29px;
+  height: 29px;
+  border: 1px dashed #056946 !important;
+  background: #E6F0EC;
+  color: #056946 !important;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Bahij TheSansArabic";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+.mat-step-header .mat-step-icon-state-done {
+  border-radius: 29px;
+  border: 1px solid  #056946 !important;
+  background:  #056946 !important;
+  color: #FFF !important;
+
+}
+.mat-step-header .mat-step-label.mat-step-label-active {
+  color: #CDCDCD;
+  font-size: 16px;
+  font-family: "Bahij TheSansArabicLight";
+  font-weight: 500;
+}
+.mat-step-header .mat-step-icon {
+  border-radius: 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 29px;
+  border: 1px solid #CDCDCD;
+  background: #FFF;
+  color: #CDCDCD;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Bahij TheSansArabic";
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.mat-horizontal-content-container {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mat-stepper-horizontal .mat-horizontal-stepper-wrapper {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .mat-horizontal-stepper-header-container {
+    display: flex;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    max-width: 100%;
+    min-width: 326px;
+    height: 100%;
+    padding: 32px 16px;
+    background: #ffffff;
+    border-radius: 31px;
+    padding-top: 60%;
+  }
+  
+  .mat-horizontal-stepper-header {
+    flex-direction: column !important;
+    gap: 10px;
+    height: 100% !important;
+  }
+
+  .mat-stepper-horizontal-line {
+    border-left-width: 0px !important;
+    border-top-width: 1px !important;
+    border-top-style: solid;
+    border-top-color: #8c8c8c !important;
+    height: 2px !important;
+    width: 50px !important;
+    min-width: 50px !important;
+    margin: 16px 0px !important;
+    
+  }
+
+  .mat-step-header .mat-step-label.mat-step-label-active {
+    color: #CDCDCD;
+    font-size: 10px;
+    font-family: "Bahij TheSansArabicLight";
+    font-weight: 500;
+    white-space: wrap;
+    min-width: 70px;
+  }
+
+  .mat-horizontal-content-container {
+    padding: 24px 0px !important;
+  }
+  
+
 }
 
 /********/
+
+
+
 html,
 body {
   font-family: "Bahij TheSansArabic";
