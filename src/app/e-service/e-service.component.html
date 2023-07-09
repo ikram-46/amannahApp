@@ -8,7 +8,9 @@
       <mat-button-toggle value="en" routerLink="/e-service-en"
         >English</mat-button-toggle
       >
-      <mat-button-toggle value="ar" routerLink="/e-service">العربية</mat-button-toggle>
+      <mat-button-toggle value="ar" routerLink="/e-service"
+        >العربية</mat-button-toggle
+      >
     </mat-button-toggle-group>
     <div class="socialIcons">
       <p>تفضلوا بالانضمام إلينا</p>
@@ -33,17 +35,17 @@
         إضافة للمفضلة
         <mat-icon>bookmark_border</mat-icon>
       </Button>
-      <Button mat-fab extended routerLink="contract-eo" class="start-service">
+      <Button mat-fab extended routerLink="/contract-eo" class="start-service">
         بدء الخدمة
-        <img src="../../assets/arrow-up-left.svg"/>
+        <img src="../../assets/arrow-up-left.svg" />
       </Button>
     </div>
   </div>
   <div class="cards">
     <div class="top-card" *ngFor="let card of topCards">
-     <img src={{card.src}}/>
-     <h1>{{card.title}}</h1>
-     <p>{{card.time}}</p>
+      <img src="{{ card.src }}" />
+      <h1>{{ card.title }}</h1>
+      <p>{{ card.time }}</p>
     </div>
   </div>
   <div class="eservice-details">
@@ -65,7 +67,11 @@
       <div class="response">
         <div class="steps" *ngFor="let question of questions">
           <div class="step" *ngFor="let response of question.response">
-            <div *ngIf="activeQuestion === question.id" class="step" [class.hideStep]="activeQuestion !== question.id">
+            <div
+              *ngIf="activeQuestion === question.id"
+              class="step"
+              [class.hideStep]="activeQuestion !== question.id"
+            >
               <p>{{ response?.content }}</p>
             </div>
           </div>
@@ -137,47 +143,47 @@
     </div>
     <div>
       <mat-accordion>
-        <mat-expansion-panel 
-        (opened)="panelOpenState = true"
-        (closed)="panelOpenState = false" hideToggle>
+        <mat-expansion-panel hideToggle (click)="togglePanel(1)" [expanded]="panelExpanded === 1">
           <mat-expansion-panel-header>
             <mat-panel-title>
               هل بإمكاني طباعة الرخصة من الموقع؟
-              <mat-icon *ngIf="!panelOpenState">add</mat-icon>
-              <mat-icon *ngIf="panelOpenState">remove</mat-icon>
             </mat-panel-title>
+            <button mat-icon-button>
+              <mat-icon>{{ panelExpanded === 1 ? 'remove' : 'add' }}</mat-icon>
+            </button>
           </mat-expansion-panel-header>
           <p>This is the primary content of the panel.</p>
         </mat-expansion-panel>
-        <mat-expansion-panel
-          (opened)="panelOpenState = true"
-          (closed)="panelOpenState = false"
-          hideToggle
-        >
+      
+        <mat-expansion-panel hideToggle (click)="togglePanel(2)" [expanded]="panelExpanded === 2">
           <mat-expansion-panel-header>
-            <mat-panel-title>
-              كيف احسب رسوم الخدمات ؟
-              <mat-icon *ngIf="!panelOpenState">add</mat-icon>
-              <mat-icon *ngIf="panelOpenState">remove</mat-icon>
-            </mat-panel-title>
+            <mat-panel-title> كيف احسب رسوم الخدمات ؟ </mat-panel-title>
+            <button mat-icon-button>
+              <mat-icon>{{ panelExpanded === 2 ? 'remove' : 'add' }}</mat-icon>
+            </button>
           </mat-expansion-panel-header>
           <p>
             هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي
             القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصف
           </p>
         </mat-expansion-panel>
-        <mat-expansion-panel hideToggle>
+      
+        <mat-expansion-panel hideToggle (click)="togglePanel(3)" [expanded]="panelExpanded === 3">
           <mat-expansion-panel-header>
             <mat-panel-title>
               طريقة معرفة تفاصيل الفواتير وطباعتها؟
-              <mat-icon *ngIf="!panelOpenState">add</mat-icon>
-              <mat-icon *ngIf="panelOpenState">remove</mat-icon>
             </mat-panel-title>
+            <button mat-icon-button>
+              <mat-icon>{{ panelExpanded === 3 ? 'remove' : 'add' }}</mat-icon>
+            </button>
           </mat-expansion-panel-header>
           <p>بتسجيل الدخول على البوابة الإلكترونية</p>
           <p>اختيار الخدمات الإلكترونية</p>
           <p>اختيار نظام سداد ثم اختيار الاستعلام عن فاتورة سداد</p>
-          <p>ادخال رقم الاثبات ورقم الفاتورة ثم النقر على البحث ثم اختيار طباعة الفاتورة لعرض التفاصيل</p>
+          <p>
+            ادخال رقم الاثبات ورقم الفاتورة ثم النقر على البحث ثم اختيار طباعة
+            الفاتورة لعرض التفاصيل
+          </p>
         </mat-expansion-panel>
       </mat-accordion>
     </div>
@@ -232,5 +238,4 @@
       <app-sh-footer></app-sh-footer>
     </div>
   </div>
-
 </div>

@@ -1,3 +1,12 @@
+
+.required-field .mat-form-field-outline {
+  outline-color: red;
+}
+
+.required-field .mat-form-field-label {
+  color: red;
+}
+
 .mat-stepper-horizontal .mat-horizontal-stepper-wrapper {
   display: flex;
   flex-direction: row !important;
@@ -164,6 +173,16 @@
   color: #363B38;
 }
 
+.stepper-form .form .fields .mat-icon {
+  color: #B8BCBA;
+  border : 1px solid #B8BCBA;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 10px;
+}
+
+
+
 
 
 .stepper-form .form .actions {
@@ -296,7 +315,7 @@
   width: 100%;
 }
 .stepper-details .step .step-details .field label {
-  font-family: "Bahij TheSansArabicExtraLight";
+  font-family: "Bahij TheSansArabicLight";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -304,12 +323,12 @@
   color: #66716d;
 }
 .stepper-details .step .step-details .field p {
-  font-family: "Bahij TheSansArabicExtraLight";
+  font-family: "Bahij TheSansArabicLight";
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 31px;
-  color: #2c302f;
+  color: #2C302F;
 }
 .stepper-details .step .step-action button {
   background: #e6f0ec;
@@ -448,6 +467,13 @@
   /******* start mobile style stepper form ******/
   .stepper-form .form .fields {
     grid-template-columns: 1fr;
+  }
+  .stepper-details .step .step-details {
+    width: 100%;
+  }
+  .stepper-details .step .step-details .field label,
+  .stepper-details .step .step-details .field p {
+    font-size: 12px;
   }
 
   .stepper-form .form .actions {

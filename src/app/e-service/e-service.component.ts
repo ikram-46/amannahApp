@@ -76,4 +76,14 @@ export class EServiceComponent {
     {src:"../../assets/cardsIcons/list-icon.svg", title:"رسوم الخدمة", time:"حسب لائحة الرسوم"},
     {src:"../../assets/cardsIcons/list-icon.svg", title:"قنوات دفع الرسوم", time:"نظام سداد للمدفوعات"},
   ]
+
+  panelExpanded: number = 0;
+
+  togglePanel(panelIndex: number) {
+    if (this.panelExpanded === panelIndex) {
+      this.panelExpanded = 0; // Collapse the panel if it is already expanded
+    } else {
+      this.panelExpanded = panelIndex; // Expand the clicked panel
+    }
+  }
 }

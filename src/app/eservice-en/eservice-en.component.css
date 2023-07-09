@@ -1,6 +1,7 @@
 .pageContent {
   background: #f5f5f5;
 }
+/***** start style bloc e-service header  *****/
 
 .cards .top-card {
   display: flex;
@@ -27,8 +28,6 @@
   color: #414A47;
   margin: 0;
 }
-/***** start style bloc e-service header  *****/
-
 .header {
   background: #ffffff;
   border-radius: 51.1479px;
@@ -54,12 +53,15 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
+  margin: 0 10px;
+  overflow: hidden;
 }
 .header .breadCrumb a,
 .header .breadCrumb span {
   font-family: "Bahij TheSansArabicExtraLight";
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 20px;
   line-height: 86px;
   color: #033f2a;
@@ -104,14 +106,17 @@
     line-height: 35px;
   }
   .header .breadCrumb a,
-  .header .breadCrumb span {
+  .header .breadCrumbspan {
     font-size: 10px;
   }
-
+  nav {
+    width: 100%;
+  }
   .header .breadCrumb {
     /* gap: 3px;
     margin-right: 30px; */
-    display: block;
+    /* display: block; */
+    justify-content: flex-start;
   }
 }
 /***** end style bloc e-service header  *****/
@@ -122,7 +127,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   background: #ffffff;
   border-radius: 43px;
   min-height: 100%;
@@ -142,7 +147,6 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 65px;
-  text-align: right;
   color: #011f15;
 }
 
@@ -210,7 +214,7 @@
   width: 100%;
   margin-top: 10px;
   position: absolute;
-  left: 16px;
+  right: 16px;
 }
 .eservice-details .questions .response .step {
   display: flex;
@@ -246,10 +250,14 @@
 @media (max-width: 768px) {
   .eservice-details .questions {
     flex-wrap: wrap;
-    width: auto;
+    width: 100%;
+  }
+  .eservice-details .questions .question {
+    width: 100%;
   }
   .eservice-details .questions .question .question-text {
-    max-width: 276px;
+    max-width: 100%;
+    width: 100%;
     height: 64px;
     font-size: 14px;
     line-height: 22px;
@@ -325,7 +333,6 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 65px;
-  text-align: right;
   color: #ffffff;
 }
 .service-guide p {
@@ -397,7 +404,6 @@
   font-weight: 500;
   font-size: 40px;
   line-height: 65px;
-  text-align: right;
   color: #011f15;
 }
 
@@ -412,8 +418,7 @@
   max-width: 472px;
 }
 
-
- .mat-accordion {
+.mat-accordion {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -424,7 +429,6 @@
   border: 1px solid #ebecf0;
   border-radius: 20px;
   height: 100%;
-
 }
 
 .mat-accordion .mat-expansion-panel .mat-expansion-panel-header {
@@ -447,6 +451,11 @@
   .mat-expansion-panel-header-title
   .mat-icon {
   height: 26px;
+  flex: 20%;
+}
+.mat-accordion .mat-expansion-panel button {
+ border: none;
+ background: transparent;
 }
 
 .mat-expansion-panel-header.mat-expanded .mat-expansion-panel-header-title {
@@ -503,13 +512,11 @@
 
   .asked-questions .title h1 {
     font-size: 23px;
-    text-align: right;
     line-height: 38px;
   }
   .asked-questions .title p {
     font-size: 14px;
     line-height: 22px;
-    text-align: right;
   }
   .asked-questions .questions {
     flex-wrap: wrap;
@@ -577,6 +584,5 @@
 
   .bottom-content .footer {
     margin-top: -12%;
-    
   }
 }

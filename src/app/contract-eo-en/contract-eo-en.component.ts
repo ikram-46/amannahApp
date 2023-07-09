@@ -26,7 +26,18 @@ export class ContractEOEnComponent {
    title = 'materialApp';   
    firstFormGroup: FormGroup;
    secondFormGroup: FormGroup;
-   constructor(private _formBuilder: FormBuilder) {}
+   fields: { label: string, value: string, isRequired: boolean }[] = [];
+   constructor(private _formBuilder: FormBuilder) {
+    // Initialize the fields array with empty values
+    this.fields = [
+      { label: 'User Name', value: '', isRequired:true },
+      { label: 'User Name', value: '', isRequired:true },
+      { label: 'User Name', value: '', isRequired:true },
+      { label: 'User Name', value: '', isRequired: false},
+      { label: 'User Name', value: '', isRequired:false },
+      { label: 'User Name', value: '', isRequired:false },
+    ];
+   }
    ngOnInit() {
       this.firstFormGroup = this._formBuilder.group({
          firstCtrl: ['', Validators.required]
@@ -45,5 +56,11 @@ export class ContractEOEnComponent {
     this.currentStepIndex = 0;
     this.stepper.selectedIndex = this.currentStepIndex;
     /* this.stepper.reset(); */
+  }
+
+  inputValue: string = '';
+
+  clearInput(index: number): void {
+    this.fields[index].value = '';
   }
 }

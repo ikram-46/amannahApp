@@ -76,5 +76,14 @@ export class EServiceEnComponent {
     {src:"../../assets/cardsIcons/list-icon.svg", title:"Service charges", time:"Based on the Tariff list"},
     {src:"../../assets/cardsIcons/list-icon.svg", title:"Payment channels", time:"Payment system"},
   ]
+  
+  panelExpanded: number = 0;
 
+  togglePanel(panelIndex: number) {
+    if (this.panelExpanded === panelIndex) {
+      this.panelExpanded = 0; // Collapse the panel if it is already expanded
+    } else {
+      this.panelExpanded = panelIndex; // Expand the clicked panel
+    }
+  }
 }

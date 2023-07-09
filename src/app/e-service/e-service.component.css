@@ -245,10 +245,14 @@
 @media (max-width: 768px) {
   .eservice-details .questions {
     flex-wrap: wrap;
-    width: auto;
+    width: 100%;
+  }
+  .eservice-details .questions .question {
+    width: 100%;
   }
   .eservice-details .questions .question .question-text {
-    max-width: 276px;
+    max-width: 100%;
+    width: 100%;
     height: 64px;
     font-size: 14px;
     line-height: 22px;
@@ -444,6 +448,11 @@
   .mat-expansion-panel-header-title
   .mat-icon {
   height: 26px;
+  flex: 20%;
+}
+.mat-accordion .mat-expansion-panel button {
+ border: none;
+ background: transparent;
 }
 
 .mat-expansion-panel-header.mat-expanded .mat-expansion-panel-header-title {

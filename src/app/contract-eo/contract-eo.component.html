@@ -38,30 +38,15 @@
         <div class="form">
           <h1>التعاقد مع مكتب هندسي</h1>
           <div class="fields">
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
+            <ng-container *ngFor="let field of fields; let i = index">
+              <mat-form-field appearance="outline">
+                <mat-label class="input-label">
+                  {{ field.label }}
+                </mat-label>
+                <input matInput [(ngModel)]="field.value" type="text" [required]="field.isRequired" />
+                <mat-icon matSuffix (click)="clearInput(i)">clear</mat-icon>
+              </mat-form-field>
+            </ng-container>
           </div>
           <div class="actions">
             <button class="next" matStepperNext>
@@ -75,30 +60,15 @@
         <div class="form">
           <h1>التعاقد مع مكتب هندسي</h1>
           <div class="fields">
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
+            <ng-container *ngFor="let field of fields; let i = index">
+              <mat-form-field appearance="outline">
+                <mat-label class="input-label">
+                  {{ field.label }}
+                </mat-label>
+                <input matInput [(ngModel)]="field.value" type="text" [required]="field.isRequired" />
+                <mat-icon matSuffix (click)="clearInput(i)">clear</mat-icon>
+              </mat-form-field>
+            </ng-container>
           </div>
           <div class="actions">
             <button class="back" mat-button matStepperPrevious>السابق</button>
@@ -113,30 +83,15 @@
         <div class="form">
           <h1>التعاقد مع مكتب هندسي</h1>
           <div class="fields">
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label class="input-label">اللقب</mat-label>
-              <input matInput placeholder="اللقب" />
-            </mat-form-field>
+            <ng-container *ngFor="let field of fields; let i = index">
+              <mat-form-field appearance="outline">
+                <mat-label class="input-label">
+                  {{ field.label }}
+                </mat-label>
+                <input matInput [(ngModel)]="field.value" type="text" [required]="field.isRequired" />
+                <mat-icon matSuffix (click)="clearInput(i)">clear</mat-icon>
+              </mat-form-field>
+            </ng-container>
           </div>
           <div class="actions">
             <button class="back" mat-button matStepperPrevious>السابق</button>
