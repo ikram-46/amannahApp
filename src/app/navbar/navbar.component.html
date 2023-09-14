@@ -143,6 +143,7 @@
             #submenu="matMenu"
             xPosition="before"
             style="margin: 0 auto"
+            class="submenu"
           >
             <div class="services_menu">
               <div class="services">
@@ -206,8 +207,19 @@
           </span>
         </div>
 
-        <mat-menu #menu="matMenu" style="width: 220px">
-          <div class="option selected-option">
+        <mat-menu #menu="matMenu" style="width: 220px" class="matMenu-open">
+          <div
+          aria-label="user selection"
+          [matMenuTriggerFor]="menu"
+          class="open-userMenu"
+        >
+          <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
+          <span>
+            اسم المستخدم
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </span>
+        </div>
+          <div class="option">
             <button mat-menu-item routerLink="/login">
               تبديل الحساب <mat-icon>shuffle</mat-icon>
             </button>

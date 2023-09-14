@@ -30,7 +30,7 @@
 }
 
 .lastCard {
-  max-width: 456px;
+  max-width: 341px;
   min-height: 265px;
   padding: 10px;
   background: #00975f;
@@ -77,7 +77,7 @@
   border-radius: 51px;
   padding-bottom: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row-reverse;
   position: absolute;
   width: 95%;
@@ -86,7 +86,7 @@
 
 .interactWith-card img {
   margin-top: -7%;
-  width: 50%;
+  width: 566px;
 }
 
 .interactWith-card .details {
@@ -96,6 +96,7 @@
   gap: 5%;
   flex-wrap: wrap;
   margin-right: 32px;
+  max-width: 478px;
 }
 
 .interactWith-card .details h1 {
@@ -108,10 +109,10 @@
   margin: 0;
 }
 .interactWith-card .details p {
-  font-family: "Bahij TheSansArabicExtraLight";
+  font-family: "Bahij TheSansArabicLight";
   font-style: normal;
   font-weight: 200;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 28px;
   color: #011f15;
 }
@@ -130,8 +131,8 @@
   font-size: 20px;
   line-height: 31px;
   color: #e6f0ec;
-  width: 284px;
-  height: 79px;
+  width: 251px;
+  height: 84px;
 }
 
 .interactWith-card .details button img {

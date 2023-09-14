@@ -1,3 +1,6 @@
+::ng-deep.cdk-overlay-pane .submenu {
+  transform: translate(90px, 50px);
+}
 .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
   height: 89px !important;
   align-items: center;

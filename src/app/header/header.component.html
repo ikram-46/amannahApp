@@ -73,10 +73,7 @@
         </mat-expansion-panel>
       </mat-accordion>
       <hr />
-      <a
-        routerLink="#"
-        (click)="clickHandler()"
-        routerLinkActive="active"
+      <a routerLink="#" (click)="clickHandler()" routerLinkActive="active"
         >الدعم والمساعدة</a
       >
     </nav>
@@ -98,10 +95,10 @@
       aria-label="Font Style"
       [(ngModel)]="defaultLanguage"
     >
-      <mat-button-toggle value="en" routerLink={{linkPageEn}}
+      <mat-button-toggle value="en" routerLink="{{ linkPageEn }}"
         >English</mat-button-toggle
       >
-      <mat-button-toggle value="ar" routerLink={{linkPageAr}}
+      <mat-button-toggle value="ar" routerLink="{{ linkPageAr }}"
         >العربية</mat-button-toggle
       >
     </mat-button-toggle-group>
@@ -134,15 +131,14 @@
               >keyboard_arrow_up</mat-icon
             >
           </a>
-          <a routerLink="#" routerLinkActive="active"
-            >الدعم والمساعدة</a
-          >
+          <a routerLink="#" routerLinkActive="active">الدعم والمساعدة</a>
         </nav>
         <div class="submenu">
           <mat-menu
             #submenu="matMenu"
             xPosition="before"
             style="margin: 0 auto"
+            class="submenu"
           >
             <div class="services_menu">
               <div class="services">
@@ -185,8 +181,13 @@
                       src="{{ link.icon }}"
                       style="width: 19px; height: 19px"
                     />
-                    <div>
+                    <div class="usedLinks-content">
                       <span>{{ link.title }}</span>
+                    </div>
+                    <div class="all-services" routerLink="/e-services">
+                      <img
+                        src="../../assets/navbarIcons/arrow-left-up-green.svg"
+                      />
                     </div>
                   </div>
                 </div>
@@ -206,8 +207,19 @@
           </span>
         </div>
 
-        <mat-menu #menu="matMenu" style="width: 220px">
-          <div class="option selected-option">
+        <mat-menu class= "open-matMenu" #menu="matMenu" style="width: 220px;">
+          <div
+            aria-label="user selection"
+            [matMenuTriggerFor]="menu"
+            class="open-userMenu"
+          >
+            <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
+            <span>
+              اسم المستخدم
+              <mat-icon>keyboard_arrow_down</mat-icon>
+            </span>
+          </div>
+          <div class="option">
             <button mat-menu-item routerLink="/login">
               تبديل الحساب <mat-icon>shuffle</mat-icon>
             </button>

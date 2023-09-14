@@ -37,13 +37,25 @@
       <mat-step label="المرحلة الأولى">
         <div class="form">
           <h1>التعاقد مع مكتب هندسي</h1>
+          <div class="mb-0" class="breadCrumb">
+            <a href="/e-service" class="text-reset">الخدمات الإلكترونية</a>
+            <span>></span>
+            <a href="" class="text-reset">الرخص والشهادات </a>
+            <span>></span>
+            <a href="" class="text-reset">خدمة إنشاء معاملة الكترونية</a>
+          </div>
           <div class="fields">
             <ng-container *ngFor="let field of fields; let i = index">
               <mat-form-field appearance="outline">
                 <mat-label class="input-label">
                   {{ field.label }}
                 </mat-label>
-                <input matInput [(ngModel)]="field.value" type="text" [required]="field.isRequired" />
+                <input
+                  matInput
+                  [(ngModel)]="field.value"
+                  type="text"
+                  [required]="field.isRequired"
+                />
                 <mat-icon matSuffix (click)="clearInput(i)">clear</mat-icon>
               </mat-form-field>
             </ng-container>
@@ -59,13 +71,25 @@
       <mat-step label="المرحلة الثانية">
         <div class="form">
           <h1>التعاقد مع مكتب هندسي</h1>
+          <div class="mb-0" class="breadCrumb">
+            <a href="/e-service" class="text-reset">الخدمات الإلكترونية</a>
+            <span>></span>
+            <a href="" class="text-reset">الرخص والشهادات </a>
+            <span>></span>
+            <a href="" class="text-reset">خدمة إنشاء معاملة الكترونية</a>
+          </div>
           <div class="fields">
             <ng-container *ngFor="let field of fields; let i = index">
               <mat-form-field appearance="outline">
                 <mat-label class="input-label">
                   {{ field.label }}
                 </mat-label>
-                <input matInput [(ngModel)]="field.value" type="text" [required]="field.isRequired" />
+                <input
+                  matInput
+                  [(ngModel)]="field.value"
+                  type="text"
+                  [required]="field.isRequired"
+                />
                 <mat-icon matSuffix (click)="clearInput(i)">clear</mat-icon>
               </mat-form-field>
             </ng-container>
@@ -82,13 +106,25 @@
       <mat-step label="المرحلة الثالثة">
         <div class="form">
           <h1>التعاقد مع مكتب هندسي</h1>
+          <div class="mb-0" class="breadCrumb">
+            <a href="/e-service" class="text-reset">الخدمات الإلكترونية</a>
+            <span>></span>
+            <a href="" class="text-reset">الرخص والشهادات </a>
+            <span>></span>
+            <a href="" class="text-reset">خدمة إنشاء معاملة الكترونية</a>
+          </div>
           <div class="fields">
             <ng-container *ngFor="let field of fields; let i = index">
               <mat-form-field appearance="outline">
                 <mat-label class="input-label">
                   {{ field.label }}
                 </mat-label>
-                <input matInput [(ngModel)]="field.value" type="text" [required]="field.isRequired" />
+                <input
+                  matInput
+                  [(ngModel)]="field.value"
+                  type="text"
+                  [required]="field.isRequired"
+                />
                 <mat-icon matSuffix (click)="clearInput(i)">clear</mat-icon>
               </mat-form-field>
             </ng-container>

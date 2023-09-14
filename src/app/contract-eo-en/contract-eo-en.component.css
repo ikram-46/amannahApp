@@ -1,12 +1,21 @@
+.required-field .mat-form-field-outline {
+  outline-color: red;
+}
+
+.required-field .mat-form-field-label {
+  color: red;
+}
+
 .mat-stepper-horizontal .mat-horizontal-stepper-wrapper {
   display: flex;
   flex-direction: row !important;
 }
 
-.mat-stepper-horizontal .mat-horizontal-stepper-wrapper .mat-horizontal-stepper-header-container {
+.mat-stepper-horizontal
+  .mat-horizontal-stepper-wrapper
+  .mat-horizontal-stepper-header-container {
   display: flex;
-  flex-direction:  column !important;
-  
+  flex-direction: column !important;
 }
 /******* */
 .stepper-form {
@@ -138,6 +147,22 @@
   font-size: 21px;
   line-height: 33px;
   color: #011f15;
+  margin: 0;
+}
+
+.stepper-form .form .breadCrumb {
+  margin-top: -10px;
+  display: flex;
+  gap: 8px;
+}
+
+.stepper-form .form .breadCrumb a , .stepper-form .form .breadCrumb span {
+  color: #AFB5B3 !important;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .stepper-form .form .fields {
@@ -161,20 +186,16 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.4px;
-  color: #363B38;
+  color: #363b38;
 }
 
 .stepper-form .form .fields .mat-icon {
-  color: #B8BCBA;
-  border : 1px solid #B8BCBA;
+  color: #b8bcba;
+  border: 1px solid #b8bcba;
   border-radius: 50%;
   padding: 0;
   margin: 0 10px;
 }
-
-
-
-
 
 .stepper-form .form .actions {
   display: flex;
@@ -319,7 +340,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 31px;
-  color: #2C302F;
+  color: #2c302f;
 }
 .stepper-details .step .step-action button {
   background: #e6f0ec;
@@ -351,7 +372,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   letter-spacing: 0.1px;
   border: none;
   height: 54px;
@@ -370,7 +390,7 @@
 }
 .modal-content .exit-btn {
   align-self: flex-start;
-  color: #AFB5B3;
+  color: #afb5b3;
   font-size: 34px;
 }
 
@@ -428,7 +448,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-   /*  max-width: 100%; */
+    /*  max-width: 100%; */
     margin: 0 10px;
     gap: 20px;
   }
@@ -457,6 +477,9 @@
     text-align: center;
   }
   /******* start mobile style stepper form ******/
+  .stepper-form .form .breadCrumb {
+    display: none;
+  }
   .stepper-form .form .fields {
     grid-template-columns: 1fr;
   }
@@ -466,7 +489,6 @@
   .stepper-details .step .step-details .field label,
   .stepper-details .step .step-details .field p {
     font-size: 12px;
-    line-height: 19px;
   }
 
   .stepper-form .form .actions {
@@ -530,4 +552,3 @@
   }
   /******* End mobile style stepper modal ******/
 }
-

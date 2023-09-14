@@ -175,9 +175,13 @@
                       src="{{ link.icon }}"
                       style="width: 19px; height: 19px"
                     />
-                    <div>
+                    <div class="usedLinks-content">
                       <span>{{ link.title }}</span>
                     </div>
+                    <div class="all-services" routerLink="/e-services">
+                      <img src="../../assets/navbarIcons/arrow-right-up-green.svg" />
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -197,6 +201,17 @@
         </div>
 
         <mat-menu #menu="matMenu" style="width: 220px">
+          <div
+          aria-label="user selection"
+          [matMenuTriggerFor]="menu"
+          class="open-userMenu"
+        >
+          <img matChipAvatar src="../../assets/avatar.svg" alt="Photo user" />
+          <span>
+            User Name Here          
+            <mat-icon>keyboard_arrow_down</mat-icon>
+          </span>
+        </div>
           <div class="option selected-option">
             <button mat-menu-item routerLink="/login-en">
               Change account <mat-icon>shuffle</mat-icon>

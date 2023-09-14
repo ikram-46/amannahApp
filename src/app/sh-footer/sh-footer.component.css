@@ -1,68 +1,163 @@
 .FooterContainer {
-    background: #00975F;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
+  background: #011f15;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  padding: 32px;
+  height: 720px;
+}
+
+.topFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.topFooter .logos {
+  flex: 1;
+  display: flex;
+  gap: 30px;
+  max-width: 200px;
+}
+
+.topFooter .logos img {
+  width: 149px;
+}
+
+.topFooter .email {
+  border-radius: 28px;
+  background: #083123;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  width: 224px;
+  height: 140px;
+}
+.topFooter .email h1 {
+  color: #4a9b7f;
+  font-family: "Bahij TheSansArabic";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.topFooter .email p {
+  color: #4a9b7f;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.footerContent {
+  display: flex;
+  gap: 10%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.footerContent .links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footerContent .links .links-title h5 {
+  color: #fff;
+  font-family: "Bahij TheSansArabicLight";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.footerContent .links .links-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.footerContent .links .links-content a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.bottomFooter {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  border-top: 1px solid #2E413B;
+  padding: 16px 0;
+}
+
+.bottomFooter span {
+  color: #fff;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.bottomFooter .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.bottomFooter .social-icons p {
+  color: #fff;
+  font-family: "Bahij TheSansArabicExtraLight";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .FooterContainer {
+    padding: 16px;
+    gap: 30px;
+    align-items: center;
+    height: 100%;
+  }
+
+  .topFooter{ 
     align-items: center;
     justify-content: center;
-    gap: 70px;
-    height: 600px;
-}
+  }
 
-.FooterContainer p {
-    max-width: 600px;
-    font-family: 'Bahij TheSansArabicExtraLight';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
-    color: #FFFFFF;
-}
-.FooterContainer nav {
-    display: flex;
-    align-items: center;
+  .topFooter .logos {
+    justify-content: space-around;
+  }
+
+  .footerContent {
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
+    gap: 30px;
+  }
+  .footerContent .links {
+     justify-content: center;
+     align-items: center;
+  }
+  .footerContent .links-content{
+    align-items: center;
+  }
 }
-
-.FooterContainer nav a{
-    color: white;
-    font-family: 'Bahij TheSansArabicLight';
-    padding: 5px 10px;
-    margin-left: 5px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 14px;
-}
-.FooterContainer nav a:hover {
-    /* color: yellow */
-    border-bottom: 2px solid #E6F0EC;
-    padding-bottom: 2px;
-    border-radius: unset;
-  }
-  .FooterContainer nav a.active {
-    /* color: yellow; */
-    border-bottom: 2px solid #E6F0EC;
-    padding-bottom: 2px;
-    border-radius: unset;
-  }
-
-  @media screen and (max-width: 980px) {
-    .FooterContainer {
-        padding: 16px;
-        max-height: 500px;
-        gap: 40px;
-        align-items: center;
-      }
-      .FooterContainer p {
-        max-width: 100%;
-        font-size: 11px;
-        line-height: 17px;
-      }
-      .FooterContainer nav {
-        flex-direction: column;
-        gap: 30px;
-      }
-  }
